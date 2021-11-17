@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+
+    <link rel="stylesheet" href="../lib/css/base.css">
+    <link rel="stylesheet" href="../lib/css/main_mo.css">
+    <link rel="stylesheet" href="../lib/css/swiper.min.css" />
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../lib/js/swiper.min.js"></script>
+    <script src="../lib/js/TweenMax.min.js"></script>
+    <script src="../lib/js/ScrollMagic.js"></script>
+    <script src="../lib/js/animation.gsap.js"></script>
+    <script src="../lib/js/debug.addIndicators.min.js"></script>
+    <script src="../lib/js/ui_mo.js"></script>
+    
+
+
+    <title>국민상점</title>
+</head>
+
+<body id="main">
+    <div id="wrap">
+
+
+        
+        <div id="searchWrap">
+            <div class="search">
+                <a href="#none" class="btn-search-close"><img src="/design/mkplanet/kkstore/img/btn_ranking_close.png" alt=""></a>
+        
+                <p class="tit">검색</p>
+        
+                <!--/form_search/-->
+                <div class="input-wrap">
+                    <p><!--/input_search_word/--></p>
+                    <a href="<!--/link_search_button/-->" class="btn-submit"><img src="/design/mkplanet/kkstore/img/ico_search_mo.jpg" alt=""></a>
+                </div>
+                <!--/end_form/-->
+        
+                <div class="keyword-wrap">
+                    <p class="sub-tit">인기검색어</p>
+        
+                    <ul>
+                        <li><a href="">#프로틴워터</a></li>
+                        <li><a href="">#포켓도시락</a></li>
+                        <li><a href="">#닭가슴살</a></li>
+                        <li><a href="">#가드칸슈</a></li>
+                        <li><a href="">#단백질쿠키</a></li>
+                        <li><a href="">#곤약떡볶이</a></li>
+                        <li><a href="">#곤약냉면</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="navWrap">
+            <div class="nav">
+                <a href="#none" class="btn-nav-close"><img src="../img/btn_nav_close.png" alt=""></a>
+                <div class="member-wrap">
+                    <p class="thumb"><img src="../img/ico_beginner.png" alt=""></p>
+                    <div class="member">
+                        <p class="name">다혜님</p>
+                        <p class="sub-name">오늘은 뭐가 땡겨요?</p>
+                    </div>
+                </div>
+                <div class="gnb-wrap">
+                    <ul class="gnb">
+                        <li>
+                            <a href="#none">운동보충</a>
+                            <ul class="depth2">
+                                <li><a href="">보충제/부스터</a></li>
+                                <li><a href="">건강기능식품</a></li>
+                                <li><a href="">쉐이크/음료</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">식사</a>
+                            <ul class="depth2">
+                                <li><a href="">닭가슴살</a></li>
+                                <li><a href="">도시락</a></li>
+                                <li><a href="">간편식</a></li>
+                                <li><a href="">샐러드</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">간식</a>
+                            <ul class="depth2">
+                                <li><a href="">저칼로리간식</a></li>
+                                <li><a href="">단백질간식</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">세트</a>
+                            <ul class="depth2">
+                                <li><a href="">바디프로필세트</a></li>
+                                <li><a href="">급찐급빠세트</a></li>
+                                <li><a href="">멸치탈출세트</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">의류/용품</a>
+                            <ul class="depth2">
+                                <li><a href="">스포츠웨어</a></li>
+                                <li><a href="">스포츠용품</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <ul class="etc-cate">
+                    <li><a href="">베스트</a></li>
+                    <li><a href="" class="on">신상품·타임특가</a></li>
+                    <li><a href="">정기배송</a></li>
+                    <li><a href="">이벤트·쿠폰</a></li>
+                </ul>
+                <div class="util-wrap">
+                    <ul class="util">
+                        <li><a href="">회원가입</a></li>
+                        <li><a href="">배송조회</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="block"></div>
+        </div>
+
+        <div class="kkranking-wrap">
+            <div class="kkranking">
+                <a href="#none" class="btn-rank-close"><img src="../img/btn_ranking_close.png" alt=""></a>
+                <p class="sub-title">kk Ranking</p>
+                <p class="title">실시간 KK판매 랭킹</p>
+
+                <div class="kkranking-list">
+                    <ul>
+                        <li class="active"><a href=""><span class="num first up">1</span><span class="name">자연을 품은 샐러드</span></a></li>
+                        <li><a href=""><span class="num first up">2</span><span class="name">아이스티 라잇티</span></a></li>
+                        <li><a href=""><span class="num first down">3</span><span class="name">포켓야식 곤약면</span></a></li>
+                        <li><a href=""><span class="num down">4</span><span class="name">포켓쉐프 닭가슴살피자 2종</span></a></li>
+                        <li><a href=""><span class="num stop">5</span><span class="name">포켓도시락 1일 3식 세트</span></a></li>
+                        <li><a href=""><span class="num stop">6</span><span class="name">거꾸로당 크로칸슈</span></a></li>
+                        <li><a href=""><span class="num up">7</span><span class="name">포켓쉐프 닭가슴살 피자 2종</span></a></li>
+                        <li><a href=""><span class="num down">8</span><span class="name">더 촉촉한 닭가슴살</span></a></li>
+                        <li><a href=""><span class="num up">9</span><span class="name">다노샵</span></a></li>
+                        <li><a href=""><span class="num up">10</span><span class="name">포켓도시락 12일 24종 다이어터식단</span></a></li>
+                    </ul>
+                    <span class="active-box"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="top-banner-wrap swiper-container">
+            <div class="top-banner swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href=""><span class="name">다혜</span>야, 스트레스 받으면 매운거 먹어야지 <span class="ico"><img src="../img/ico_banner_mo.png" alt=""></span></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href=""><span class="name">다혜</span>야, 언제까지 굶으면서 다이어트할래?</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="headerWrap">
+            <div class="header">
+                <div class="btn-menu"><a href="#none"><img src="../img/ico_menu_mo.png" alt=""></a></div>
+
+                <div class="logo"><a href=""><img src="../img/kkstore_logo_m.gif" alt=""></a></div>
+
+                <div class="util-menu">
+                    <div class="btn-search"><a href=""><img src="../img/ico_search_mo.jpg" alt=""></a></div>
+                    <div class="btn-member"><a href=""><img src="../img/ico_mypage_mo.jpg" alt=""></a></div>
+                    <div class="btn-bag"><a href=""><img src="../img/ico_bag_mo.jpg" alt=""></a></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="containerWrap">
+            <div class="container">
+
+                <!-- s:메인배너 -->
+                <div class="main-banner-wrap swiper-container">
+                    <div class="main-banner swiper-wrapper">
+                        <div class="swiper-slide"><a href=""><img src="../img/img_main_banner01.jpg" alt=""></a>
+                        </div>
+                        <div class="swiper-slide"><a href=""><img src="../img/img_main_banner02.jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="main-banner-pagination swiper-pagination"></div>
+                </div>
+                <!-- //e:메인배너 -->
+
+
+                <!-- s:실시간랭킹 -->
+                <div class="ranking-sec">
+                    <div class="rank-sell">
+                        <p class="title">실시간 KK판매 랭킹</p>
+                        <ul>
+                            <li><a href="#none"><span class="num first up">1</span><span class="name">자연을 품은 샐러드</span></a></li>
+                            <li><a href="#none"><span class="num first up">2</span><span class="name">아이스티 라잇티</span></a></li>
+                            <li><a href="#none"><span class="num first down">3</span><span class="name">포켓야식 곤약면</span></a></li>
+                            <li><a href="#none"><span class="num down">4</span><span class="name">포켓쉐프 닭가슴살피자 2종</span></a></li>
+                            <li><a href="#none"><span class="num stop">5</span><span class="name">포켓도시락 1일 3식 세트</span></a></li>
+                            <li><a href="#none"><span class="num stop">6</span><span class="name">거꾸로당 크로칸슈</span></a></li>
+                            <li><a href="#none"><span class="num up">7</span><span class="name">포켓쉐프 닭가슴살 피자 2종</span></a></li>
+                            <li><a href="#none"><span class="num down">8</span><span class="name">더 촉촉한 닭가슴살</span></a></li>
+                            <li><a href="#none"><span class="num up">9</span><span class="name">다노샵</span></a></li>
+                            <li><a href="#none"><span class="num up">10</span><span class="name">포켓도시락 12일 24종 다이어터식단</span></a></li>
+                        </ul>
+                        <a href="#none" class="btn-rank-view"><img src="../img/btn_footer_plus.png" alt=""></a>
+                    </div>
+                </div>
+                <!-- //e:실시간랭킹 -->
+
+
+                <!-- s:카테고리리스트 -->
+                <div class="cate-list-wrap">
+                    <div class="cate-list">
+                        <div class="list">
+                            <a href="">
+                                <p class="img"><img src="../img/mo_cate02.png" alt=""></p>
+                                <p class="title">운동보충</p>
+                            </a>
+                        </div>
+                        <div class="list">
+                            <a href="">
+                                <p class="img"><img src="../img/mo_cate05.png" alt=""></p>
+                                <p class="title">간식</p>
+                            </a>
+                        </div>
+                        <div class="list">
+                            <a href="">
+                                <p class="img"><img src="../img/mo_cate03.png" alt=""></p>
+                                <p class="title">세트</p>
+                            </a>
+                        </div>
+                        <div class="list">
+                            <a href="">
+                                <p class="img"><img src="../img/mo_cate08.png" alt=""></p>
+                                <p class="title">의류·용품</p>
+                            </a>
+                        </div>
+                        <div class="list">
+                            <a href="">
+                                <p class="img"><img src="../img/mo_cate09.png" alt=""></p>
+                                <p class="title">커뮤니티</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //e:카테고리리스트 -->
+
+
+
+                <div class="event-banner">
+                    <a href="">
+                        <p class="img"><img src="../img/event_banner_mo.jpg" alt=""></p>
+                        <div class="desc">
+                            <p class="title">건강한 음식과<br>건강한 이벤트</p>
+                            <p class="date">2021.09.10 ~ 2021.10.30</p>
+                        </div>
+                    </a>
+                </div>
+
+
+                <!-- s:타임세일 -->
+                <div class="timesale-sec">
+                    <div class="tit-wrap">
+                        <p class="tit">시간이 없어요! KK 타임딜&#9201;</p>
+                    </div> 
+
+                    <div class="timesale-list">
+                        <div class="list">
+                            <a href="">
+                                <div class="timesale first">
+                                    <div class="time"></div>
+                                </div>
+                                <p class="ico-timesale"><img src="../img/time_icon.png" alt=""></p>
+                                <p class="thumb"><img src="../img/img_timesale_prd01.jpg" alt=""></p>
+                                <div class="info">
+                                    <p class="title">층간소음으로 아랫층에서 신고당해봤어?</p>
+                                    <p class="sub-title">
+                                        홈트를 위한, 홈트에 의한 클라우드 요가매트
+                                        층간소음 및 부상방지 #판매급상승 #최고 후기 매트
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="list">
+                            <a href="">
+                                <div class="timesale second">
+                                    <div class="time"></div>
+                                </div>
+                                <p class="thumb"><img src="../img/timesale_prd02.gif" alt=""></p>
+                                <div class="info">
+                                    <p class="title">자연을 품은 샐러드, 지금 반값 할인 중</p>
+                                    <p class="sub-title">
+                                        아직도 퍽퍽하고 맛없는것만 먹을거야? 단백질 보충도 퍽퍽한 닭가슴살
+                                        말고 포켓쉐프 닭가슴살 피자, 최초 단백질또띠야 먹어봐
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //e:타임세일 -->
+
+
+                <!-- s:베스트상품 -->
+                <div class="best-list-wrap">
+                    <div class="best-list">
+                        <div class="tit-wrap">
+                            <p class="tit">지금 가장 핫한 kk상품&#9201;</p>
+                        </div>
+
+                        <div class="best-tab">
+                            <ul>
+                                <li class="active">전체보기</li>
+                                <li>식단도시락</li>
+                                <li>건강기능식품</li>
+                                <li>트레이닝용품</li>
+                            </ul>
+                        </div>
+
+                        <div class="best-con">
+                            <div class="inner active">
+                                블라블라야1
+                            </div>
+                            <div class="inner">
+                                블라블라야2
+                            </div>
+                            <div class="inner">
+                                블라블라야3
+                            </div>
+                            <div class="inner">
+                                블라블라야4
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //e:베스트상품 -->
+
+
+                <!-- s:엠디초이스 -->
+                <div class="md-choice-wrap">
+                    <div class="md-choice">
+
+                        <div class="tit-wrap">
+                            <p class="tit">KK MD들이 <br>초이스한 상품이에요.</p>
+                            <a href="" class="btn-more"><img src="../img/btn_more.png" alt=""></a>
+                        </div>
+
+                        <div class="md-choice-list swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="list swiper-slide">
+                                    <a href="">
+                                        <p class="name">포켓분식 곤약구슬 떡볶이 2종</p>
+                                        <p class="thumb"><img src="../img/md_prd01_mo.png" alt=""></p>
+                                    </a>
+                                </div>
+                                <div class="list swiper-slide">
+                                    <a href="">
+                                        <p class="name">포켓분식 곤약구슬 떡볶이 2종</p>
+                                        <p class="thumb"><img src="../img/md_prd01_mo.png" alt=""></p>
+                                    </a>
+                                </div>
+                                <div class="list swiper-slide">
+                                    <a href="">
+                                        <p class="name">포켓분식 곤약구슬 떡볶이 2종</p>
+                                        <p class="thumb"><img src="../img/md_prd01_mo.png" alt=""></p>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="md-pagination-wrap">
+                                <div class="md-pagination swiper-pagination"></div>
+                                <div class="md-fraction"><span>1</span>/<span>3</span></div>
+                            </div>
+                            
+                        </div>
+
+                    </div>
+                </div>
+                <!-- //e:엠디초이스 -->
+
+
+                <!-- s:이벤트섹션 -->
+                <div class="event-wrap">
+                    <div class="tit-wrap">
+                        <p class="tit">kk Event</p>
+                        <a href="" class="btn-more"><img src="../img/btn_more.png" alt=""></a>
+                    </div>
+                    <div class="event-list">
+                        <div class="list">
+                            <a href="">
+                                <p class="thumb"><img src="../img/img_event01.jpg" alt=""></p>
+                                <div class="info">
+                                    <p class="title">무설탕 아이스티 라잇티 구매 시, 바게트 6ea 증정</p>
+                                    <p class="period">2021.08.09 - 2021.08.31</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="list">
+                            <a href="">
+                                <p class="thumb"><img src="../img/img_event02.jpg" alt=""></p>
+                                <div class="info">
+                                    <p class="title">국민상점 X 국민피티 앱 출시 기념 이벤트</p>
+                                    <p class="period">2021.08.09 - 2021.08.31</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="list">
+                            <a href="">
+                                <p class="thumb"><img src="../img/img_event03.jpg" alt=""></p>
+                                <div class="info">
+                                    <p class="title">7일간 역대급 혜택, 클리어런스세일</p>
+                                    <p class="period">2021.08.09 - 2021.08.31</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //e:이벤트섹션 -->
+                
+                
+
+                <!-- s:매거진섹션 -->
+                <div class="magazine-wrap">
+
+                    <div class="tit-wrap">
+                        <p class="tit">kk Magazine</p>
+                        <a href="" class="btn-more"><img src="../img/btn_more.png" alt=""></a>
+                    </div>
+
+                    <div class="magazine-list swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="list swiper-slide">
+                                <a href="">
+                                    <p class="thumb"><img src="../img/img_magazine_mo01.jpg" alt=""></p>
+                                    <div class="info">
+                                        <p class="title">다이어트 보조제의 진실</p>
+                                        <p class="sub-title">
+                                            커피가 다이어트에 영향을 끼진다는 연구결과 ! 그냥 커피말고 다이어트프레소! 하루 두잔, 체지방감소 절제프레소 불라불라불라라랄라라라ㅏㄹ
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="list swiper-slide">
+                                <a href="">
+                                    <p class="thumb"><img src="../img/img_magazine_mo02.jpg" alt=""></p>
+                                    <div class="info">
+                                        <p class="title">칼로리와 나트륨까지! 다이어트 중이라면 이렇게 관리하자.</p>
+                                        <p class="sub-title">
+                                            커피가 다이어트에 영향을 끼진다는 연구결과 ! 그냥 커피말고 다이어트프레소! 하루 두잔, 체지방감소 절제프레소 불라불라불라라랄라라라ㅏㄹ
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="magazine-pagination-wrap">
+                            <div class="magazine-pagination swiper-pagination"></div>
+                            <div class="magazine-fraction"><span>1</span>/<span>2</span></div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- //e:매거진섹션 -->
+
+                <!-- s:인스타섹션 -->
+                <div class="insta-wrap">
+                    <div class="tit-wrap">
+                        <p class="tit">kk Instagram</p>
+                        <a href="" class="btn-more"><img src="../img/btn_more.png" alt=""></a>
+                    </div>
+                    <div class="insta-tab">
+                        <ul>
+                            <li class="active">@ssong.aa</li>
+                            <li>@dahyezzing</li>
+                            <li>@insta</li>
+                            <li>@we3dv</li>
+                            <li>@dew1d_fwd</li>
+                        </ul>
+                    </div>
+    
+    
+                    <div class="insta-con">
+                        <div class="inner active">
+                            <div class="banner">
+                                <a href=""><img src="../img/main_sns_banner01.png" alt=""></a>
+                            </div>
+    
+                            <div class="insta-prd-sec">
+                                <p class="intro-desc">
+                                    몇년째 당뇨때문에 식단관리하시는 엄마에게 <br>
+                                    맛있지만 칼로리 낮은 <span class="highlight">건강식단</span> 차려드렸어요.
+                                </p>
+
+                                <div class="user">
+                                    <p class="thumb"><img src="../img/img_insta_user.png" alt=""></p>
+                                    <p class="id">ssong.aa님</p>
+                                </div>
+
+                                <div class="prd-slide-wrap swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <p class="thumb"><a href=""><img src="../img/product01.jpg" alt=""></a></p>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <p class="thumb"><a href=""><img src="../img/product01.jpg" alt=""></a></p>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <p class="thumb"><a href=""><img src="../img/product01.jpg" alt=""></a></p>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <p class="thumb"><a href=""><img src="../img/product01.jpg" alt=""></a></p>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <p class="thumb"><a href=""><img src="../img/product01.jpg" alt=""></a></p>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <p class="thumb"><a href=""><img src="../img/product01.jpg" alt=""></a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="prd-pagination-wrap">
+                                    <div class="prd-pagination swiper-pagination"></div>
+                                    <div class="prd-fraction"><span>1</span>/<span>2</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inner">
+                            <div class="banner">
+                                <a href=""><img src="../img/main_sns_banner02.png" alt=""></a>
+                            </div>
+    
+                            <div class="insta-prd-sec">
+                                <p class="intro-desc">
+                                    몇년째 당뇨때문에 식단관리하시는 엄마에게 <br>
+                                    맛있지만 칼로리 낮은 <span class="highlight">건강식단</span> 차려드렸어요.
+                                </p>
+
+                                <div class="user">
+                                    <p class="thumb"><img src="../img/img_insta_user.png" alt=""></p>
+                                    <p class="id">ssong.aa님</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inner">
+                            <div class="banner">
+                                <a href=""><img src="../img/main_sns_banner03.png" alt=""></a>
+                            </div>
+    
+                            <div class="insta-prd-sec">
+                                <p class="intro-desc">
+                                    몇년째 당뇨때문에 식단관리하시는 엄마에게 <br>
+                                    맛있지만 칼로리 낮은 <span class="highlight">건강식단</span> 차려드렸어요.
+                                </p>
+
+                                <div class="user">
+                                    <p class="thumb"><img src="../img/img_insta_user.png" alt=""></p>
+                                    <p class="id">ssong.aa님</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inner">
+                            <div class="banner">
+                                <a href=""><img src="../img/main_sns_banner04.png" alt=""></a>
+                            </div>
+    
+                            <div class="insta-prd-sec">
+                                <p class="intro-desc">
+                                    몇년째 당뇨때문에 식단관리하시는 엄마에게 <br>
+                                    맛있지만 칼로리 낮은 <span class="highlight">건강식단</span> 차려드렸어요.
+                                </p>
+
+                                <div class="user">
+                                    <p class="thumb"><img src="../img/img_insta_user.png" alt=""></p>
+                                    <p class="id">ssong.aa님</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inner">
+                            <div class="banner">
+                                <a href=""><img src="../img/main_sns_banner05.png" alt=""></a>
+                            </div>
+    
+                            <div class="insta-prd-sec">
+                                <p class="intro-desc">
+                                    몇년째 당뇨때문에 식단관리하시는 엄마에게 <br>
+                                    맛있지만 칼로리 낮은 <span class="highlight">건강식단</span> 차려드렸어요.
+                                </p>
+
+                                <div class="user">
+                                    <p class="thumb"><img src="../img/img_insta_user.png" alt=""></p>
+                                    <p class="id">ssong.aa님</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //e:인스타섹션 -->
+
+            </div>
+        </div>
+
+
+        <!-- s:footerWrap -->
+        <div id="footerWrap">
+            <div class="footer">
+                <div class="cs-section">
+                    <p class="title">즐거운 KK고객센터 <span class="ico"><img src="../img/ico_footer01.jpg" alt=""></span></p>
+
+                    <p class="work-hour">
+                        토, 일요일 및 공휴일 휴무 <br>
+                        오전 10시 - 오후 6시<br>
+                        점심 12시 - 오후 2시
+                    </p>
+
+                    <div class="cs-btn-wrap">
+                        <a href="" class="type2">1:1문의</a>
+                        <a href="">카카오톡 문의</a>
+                        <a href="">네이버톡톡 문의</a>
+                    </div>
+                    <div class="cs-btn-wrap">
+                        <a href="">전화 문의 070-7773-3152</a>
+                        <a href="">제휴·입점문의</a>
+                    </div>
+                </div>
+                <div class="bank-section">
+                    <p class="title">국민상점 Bank<span class="ico"><img src="../img/ico_footer02.jpg" alt=""></span></p>
+
+                    <div class="info-wrap">
+                        <div class="info">
+                            <p class="title">입금계좌</p>
+                            <p class="con">1005-503-014636</p>
+                        </div>
+                        <div class="info">
+                            <p class="title">입금은행</p>
+                            <p class="con">우리은행</p>
+                        </div>
+                        <div class="info">
+                            <p class="title">예금주</p>
+                            <p class="con">(주)쓰리케어코리아</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sns-section">
+                    <p class="title">보다 더 즐길 수 있도록, 국민상점<span class="ico"><img src="../img/ico_footer03.jpg" alt=""></span></p>
+
+                    <div class="info-wrap">
+                        <div class="info">
+                            <p class="title">유튜브</p>
+                            <p class="con">국민상점스토어</p>
+                        </div>
+                        <div class="info">
+                            <p class="title">인스타그램</p>
+                            <p class="con">@Kookminstore</p>
+                        </div>
+                        <div class="info">
+                            <p class="title">카카오톡</p>
+                            <p class="con">@국민상점스토어</p>
+                        </div>
+                    </div>
+
+                    <div class="sns-btn-wrap">
+                        <a href="" class="type2">국민피티 APP 다운로드</a>
+                        <div class="family-select">
+                            <a href="#none">패밀리사이트</a>
+                            <div class="inner">
+                                <a href="">포켓도시락</a>
+                                <a href="">거꾸로당</a>
+                                <a href="">젝시믹스</a>
+                                <a href="">다른브랜드</a>
+                            </div>
+                        </div>
+                        <a href="">브랜드스토리 보러가기</a>
+                    </div>
+                </div>
+
+                <div class="footer-info">
+                    <p class="title">(주)쓰리케어코리아 사업자 정보</p>
+                    <p class="info-con">
+                        <span>
+                            대표자. 한대광 | 사업자등록번호. 274-81-00425 <br>
+                            통신판매업신고번호.  2019-서울성동-01824호<br>
+                            <br>
+                            서울특별시 성동구 아차산로17길 48, 1동 819-822호<br>
+                            제휴/입점문의. 3carekorea_ad@brandxcorp.com<br>
+                            개인정보보호 책임자. <br>
+                            이윤희 (yoonhee_90@brandxcorp.com)<br>
+                            호스팅사. (주)코리아센터
+                        </span>
+                    </p>
+                    <ul class="footer-menu">
+                        <li><a href="">사업자정보확인</a></li>
+                        <li><a href="">개인정보처리방침</a></li>
+                        <li><a href="">이용약관</a></li>
+                        <li><a href="">고객센터</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- //e:footerWrap -->
+
+
+        <!-- s:floating -->
+        <div id="floatingWrap">
+            <div class="floating">
+                <div class="list">
+                    <a href="">
+                        <p class="img"><img src="../img/mo_float_home.png" alt=""></p>
+                        <p class="title">홈</p>
+                    </a>
+                </div>
+                <div class="list">
+                    <a href="">
+                        <p class="img"><img src="../img/mo_float_best.png" alt=""></p>
+                        <p class="title">베스트</p>
+                    </a>
+                </div>
+                <div class="list">
+                    <a href="">
+                        <p class="img"><img src="../img/mo_float_deal.png" alt=""></p>
+                        <p class="title">신상품·타임딜</p>
+                    </a>
+                </div>
+                <div class="list">
+                    <a href="">
+                        <p class="img"><img src="../img/mo_float_event.png" alt=""></p>
+                        <p class="title">이벤트·쿠폰</p>
+                    </a>
+                </div>
+                <div class="list">
+                    <a href="">
+                        <p class="img"><img src="../img/mo_float_period.png" alt=""></p>
+                        <p class="title">정기배송</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- //e:floating -->
+
+    </div>
+</body>
+</html>

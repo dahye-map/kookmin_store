@@ -1,0 +1,44 @@
+#containerWrap .container { background:#f9f9f9; }
+
+.mypage-wrap { max-width:1400px; min-width:1080px; padding:45px 40px 100px; }
+.mypage-wrap .title { font-size:34px; font-weight:bold; color:#000; padding-bottom:100px; }
+
+.mypage-list { position:absolute; right:0; top:10px; }
+.mypage-list a { position:relative; color:#9d9d9d; font-size:24px; margin-left:32px; }
+.mypage-list a.active { color:#ff7600; font-weight:bold; }
+.mypage-list a.active:after { content:''; display:block; position:absolute; left:0; top:2px; border:1px solid #ff7600; border-radius:100%; transform:rotate(-10deg); width:100%; height:30px; }
+
+.user-info-wrap { display:flex; display:-webkit-flex; }
+.user-info-wrap > div { position:relative; background:#fff; padding:45px 52px; border-radius:15px; }
+.user-info-wrap .btn-link { position:absolute; right:45px; top:55px; color:#b4b4b4; font-size:15px; }
+.user-info-wrap .sub-title { font-size:30px; font-weight:bold; padding-bottom:48px; }
+.user-info-wrap .user-info { width:50%; margin-right:11px; }
+.user-info-wrap .grade-info { width:50%; margin-left:11px; }
+
+.user-info-wrap .user-info .id { font-size:24px; font-weight:bold; color:#ff7600; margin-bottom:24px; }
+.user-info-wrap .user-info .name { display:inline-block; color:#aeaeae; font-size:15px; padding-left:10px; font-weight:normal; }
+.user-info-wrap .user-info .etc { color:#757575; font-size:18px; line-height:1.6; }
+
+.user-info-wrap .grade-info .detail { display:flex; display:-webkit-flex; }
+.user-info-wrap .grade-info .desc { padding-left:40px; }
+.user-info-wrap .grade-info .grade-name { font-size:24px; font-weight:bold; color:#000; margin-bottom:15px; }
+.user-info-wrap .grade-info .date { display:inline-block; color:#aeaeae; font-size:15px; padding-left:10px; font-weight:normal; }
+.user-info-wrap .grade-info .benefit li { display:inline-block; font-size:15px; color:#757575; padding:10px 14px; border:1px solid #cacaca; border-radius:40px; margin-bottom:7px; }
+
+
+.mypage-tab { display:flex; display:-webkit-flex; margin-left:-11px; margin-right:-11px; margin-top:96px; }
+.mypage-tab .tab { position:relative; background:#fff; padding:40px 52px; border-radius:15px; width:25%; margin:0 11px; }
+.mypage-tab .tab .ico { position:absolute; right:40px; bottom:30px; opacity:.6; }
+.mypage-tab .tab .sub-title { font-size:18px; color:#000; padding-bottom:24px; }
+.mypage-tab .tab .num { font-size:30px; font-weight:bold; color:#000; }
+
+
+.mypage-detail-wrap .mypage-detail-tab { display:flex; display:-webkit-flex; margin-top:96px; }
+.mypage-detail-wrap .mypage-detail-tab a { display:inline-block; color:#9d9d9d; font-size:26px; text-align:center; width:20%; padding:30px 0; }
+.mypage-detail-wrap .mypage-detail-tab a.active { background:#fff; color:#000; font-weight:bold; border-top-left-radius:15px; border-top-right-radius:15px; }
+.mypage-detail-wrap .mypage-detail { background:#fff; padding:50px 42px; border-radius:15px; border-top-left-radius:0; }
+
+
+.mypage-wrap .tbl thead th { color:#000; font-size:15px; padding:24px 0; border-top:1px solid #ebebeb; border-bottom:1px solid #ebebeb; }
+.mypage-wrap .tbl tbody td { border-bottom:1px solid #ebebeb; font-size:14px; padding:15px 0; }
+.mypage-wrap .tbl .btn-view { background:#848484; display:inline-block; padding:10px 15px; color:#fff; text-align:center; }

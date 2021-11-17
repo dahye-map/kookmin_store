@@ -1,0 +1,111 @@
+<!--/include_header(1)/-->
+
+<div id="containerWrap">
+    <div class="container">
+
+        <div class="mypage-wrap">
+
+            <p class="title">적립금 내역</p>
+
+            <div class="reserve-list-wrap">
+                <div class="reserve-box">
+                    <div class="inner">
+                        <p class="tit">
+                            <!--/user_name/--> 님의 <br>
+                            총 보유 적립금 <span class="icon">c</span>
+                        </p>
+                        <p class="cash">
+                            <!--/number/user_reserve/-->원
+                        </p>
+                    </div>
+                    <ul class="notice-list">
+                        <li>· 적립된 금액이 <!--/number/usable_reserve/-->원 이상 누적되었을 때, 사용하실 수 있습니다.</li>
+                        <li>· 결제 시 적립금 사용 여부를 확인할 수 있는 안내문이 나옵니다.</li>
+                    </ul>
+                </div>
+                <div class="tbl">
+                    <table summary="날짜, 적립내역, 적립금">
+                        <caption>적립금내역</caption>
+                        <colgroup>
+                            <col width="160" />
+                            <col width="*" />
+                            <col width="100" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="row">
+                                    <div class="tb-center">날짜</div>
+                                </th>
+                                <th scope="row">
+                                    <div class="tb-left">적립 내역</div>
+                                </th>
+                                <th scope="row">
+                                    <div class="tb-center">적립금</div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!--/if_reserve/-->
+                            <!--/loop_reserve/-->
+                            <tr>
+                                <td>
+                                    <div class="tb-center date">
+                                        <!--/reserve@date/-->
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="tb-left subject">
+                                        <!--/reserve@content/-->
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="tb-right price">
+                                        <!--/number/reserve@price/-->원
+                                    </div>
+                                </td>
+                            </tr>
+                            <!--/end_loop/-->
+                            <!--/else/-->
+                            <tr>
+                                <td colspan="3">
+                                    <div class="tb-center">적립금 내역이 없습니다.</div>
+                                </td>
+                            </tr>
+                            <!--/end_if/-->
+                        </tbody>
+                    </table>
+                </div>
+                <ol class="paging">
+                    <!--/if_pager_reserve::first/-->
+                    <li class="first"><a href="<!--/pager_reserve::first@link/-->">[처음]</a></li>
+                    <!--/end_if/-->
+                    <!--/if_pager_reserve::prev/-->
+                    <li class="prev"><a href="<!--/pager_reserve::prev@link/-->">[이전]</a></li>
+                    <!--/end_if/-->
+                    <!--/if_pager_reserve/-->
+                    <!--/loop_pager_reserve::page/-->
+                    <!--/if_pager_reserve::page@current/-->
+                    <li><strong>
+                            <!--/pager_reserve::page/-->
+                        </strong></li>
+                    <!--/else/-->
+                    <li><a href="<!--/pager_reserve::page@link/-->">
+                            <!--/pager_reserve::page/-->
+                        </a></li>
+                    <!--/end_if/-->
+                    <!--/end_loop/-->
+                    <!--/end_if/-->
+                    <!--/if_pager_reserve::next/-->
+                    <li class="next"><a href="<!--/pager_reserve::next@link/-->">[다음]</a></li>
+                    <!--/end_if/-->
+                    <!--/if_pager_reserve::last/-->
+                    <li class="last"><a href="<!--/pager_reserve::last@link/-->">[끝]</a></li>
+                    <!--/end_if/-->
+                </ol>
+                
+            </div>
+
+        </div><!-- #contentWrap -->
+    </div><!-- #contentWrapper-->
+
+    <!--/include_footer(1)/-->

@@ -1,0 +1,126 @@
+<!--/include_header(1)/-->
+<div id="containerWrap">
+    <div class="container">
+
+        <div class="community-wrap">
+
+            <div class="commu-tit-wrap">
+                <p class="title">즐거운 국민상점 고객센터</p>
+                <div class="commu-depth2">
+                    <a href="/shop/faq.html" class="active">자주묻는질문</a>
+                    <a href="/board/board.html?code=mkplanet" class="">문의하기</a>
+                </div>
+            </div>
+
+            <div class="community-con-wrap">
+                <div class="faq-search">
+                    <!--/form_search_faq/-->
+                    <div class="search-wrap">
+                        <fieldset>
+                            <legend>FAQ 검색 폼</legend>
+                            <h4>FAQ 자주 묻는 질문</h4>
+                            <div class="search_input">
+                                <!--/select_category/-->
+                                <!--/end_select/-->
+                                <div class="keyword">
+                                    <!--/input_keyword/-->
+                                </div>
+                            </div>
+                            <a href="<!--/link_search_faq/-->"><img alt="검색" src="/design/mkplanet/images/faq_ico.png"
+                                    class="btn-submit" /></a>
+                            <dl class="best-keyword">
+                                <dt><strong>BEST검색어</strong> : <ins>섭취방법</ins> <ins>효능</ins> <ins>배송</ins>
+                                    <ins>반품</ins>
+                                </dt>
+                                <dd>
+                                    <ul class="list">
+                                        <!--/loop_best_keyword/-->
+                                        <li><a href="<!--/best_keyword@link/-->">
+                                                <!--/best_keyword@keyword/-->
+                                            </a></li>
+                                        <!--/end_loop/-->
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </fieldset>
+                    </div><!-- .search-wrap -->
+                    <!--/end_form/-->
+                </div><!-- .faq-search-->
+                <div class="faq-category">
+                    <ul class="faq-menu">
+                        <!--/loop_category/-->
+                        <li><a href="<!--/category@link/-->" class="<!--/if_category@is_now/-->active<!--/end_if/-->"><!--/category@name/--></a></li>
+                        <!--/end_loop/-->
+                    </ul><!-- .faq-menu-->
+                </div><!-- .faq-category-->
+                <div class="commu-table">
+                    <table summary="분류 제목">
+                        <caption>질문/답변</caption>
+                        <colgroup>
+                            <col width="150" />
+                            <col width="*" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">
+                                    <div class="tb-center">분류</div>
+                                </th>
+                                <th scope="col">
+                                    <div class="tb-center">제목</div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!--/loop_faq/-->
+                            <tr class="question" uid="<!--/faq@uid/-->">
+                                <td>
+                                    <div class="tb-center tb-cate">
+                                        <!--/faq@category/-->
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="tb-left">
+                                        <!--/faq@subject/-->
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                            <tr class="answer">
+                                <td colspan="2">
+                                    <div class="tb-slide">
+                                        <!--/faq@answer/-->
+                                    </div>
+                                </td>
+                            </tr>
+                            <!--/end_loop/-->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="item-page">
+                <!--/if_pager_faq::first/-->
+                <a href="<!--/pager_faq::first@link/-->" class="paging-start">[처음]</a>
+                <!--/end_if/-->
+                <!--/if_pager_faq::prev/-->
+                <a href="<!--/pager_product::prev@link/-->" class="paging-prev">[이전]</a>
+                <!--/end_if/-->
+
+                <!--/if_pager_faq/-->
+                    <!--/loop_pager_faq::page/-->
+                    <!--/if_pager_faq::page@current/-->
+                    <a class="now" href="<!--/pager_faq::current@link/-->"><!--/pager_faq::page/--></a>
+                    <!--/else/-->
+                    <a href="<!--/pager_faq::page@link/-->"><!--/pager_faq::page/--></a>
+                    <!--/end_if/-->
+                    <!--/end_loop/-->
+                <!--/end_if/-->
+
+                <!--/if_pager_faq::next/--><a href="<!--/pager_faq::next@link/-->" class="paging-next">[다음]</a><!--/end_if/-->
+                <!--/if_pager_faq::last/--><a href="<!--/pager_faq::last@link/-->" class="paging-end">[끝]</a><!--/end_if/-->
+            </div>
+
+        </div>
+    </div><!-- #content -->
+</div><!-- #contentWrap -->
+<!--/include_footer(1)/-->

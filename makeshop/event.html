@@ -1,0 +1,116 @@
+<!--/include_header(1)/-->
+<div id="containerWrap">
+    <div class="container">
+
+        <div class="community-wrap">
+
+            <div class="commu-tit-wrap">
+                <p class="title">커뮤니티</p>
+                <div class="commu-list-wrap">
+                    <div class="commu-list">
+                        <div class="list"><a href="/shop/faq.html">FAQ</a></div>
+                        <div class="list"><a href="/board/board.html?code=mkplanet_board2">공지사항</a></div>
+                        <div class="list"><a href="/shop/page.html?id=6">멤버쉽혜택</a></div>
+                        <div class="list"><a href="/board/board.html?code=mkplanet_board1">구매후기</a></div>
+                        <div class="list"><a href="/board/board.html?code=mkplanet">질문과대답</a></div>
+                        <div class="list active"><a href="/board/board.html?code=mkplanet_board6">이벤트</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="community-con-wrap">
+                <div class="bbs-table-list">
+                    <!--/if_notice_list/-->
+                    <!-- .공지사항 리스트 시작 -->
+                    <div class="fixed-img-collist">
+                        <ul class="clear">
+                            <!--/loop_notice_list/-->
+                            <li>
+                                <a href="<!--/notice_list@link/-->">
+                                    <div class="thumb"><img src="<!--/notice_list@attach_origin_image/-->"></div>
+                                    <div class="subject">
+                                        <!--/notice_list@subject/-->
+                                    </div>
+                                    <div class="date">
+                                        <!--/date(%Y.%M.%D)/notice_list@date_write/-->
+                                    </div>
+                                </a>
+                            </li>
+                            <!--/end_loop/-->
+                        </ul>
+                    </div>
+                    <!--/end_if/-->
+                    <!--. 공지사항 리스트 끝! -->
+
+                    <div class="bbs-table-list">
+                        <div class="fixed-img-collist" style="position: relative;">
+                            <!--div style="position: absolute; top: 0; left: 0; z-index: 10;"><img src="http://xexymix.jpg3.kr/xexymix/img/content/event/event_thumnail_pc.jpg" alt="준비중"></div-->
+                            <ul class="clear">
+                                <!--/loop_list(8)/-->
+                                <li>
+                                    <a href="<!--/list@link/-->">
+                                        <div class="thumb">
+                                            <!--/if_list@attach_origin_image/-->
+                                            <img src="<!--/list@attach_origin_image/-->" />
+                                            <!--/else/-->
+                                            <div class="noimg">no image</div>
+                                            <!--/end_if/-->
+                                        </div>
+                                        <div class="subject">
+                                            <!--/list@subject/-->
+                                            <!--/if_list@comment_cnt/-->&nbsp;[
+                                            <!--/list@comment_cnt/-->]
+                                            <!--/end_if/-->
+                                            <!--/if_list@new_icon_image/-->&nbsp;
+                                            <!--img src="<!--/list@new_icon_image/-->"/-->
+                                            <!--/end_if/-->
+                                        </div>
+                                        <div class="date">
+                                            <!--/date(%Y.%M.%D)/list@date_write/-->
+                                        </div>
+                                    </a>
+                                </li>
+                                <!--/if_step(3)/-->
+                            </ul>
+                            <ul class="clear">
+                                <!--/end_if/-->
+                                <!--/end_loop/-->
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+
+
+                <div class="item-page">
+                    <a href="<!--/if_pager_list::prev@link/--><!--/pager_list::prev@link/--><!--/else/-->javascript:;<!--/end_if/-->"
+                        class="paging-prev">[이전]</a>
+
+                    <!--/loop_pager_list::page/-->
+                    <!--/if_pager_list::page@current/-->
+                    <a class="now" href="<!--/pager_list::current@link/-->">
+                        <!--/pager_list::current/-->
+                    </a>
+                    <!--/else/-->
+                    <a href="<!--/pager_list::page@link/-->">
+                        <!--/pager_list::page/-->
+                    </a>
+                    <!--/end_if/-->
+                    <!--/end_loop/-->
+
+                    <a href="<!--/if_pager_list::next@link/--><!--/pager_list::next@link/--><!--/else/-->javascript:;<!--/end_if/-->"
+                        class="paging-next">[다음]</a>
+                </div>
+            </div>
+
+        </div>
+    </div><!-- #content -->
+</div><!-- #contentWrap -->
+
+
+
+<!--/include_footer(1)/-->

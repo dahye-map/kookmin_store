@@ -1,0 +1,136 @@
+.basket-wrap { background:#fafafa; }
+.basket-wrap .btn-order { position:fixed; left:0; right:0; bottom:0; z-index:60; }
+.basket-wrap .btn-order a { background:#ff7600 url('/design/mkplanet/kkstore/img/bg_btn_order.png') 94% center no-repeat; display:block; padding:20px; font-size:17px; color:#fff; background-size:34px; }
+
+
+.basket-tab-wrap .basket-tab { position:relative; background:#fff; display:flex; display:-webkit-flex; padding:10px 20px; }
+.basket-tab-wrap .basket-tab:before { content:''; position:absolute; width:100%; height:30%; background:#000; 
+    left:0; top:0;
+    /*start ------------*/
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f0efef), color-stop(1, transparent));
+	background: -moz-linear-gradient(top, #f0efef 0%, transparent 100%);
+	background: -webkit-linear-gradient(top,  #f0efef 0%, transparent 100%);
+	background: -o-linear-gradient(top,  #f0efef 0%, transparent 100%);
+	background: -ms-linear-gradient(top,  #f0efef 0%, transparent 100%);
+	background: linear-gradient(top,  #f0efef 0%, transparent 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0efef', endColorstr='transparent', gradientType=0);
+    opacity:.5; 
+}
+.basket-tab-wrap .basket-tab a { position:relative; padding:15px 10px; display:block; font-size:16px; color:#9d9d9d; }
+.basket-tab-wrap .basket-tab a.active { color:#ff4e09; font-weight:bold; }
+.basket-tab-wrap .basket-tab a.active:after { content:''; display:block; position:absolute; left:0; top:7px; border:1px solid #ff4e09; border-radius:100%; transform:rotate(-10deg); width:100%; height:30px; }
+
+.chk-btn-wrap { display:flex; display:-webkit-flex; justify-content:space-between; align-items:center; padding:10px 20px; }
+.chk-btn-wrap .all-select { font-size:14px; color:#727272; }
+.chk-btn-wrap .chk-delete a { display:block; font-size:14px; color:#727272; text-decoration:underline; }
+
+
+.not-prov-wrap,
+.prov-wrap { background:#fff; border-bottom:1px solid #f0f0f0; padding-bottom:40px; margin-bottom:10px; }
+
+.basket-list { padding:30px 20px; }
+.basket-list .title { color:#000; font-size:17px; font-weight:bold; }
+
+.basket-list ul li { position:relative; padding:30px 0; }
+.basket-list ul li:not(:last-child) { border-bottom:1px solid #dadada; }
+.basket-list ul li form { display:flex; display:-webkit-flex; }
+.basket-list .btn-del-cart { position:absolute; right:0; top:20px; width:20px; }
+.basket-list .input { width:7%; }
+.basket-list .thumb { width:32%; min-width:80px; }
+.basket-list .thumb img { border-radius:15px; overflow:hidden; }
+.basket-list .info { width:50%; padding-left:20px; }
+.basket-list .info .name { font-size:15px; font-weight:bold; color:#000; margin-bottom:10px; }
+.basket-list .info .option { font-size:14px; color:#000; opacity:.5; line-height:1.5; margin-bottom:15px; 
+    white-space:normal; display:-webkit-box; line-clamp:2; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;
+}
+.basket-list .info .price-wrap { margin-bottom:20px; }
+.basket-list .info .price-wrap .price01 { display:inline-block; color:#1d1d1d; font-size:14px; font-weight:bold; }
+.basket-list .info .price-wrap .price02 { display:inline-block; color:#1d1d1d; opacity:.4; font-size:14px; text-decoration:line-through; }
+.basket-list .info .qty-wrap { display:flex; display:-webkit-flex; justify-content:center; border:1px solid #c3c3c3; border-radius:20px; overflow:hidden; width:110px; }
+.basket-list .info .qty-wrap a { width:35px; text-align:center; }
+.basket-list .info .qty-wrap input { border:none; width:30px; padding:0; text-align:center; font-weight:bold; }
+.basket-list .info .btn-modify { position:absolute; right:0; bottom:40px; color:#000; opacity:.6; text-decoration:underline; }
+
+
+.all-price-wrap { background:#f3f3f3; margin-left:20px; margin-right:20px; padding:20px 30px; border-radius:15px; }
+.all-price-wrap .price-each-info-top { border-bottom:1px solid #b6b6b6; }
+.all-price-wrap .txt p { display:flex; display:-webkit-flex; justify-content:space-between; margin:12px 0; }
+.all-price-wrap .price-each-info-top .txt .title { font-size:15px; color:#000; opacity:.5; }
+.all-price-wrap .price-each-info-top .txt .price { font-size:15px; color:#000; }
+.all-price-wrap .price-each-info-bottom .txt .title { font-size:15px; color:#000; }
+.all-price-wrap .price-each-info-bottom .txt .price { font-size:15px; color:#000; font-weight:bold; }
+
+
+.price-total-wrap { background:#fff; padding:30px 50px; }
+.price-total-wrap .txt p { display:flex; display:-webkit-flex; justify-content:space-between; margin:15px 0; }
+.price-total-wrap .txt .title { font-size:15px; color:#000; opacity:.5; }
+.price-total-wrap .txt .price { font-size:18px; color:#000; font-weight:bold; }
+.price-total-wrap .total .title { color:#ff7600; opacity:1; }
+.price-total-wrap .total .price { color:#ff7600; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#basket .btn-wrap {padding:15px 10px;}
+#basket .btn-wrap div {width:49%; float:left;}
+#basket .btn-wrap div:last-child {float:right;}
+#basket .all-select {border-top: 1px solid #4a4a4a; border-bottom: 1px solid #dedede; background-color: #f1f1f1; padding:10px;}
+#basket .not_provider li {padding:20px 0;}
+#basket .provider li {padding:20px 0;}
+#basket figure {width:100%; display: table; box-sizing: border-box; padding:0 10px;}
+#basket .basketLeft {width:110px; position:relative; float: left;}
+#basket .basketLeft a {padding-right: 20px; margin-top: 20px; display:block;}
+#basket .basketLeft .MS_input_checkbox {top:0; left:0; position:absolute;}
+#basket .basketRight {padding-left:110px;}
+#basket .basketRight p {color:#707070; margin-bottom:5px;}
+#basket .basketRight .pname {border-bottom:1px solid #dedede;  padding-bottom: 4px;}
+#basket .basketRight .pname .blue-delivery {background-color: #74a9e4; color:#fff; font-size:0.917em; padding: 1px 2px;}
+#basket .basketRight .pname .red-delivery {background-color: #d674e4; color:#fff; font-size:0.917em; padding: 1px 2px;}
+#basket .basketRight .pname .fa {float:right; margin-top: -6px;}
+#basket .basketRight .fa-plus {background-color: #bbb; width: 35px; height: 35px; text-align: center; vertical-align: middle; line-height: 35px; color: #fff;}
+#basket .basketRight .fa-minus {background-color: #bbb; width: 35px; height: 35px; text-align: center; vertical-align: middle; line-height: 35px; color: #fff;}
+#basket .basketRight .btn_Black {margin-top:5px;}
+#basket .basketRight .MS_select {width:100%;}
+#basket .basketRight .amount-input {width:50px;}
+#basket .price-each-info-top {text-align : right; border-top: 1px solid #cbcbcb; border-bottom: 1px solid #cbcbcb; background:#eaeaea; padding:10px;}
+#basket .price-each-info-bottom {text-align : right; padding:10px; background:#eaeaea; border-bottom:1px solid #cbcbcb;}
+#basket .price-total-info-top {border-top: 2px solid #464646; border-bottom: 1px solid #cbcbcb; background-color: #eaeaea; text-align : right;  padding:10px; margin-top:10px;}
+#basket .price-total-info-bottom {border-bottom: 1px solid #cbcbcb; background-color: #eaeaea; text-align : right; padding:15px 10px; font-size:1.333em;}
+#basket .price-total-info-bottom .txt-price {color : #f1191f; font-weight:bold;}
+#basket .price-total-info-bottom .txt-reserve {color : #898989; font-size:0.688em;}
+#basket .delivery-type { padding:15px 10px;}
+#basket .order-btn {padding:0 10px;}
+#basket .naver-checkout {margin-top: 20px;}
+
+@media screen and (min-width:768px) {
+ #basket .basketRight .btn_Black {width:315px; display:inline-block; vertical-align: middle; margin-top:0px;}
+}
+
+.cart-ft2 { display: block; text-align: center; } 
+
+.basket-option-dlist li img { width:30px; height:30px; vertical-align:middle; }
+
+
+
+/* 정기배송 탭 */
+#basket .cart-tab { width:100%; height:32px; border-top:1px solid #464646; }
+#basket .cart-tab:after { clear: both; content: ""; display: block; }
+#basket .cart-tab li { float:left; width:50%; height:31px; border-bottom:1px solid #cecece; }
+#basket .cart-tab li a { display:inline-block; width:100%; height:100%; color:#3b3b3b; font-size:12px; text-align:center; text-decoration:none; background:none; }
+#basket .cart-tab li a span { display:block; height:18px; line-height:18px; margin-top:6px; }
+#basket .cart-tab li:first-child a span { border-right:2px solid #e2e2e2; }
+#basket .cart-tab li.now { border-bottom:1px solid #f1191f; }
+#basket .cart-tab li.now a { font-weight:bold; color:#f1191f; }

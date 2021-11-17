@@ -1,0 +1,189 @@
+<!--/include_header(2)/-->
+
+<!-- 본문 -->
+<!-- s:containerWrap -->
+<div id="containerWrap">
+    <!-- s:container -->
+    <div class="container">
+
+        <div class="community-wrap">
+
+            <div class="commu-tit-wrap">
+                <p class="title">커뮤니티</p>
+                <div class="commu-list-wrap">
+                    <div class="commu-list">
+                        <div class="list"><a href="/m/faq.html">
+                                <p class="title">자주묻는질문</p>
+                            </a></div>
+                        <div class="list"><a href="/m/board.html?code=mkplanet_board2">
+                                <p class="title">공지사항</p>
+                            </a></div>
+                        <div class="list"><a href="">
+                                <p class="title">멤버쉽혜택</p>
+                            </a></div>
+                        <div class="list"><a href="/m/board.html?code=mkplanet_board1">
+                                <p class="title">구매후기</p>
+                            </a></div>
+                        <div class="list"><a href="">
+                                <p class="title">케어별 관리법</p>
+                            </a></div>
+                        <div class="list"><a href="/m/board.html?code=mkplanet">
+                                <p class="title">질문과대답</p>
+                            </a></div>
+                        <div class="list active"><a href="/m/board.html?code=mkplanet_board6">
+                                <p class="title">이벤트</p>
+                            </a></div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="community-con-wrap">
+
+                <!-- 공지글 -->
+                <div class="notice">
+                    <!--/if_notice_list/-->
+                    <!--/loop_notice_list/-->
+                    <div class="notice-bar">
+                        <div class="thumb"><a href="<!--/notice_list@link/-->"><img src="<!--/notice_list@attach_origin_image/-->"></a></div>
+                        <div class="subject">
+                            <a href="<!--/notice_list@link/-->">
+                                <!--/notag/notice_list@subject/-->
+                                <!--/if_notice_list@comment_cnt/-->
+                                (
+                                <!--/notice_list@comment_cnt/-->)
+                                <!--/end_if/-->
+                            </a>
+                        </div>
+                        <p class="date">
+                            <!--/date(%Y-%M-%D)/list@date_write/-->
+                        </p>
+                    </div>
+                    <!--/end_loop/-->
+                    <!--/end_if/-->
+                </div>
+                <!-- //공지글 -->
+                <ul class="boardList">
+                    <!--/if_list/-->
+                    <!--/loop_list(10)/-->
+                    <li>
+                        <!--/if_list@depth(+1)/-->
+                        <div class="<!--/if_list@depth/-->bl_depth<!--/list@depth/--><!--/end_if/-->">
+                            <i class="fa fa-level-up fa-rotate-90"></i>
+                        </div>
+                        <!--/end_if/-->
+                        <!--/if_list@product_mobile_image/-->
+                        <div class="bl_image">
+                            <a href="<!--/list@link_product/-->">
+                                <img src="<!--/list@product_mobile_image/-->" />
+                            </a>
+                        </div>
+                        <!--/end_if/-->
+                        
+                        <!--/if_not_link/-->
+                        <!--/if_list@product_name/-->
+                        <dt class="dl_goodsName"><a href="<!--/list@link_product/-->">
+                                <!--/notag/list@product_name/-->
+                            </a></dt>
+                        <!--/end_if/-->
+                        <!--/end_if/-->
+
+                        <!--/if_list@link/-->
+                        <a href="<!--/list@link/-->">
+                            <!--/if_list@is_original_del/-->
+                            <div class="original-del">* 아래 답변의 최초게시물을 게시자가 삭제하였습니다.</div>
+                            <!--/end_if/-->
+                            <div class="thumb">
+                                <img src="<!--/list@attach_origin_image/-->" alt="">
+                            </div>
+                            <div>
+                                <!--/if_list@link/-->
+                                <p class="subject">
+                                    <a href=""><!--/notag/list@subject/--></a>
+                                </p>
+                                <p class="date">
+                                    <!--/date(%Y-%M-%D)/list@date_write/-->
+                                </p>
+                                <!--/else/-->
+                                <p class="subject">
+                                    <a href=""><!--/notag/list@spam_subject/--></a>
+                                </p>
+                                <p class="date">
+                                    <!--/date(%Y-%M-%D)/list@date_write/-->
+                                </p>
+                                <!--/end_if/-->
+
+                                <!--/if_list@new_icon_image/-->
+                                <span class="bl_iconNew">N</span>
+                                <!--/end_if/-->
+                                <!--/if_list@hit_icon_image/-->
+                                <span class="bl_iconHit">H</span>
+                                <!--/end_if/-->
+                            </div>
+                        </a>
+                        <!--/end_if/-->
+                    </li>
+                    <!--/end_loop/-->
+                    <!--/else/-->
+                    <li>
+                        <div class="none-data">
+                            <i class="fa fa-exclamation-triangle fa-2x"></i>
+                            <p>등록/검색된 게시글이 없습니다.</p>
+                        </div>
+                    </li>
+                    <!--/end_if/-->
+                </ul>
+
+                <div class="paging">
+                    <!--/if_pager_list::prev/-->
+                    <a href="<!--/pager_list::prev@link/-->"><span class="fa fa-angle-left"></span></a>
+                    <!--/end_if/-->
+                    <!--/if_pager_list/-->
+                    <!--/loop_pager_list::page(5)/-->
+                    <!--/if_pager_list::page@current/-->
+                    <a href="javascript:return false;" class="now">
+                        <!--/pager_list::page/-->
+                    </a>
+                    <!--/else/-->
+                    <a href="<!--/pager_list::page@link/-->">
+                        <!--/pager_list::page/-->
+                    </a>
+                    <!--/end_if/-->
+                    <!--/end_loop/-->
+                    <!--/end_if/-->
+                    <!--/if_pager_list::next/-->
+                    <a href="<!--/pager_list::next@link/-->"><span class="fa fa-angle-right"></span></a>
+                    <!--/end_if/-->
+                </div>
+
+
+                <div class="search-wrap">
+                    <!-- .검색 폼시작 -->
+                    <fieldset>
+                        <div class="item-search">
+                            <label>
+                                <!--/select_search_type(txt-input1)/-->
+                            </label>
+                            <div class="wrap">
+                                <!--/input_keyword(txt-input1)/-->
+                            </div>
+                            <a href="<!--/link_search/-->" class="btn-gray-h25"><strong>검색</strong></a>
+                        </div>
+                    </fieldset>
+                    <!-- .검색 폼 끝 -->
+                </div><!-- .search-wrap -->
+            </div>
+
+
+        </div>
+        <!-- //border-list -->
+
+    </div>
+    <!-- //contents -->
+</div>
+<!-- //container -->
+<!-- //본문 -->
+
+<!--/include_footer(1)/-->

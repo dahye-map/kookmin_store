@@ -1,0 +1,102 @@
+<!--/include_header(1)/-->
+
+<!-- s:containerWrap -->
+<div id="containerWrap">
+    <!-- s:container -->
+    <div class="container">
+
+        <div class="coupon-list">
+
+            <div class="mypage-sub-tab">
+                <div class="mypage-sub">
+                    <div class="tab"><a href="/m/coupon_list.html" class="active">쿠폰내역</a></div>
+                    <div class="tab"><a href="/m/order_list.html">주문내역</a></div>
+                    <div class="tab"><a href="/m/mypage.html?mypage_type=myreserve">적립금내역</a></div>
+                    <div class="tab"><a href="/m/wishlist.html">관심상품</a></div>
+                    <div class="tab"><a href="/m/mypage.html?mypage_type=myarticle">내 게시글보기</a></div>
+                </div>
+            </div>
+
+            <div class="coupon-num">
+                <!--/form_coupon/-->
+                <ul>
+                    <li>
+                        <!--/input_coupon_number(input-text)/-->
+                        <a href="<!--/link_coupon_insert/-->" class="sc-btn-insert">등록</a>
+                    </li>
+                    <li>
+                        <p>* 오프라인, 이메일, 모바일을 통해 발급 받으신 쿠폰인증번호를 입력해주시면 발급 가능합니다.</p>
+                    </li>
+                </ul>
+                <!--/end_form/-->
+            </div>
+            
+            
+            <section class="couponList">
+                <p class="title">내가 갖고 있는 쿠폰</p>
+                <div class="mycouponWrap">
+                    <!--/block_coupon_list/-->
+                    <!-- 보유 쿠폰 리스트 -->
+                    <div class="list">
+                        <!--/if_coupon_list/-->
+                        <!--/loop_coupon_list/-->
+                        <div>
+                            <div class="coupon-tit">
+                                <p>[<!--/coupon_list@number/-->] <!--/coupon_list@name/--></p>
+                            </div>
+                            <div class="coupon-con">
+                                <p>
+                                    <span class="sub-tit">쿠폰적용품목</span>
+                                    <span class="desc"><!--/coupon_list@apply_type/--></span>
+                                </p>
+                                <!--/if_coupon_list@valid_price/-->
+                                <p>
+                                    <span class="sub-tit">사용가능금액</span>
+                                    <span class="desc"><!--/number/coupon_list@valid_price/-->원이상</span>
+                                </p>
+                                <!--/end_if/-->
+                                <!--/if_coupon_list@coupon_type(DISCOUNT)/-->
+                                <!--/if_coupon_list@discount_max_price/-->
+                                <p>
+                                    <span class="sub-tit">할인/적립액(률)</span>
+                                    <span class="desc"><!--/number/coupon_list@discount_max_price/-->원</span>
+                                </p>
+                                <!--/end_if/-->
+                                <!--/if_coupon_list@discount_max_rate/-->
+                                <p>
+                                    <span class="sub-tit">할인/적립액(률)</span>
+                                    <span class="desc"><!--/coupon_list@discount_max_rate/-->%</span>
+                                </p>
+                                <!--/end_if/-->
+                                <!--/end_if/-->
+                                <p class="date">
+                                    <span class="sub-tit">사용기간</span>
+                                    <span class="desc">
+                                        <!--/if_coupon_list@use_end_date/-->
+                                        <!--/date(%Y-%M-%D)/coupon_list@use_start_date/-->
+                                        ~
+                                        <!--/date(%Y-%M-%D)/coupon_list@use_end_date/-->
+                                        <!--/end_if/-->
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                        <!--/end_loop/-->
+                        <!--/else/-->
+                        <div class="no-data">보유쿠폰이 없습니다.</div>
+                        <!--/end_if/-->
+                    </div>
+                    <!-- //보유 쿠폰  페이징 -->
+                    <!--/end_block/-->
+                    <!-- //보유 쿠폰 리스트 -->
+
+                </div>
+            </section>
+        </div>
+
+    </div>
+    <!-- //contents -->
+</div>
+<!-- //container -->
+
+<!--/include_footer(1)/-->

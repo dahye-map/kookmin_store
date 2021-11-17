@@ -1,0 +1,988 @@
+<!--/include_header(1)/-->
+
+<!-- 본문 -->
+<!-- s:containerWrap -->
+<div id="containerWrap">
+    <!-- s:container -->
+    <div class="container">
+
+        <div class="mysubs">
+            <p class="big-title">정기배송</p>
+            <div class="tabWrap">
+                <ul class="mysubs-tab">
+                    <li class="<!--/if_link_user_save/-->li-01<!--/else/-->li-01-1<!--/end_if/--> <!--/if_is_view_schedule/-->now<!--/end_if/-->">
+                        <a href="#none" onclick="fnMove('MS_SUBS_SCHEDULE')">정기배송 스케줄관리</a>
+                    </li>
+                    <li class="li-02 <!--/if_is_view_billing/-->now<!--/end_if/-->">
+                        <a href="#none" onclick="fnMove('MS_SUBS_BILLING')">결제카드 정보</a>
+                    </li>
+                    <!--/if_link_user_save/-->
+                    <li class="li-03 <!--/if_is_view_config/-->now<!--/end_if/-->">
+                        <a href="#none" onclick="fnMove('MS_SUBS_CONFIG')">기타 설정</a>
+                    </li>
+                    <!--/end_if/-->
+                </ul>
+            </div>
+            <div class="tabWrap">
+                <!--/block_subs_schedule/-->
+                <div class="step-comm">
+
+                    <!--/block_subs_calendar/-->
+                    <!--/if_subs_calendar/-->
+                    <div class="subs-calendar">
+                        <div class="sc-page-hd">
+                            <div class="sc-date">
+                                <!--/subs_calendar_year_text/-->.
+                                <!--/subs_calendar_month_text/-->
+                                <!--/if_link_subs_calendar_prev/--><a href="<!--/link_subs_calendar_prev/-->"
+                                    class="sc-btn-prev"><img src="/images/common/mysubs_h15_left.gif" alt="" /></a>
+                                <!--/end_if/-->
+                                <!--/if_link_subs_calendar_next/--><a href="<!--/link_subs_calendar_next/-->"
+                                    class="sc-btn-next"><img src="/images/common/mysubs_h15_right.gif" alt="" /></a>
+                                <!--/end_if/-->
+                            </div>
+                        </div>
+                        <div class="sc-page-cont">
+                            <table>
+                                <caption>달력</caption>
+                                <colgroup>
+                                    <col style="width:14.28%" span="7" />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th class="sc-sun">일</th>
+                                        <th class="sc-mon">월</th>
+                                        <th class="sc-the">화</th>
+                                        <th class="sc-wed">수</th>
+                                        <th class="sc-thu">목</th>
+                                        <th class="sc-fri">금</th>
+                                        <th class="sc-sat">토</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!--/loop_subs_calendar/-->
+                                    <!--/if_subs_calendar@num(1)/-->
+                                    <tr>
+                                        <!--/end_if/-->
+                                        <td id="<!--/subs_calendar@id/-->"
+                                            class="<!--/if_subs_calendar@week(일)/-->sc-sun <!--/else_if_subs_calendar@week(토)/-->sc-sat <!--/end_if/--><!--/if_subs_calendar@type(disable)/-->sc-disable<!--/end_if/-->">
+                                            <!--/if_subs_calendar@link/-->
+                                            <a class="sc-link" href="<!--/subs_calendar@link/-->">
+                                                <div class="sc-fill-base">
+                                                    <p class="sc-day">
+                                                        <!--/subs_calendar@day/-->
+                                                        <!--/if_subs_calendar@day_text/--> <span>
+                                                            <!--/subs_calendar@day_text/-->
+                                                        </span>
+                                                        <!--/end_if/-->
+                                                    </p>
+                                                    <div class="subs_order" id="subs_order_<!--/subs_calendar@day/-->">
+                                                        <!--/loop_subs_calendar@subs_order(3)/-->
+                                                        <!--/if_subs_calendar@subs_order@is_soldout/-->
+                                                        <span class="sc-band sc-soldout">
+                                                            <!--/subs_calendar@subs_order@product_name/-->
+                                                        </span>
+                                                        <!--/else/-->
+                                                        <span
+                                                            class="sc-band sc-possible<!--/subs_calendar@subs_order@color_id/-->">
+                                                            <!--/subs_calendar@subs_order@product_name/-->
+                                                        </span>
+                                                        <!--/end_if/-->
+                                                        <!--/end_loop/-->
+                                                        <!--/if_subs_calendar@subs_product_total(+4)/-->
+                                                        <div><span class="sc-more">+more</span></div>
+                                                        <!--/end_if/-->
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <!--/else/-->
+                                            <div class="sc-fill-base">
+                                                <p class="sc-day">
+                                                    <!--/subs_calendar@day/-->
+                                                    <!--/if_subs_calendar@day_text/--> <span>
+                                                        <!--/subs_calendar@day_text/-->
+                                                    </span>
+                                                    <!--/end_if/-->
+                                                </p>
+                                            </div>
+                                            <!--/end_if/-->
+                                        </td>
+                                        <!--/if_subs_calendar@num(7)/-->
+                                    </tr>
+                                    <!--/end_if/-->
+                                    <!--/end_loop/-->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!--/else/-->
+                    <!-- 정기배송 신청 내역 없음 -->
+                    <div class="tabWrap">
+                        <div id="subs1Wrap">
+                            <div class="schedule-none">
+                                <div class="none-txt"><span class="fa fa-exclamation-circle"></span> 정기배송 서비스를 이용하지 않고
+                                    있습니다.</div>
+                                <div class="none-txt2"><span class="fa fa-truck fa-4x"></span><br />나만의 배송일에 맞춰<br />필요한
+                                    상품을 편하게 배송 받으세요~</div>
+                                <div class="none-txt3">
+                                    <ul>
+                                        <li><span>·</span>한 번만 등록하면 편리하게 자동결제</li>
+                                        <li><span>·</span>언제든지 건너뛰기로 스마트하게 패스 가능</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/end_if/-->
+                    <!--/end_block/-->
+
+                    <!-- 정기배송 리스트 팝업 -->
+                    <!--/block_subs_calendar_product/-->
+                    <div id="subsList" class="step-1omm">
+                        <div class="layer">
+                            <div class="layer-pop">
+                                <h3>
+                                    정기배송 리스트
+                                    <!--/date(%Y.%M.%D)/subs_date/-->
+                                </h3>
+                                <div class="txt">
+                                    <ul>
+                                        <!--/loop_calendar_product/-->
+                                        <li>
+                                            <a href="<!--/calendar_product@link/-->">
+                                                <span
+                                                    class="ico-color <!--/if_calendar_product@is_soldout/-->sc-soldout<!--/else/-->sc-possible<!--/calendar_product@color_id/--><!--/end_if/-->"></span>
+                                                <!--/if_calendar_product@is_jump/-->
+                                                <del class="subs-subj">
+                                                    <!--/calendar_product@product_name/-->
+                                                </del>
+                                                <span class="ico-state state02">건너뛰기</span>
+                                                <!--/else_if_calendar_product@ordernum/-->
+                                                <span class="subs-subj">
+                                                    <!--/calendar_product@product_name/-->
+                                                </span>
+                                                <span class="ico-state state04">배송완료</span>
+                                                <!--/else_if_calendar_product@is_soldout/-->
+                                                <span class="subs-subj">
+                                                    <!--/calendar_product@product_name/-->
+                                                </span>
+                                                <span class="ico-state state03">일시품절</span>
+                                                <!--/else/-->
+                                                <span class="subs-subj">
+                                                    <!--/calendar_product@product_name/-->
+                                                </span>
+                                                <span class="ico-state state01">배송예정</span>
+                                                <!--/end_if/-->
+                                            </a>
+                                        </li>
+                                        <!--/end_loop/-->
+                                    </ul>
+                                </div>
+                                <a href="#subsList" class="close layer-subslist"><img src="/design/mkplanet/kkstore/img/btn_ranking_close.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/end_block/-->
+                    <!-- //정기배송 리스트 -->
+                    <!--/block_subs_detail/-->
+                    <!--/if_subs_fail_comment/-->
+                    <div class="dsc-schedule-fail">
+                        <strong><span class="fa fa-exclamation-circle"></span> 정기배송 결제 실패</strong><br />
+                        실패 사유 :
+                        <!--/subs_fail_comment/--><br />자세한 내용은 카드사 혹은 은행에 문의 바랍니다.
+                    </div>
+                    <!--/end_if/-->
+                    <!-- 정기배송 상세내용 -->
+                    <div class="schedule">
+                        <!-- 정기배송 안내 -->
+                        <section class="subsBody">
+                            <p class="title">정기배송 안내</p>
+                            <div>
+                                <table>
+                                    <colgroup>
+                                        <col width="130" />
+                                        <col width="*" />
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>· 신청번호</th>
+                                            <td>
+                                                <!--/subs_number/-->
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <!--/if_is_compleate/-->· 정기배송일
+                                                <!--/else/-->· 정기배송 예정일
+                                                <!--/end_if/-->
+                                            </th>
+                                            <td>
+                                                <!--/subs_detail_date/-->(
+                                                <!--/subs_week_text/-->)
+                                                <!--/if_is_jump/--> <span class="fc-red"><b>[건너뛰기]</b></span>
+                                                <!--/end_if/-->
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" class="subs-btm-btn">
+                                                <!--/if_link_order/-->
+                                                <a href="<!--/link_order/-->" id="subs_is_jump"
+                                                    class="btn-normal">주문상세조회</a>
+                                                <!--/else_if_link_jump/-->
+                                                <a href="<!--/link_jump/-->" id="subs_is_jump" class="btn-cancel">이번 배송
+                                                    건너뛰기</a>
+                                                <!--/end_if/-->
+                                                <!--/if_link_jump_cancel/-->
+                                                <a href="<!--/link_jump_cancel/-->" id="subs_is_jump"
+                                                    class="btn-cancel">건너뛰기 취소</a>
+                                                <!--/end_if/-->
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                        <!-- //정기배송 안내 -->
+                        <!-- 이번 배송일에 받을 상품 -->
+                        <!--/if_subs_provider/-->
+                        <div id="subs_view">
+                            <p class="title">이번 배송일에 받을 상품</p>
+                            <!--/loop_subs_provider/-->
+                            <p class="brand">
+                                <!--/subs_provider@name/-->
+                            </p>
+                            <ul class="prd_order">
+                                <!--/loop_subs_provider@subs_product/-->
+                                <li class="subs_order_list">
+                                    <figure>
+                                        <!--/if_subs_provider@subs_product@is_jump/-->
+                                        <div class="basketLeft thumb-pass">
+                                            <a href="<!--/subs_provider@subs_product@link/-->"><img
+                                                    src="<!--/subs_provider@subs_product@product_img/-->"
+                                                    class="response100" alt="" /></a>
+                                            <div class="pass-txt">
+                                                <div class="flex-center"><strong>건너뛰기</strong></div>
+                                            </div>
+                                        </div>
+                                        <!--/else_if_subs_provider@subs_product@is_soldout/-->
+                                        <div class="basketLeft thumb-soldout">
+                                            <a href="<!--/subs_provider@subs_product@link/-->">
+                                                <img src="<!--/subs_provider@subs_product@product_img/-->"
+                                                    class="response100" alt="" />
+                                                <div class="soldout-txt">
+                                                    <div class="flex-center"><strong>SOLD<br />OUT</strong></div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <!--/else/-->
+                                        <div class="basketLeft">
+                                            <a href="<!--/subs_provider@subs_product@link/-->"><img
+                                                    src="<!--/subs_provider@subs_product@product_img/-->"
+                                                    class="response100"
+                                                    alt="<!--/subs_provider@subs_product@product_name/-->" /></a>
+                                        </div>
+                                        <!--/end_if/-->
+                                        <figcaption class="basketRight">
+
+                                            <div class="pname">
+                                                <!--/subs_provider@subs_product@product_name/-->
+                                            </div>
+                                            <!--/if_subs_provider@subs_product@option/-->
+                                            <div class="option">
+                                                <!--/subs_provider@subs_product@option/-->
+                                            </div>
+                                            <!--/end_if/-->
+                                            <div class="reserve-point">
+                                                <!--/if_subs_provider@subs_product@reserve_price/--><img
+                                                    src="/makeshop/newmanager/icons/icon_reserve.png" alt="적립금" />
+                                                <!--/number/subs_provider@subs_product@reserve_price/-->원 적립
+                                                <!--/end_if/-->
+                                                <!--/if_subs_provider@subs_product@point_price/--><img
+                                                    src="/makeshop/newmanager/icons/icon_point.png" alt="포인트" />
+                                                <!--/number/subs_provider@subs_product@point_price/-->point 적립
+                                                <!--/end_if/-->
+                                            </div>
+
+                                            <div class="psale"><strong><span>
+                                                        <!--/number/subs_provider@subs_product@discount_price/-->
+                                                    </span>원</strong></div>
+                                            <div class="price-sale">
+                                                <dl>
+                                                    <dt><span class="fa fa-level-up"></span> 상품가</dt>
+                                                    <dd>
+                                                        <!--/number/subs_provider@subs_product@price/-->원
+                                                    </dd>
+                                                </dl>
+                                                <!--/if_subs_provider@subs_product@discount_period(+1)/-->
+                                                <dl>
+                                                    <dt><span class="fa fa-level-up"></span> 상품별 기간할인</dt>
+                                                    <dd><span class="fc-red">-
+                                                            <!--/number/subs_provider@subs_product@discount_period/-->원
+                                                        </span></dd>
+                                                </dl>
+                                                <!--/end_if/-->
+                                                <!--/if_subs_provider@subs_product@discount_group(+1)/-->
+                                                <dl>
+                                                    <dt><span class="fa fa-level-up"></span> 상품별 그룹할인</dt>
+                                                    <dd><span class="fc-red">-
+                                                            <!--/number/subs_provider@subs_product@discount_group/-->원
+                                                        </span></dd>
+                                                </dl>
+                                                <!--/end_if/-->
+                                                <!--/if_subs_provider@subs_product@discount_subs(+1)/-->
+                                                <dl>
+                                                    <dt><span class="fa fa-level-up"></span> 정기배송 할인</dt>
+                                                    <dd><span class="fc-red">-
+                                                            <!--/number/subs_provider@subs_product@discount_subs/-->원
+                                                        </span></dd>
+                                                </dl>
+                                                <!--/end_if/-->
+                                            </div>
+
+                                            <div class="count">
+                                                <div class="qty-wrap">
+                                                    <a href="<!--/subs_provider@subs_product@link_amount_down/-->"><img
+                                                            src="/design/mkplanet/kkstore/img/qty_down.jpg" alt=""></a>
+                                                    <!--/subs_provider@subs_product@input_amount/-->
+                                                    <a href="<!--/subs_provider@subs_product@link_amount_up/-->"><img
+                                                            src="/design/mkplanet/kkstore/img/qty_up.jpg" alt=""></a>
+                                                </div>
+                                                <!--/if_subs_provider@subs_product@link_amount_update/-->
+                                                <span class="cnt_right">
+                                                    <a href="<!--/subs_provider@subs_product@link_amount_update/-->"
+                                                        class="btn-modify">수량변경</a>
+                                                </span>
+                                                <!--/end_if/-->
+                                            </div>
+
+
+                                        </figcaption>
+                                    </figure>
+                                    <div class="basket-subs">
+                                        <div class="subs-period">
+                                            <span><em class="fa fa-sliders"></em>배송주기</span>
+                                            <strong><a href="<!--/subs_provider@subs_product@link_subs_edit/-->"
+                                                    class="btn_subsedit">
+                                                    <!--/subs_provider@subs_product@cycle/--> 주 간격 /
+                                                    <!--/subs_provider@subs_product@week/-->요일 배송 <em
+                                                        class="fa fa-angle-right"></em>
+                                                </a></strong>
+                                        </div>
+                                        <div class="subs-btns">
+                                            <!--/if_subs_provider@subs_product@is_jump/-->
+                                            <a href="<!--/subs_provider@subs_product@link_subs_jump_cancel/-->"
+                                                class="btn-normal">건너뛰기 취소</a>
+                                            <!--/else/-->
+                                            <a href="<!--/subs_provider@subs_product@link_subs_jump/-->"
+                                                class="btn-normal">이번 배송 건너뛰기</a>
+                                            <!--/end_if/-->
+                                            <a href="<!--/subs_provider@subs_product@link_subs_cancel/-->"
+                                                class="btn-cancel">정기배송 취소</a>
+                                        </div>
+                                    </div>
+                                    <!--/end_loop/-->
+                                </li>
+                            </ul>
+                            <!--/end_loop/-->
+
+                        </div>
+                        <div class="prd-total">
+                            <p class="title">총 결제 예정금액</p>
+                            <dl>
+                                <dt>전체 상품금액</dt>
+                                <dd>
+                                    <!--/number/subs_product_price/-->원
+                                </dd>
+                            </dl>
+                            <dl class="total-discount">
+                                <dt>총 할인금액
+                                    <!--/if_subs_sale_total_price(+1)/--><a href="#total-discount-list"
+                                        class="fa fa-plus btn-angle"></a>
+                                    <!--/end_if/-->
+                                </dt>
+                                <dd>
+                                    <!--/number/subs_sale_total_price/-->원
+                                </dd>
+                            </dl>
+                            <dl id="total-discount-list" style="display:none;">
+                                <!--/if_subs_product_discount_price/-->
+                                <dt><span class=""></span> 기간할인</dt>
+                                <dd>
+                                    <!--/number/subs_product_discount_price/-->원
+                                </dd>
+                                <!--/end_if/-->
+                                <!--/if_subs_group_prd_sale_price/-->
+                                <dt><span class=""></span> 상품별 그룹할인</dt>
+                                <dd>
+                                    <!--/number/subs_group_prd_sale_price/-->원
+                                </dd>
+                                <!--/end_if/-->
+                                <!--/if_subs_subs_sale_price/-->
+                                <dt><span class=""></span> 정기배송할인</dt>
+                                <dd>
+                                    <!--/number/subs_subs_sale_price/-->원
+                                </dd>
+                                <!--/end_if/-->
+                                <!--/if_subs_group_price/-->
+                                <dt><span class=""></span> 그룹 추가할인</dt>
+                                <dd>-
+                                    <!--/number/subs_group_price/-->원
+                                </dd>
+                                <!--/end_if/-->
+                            </dl>
+                            <dl>
+                                <dt><span class=""></span>전체 배송비</dt>
+                                <dd>
+                                    <!--/number/subs_delivery_price/-->원
+                                </dd>
+                            </dl>
+                            <!--/if_subs_tax_price(+1)/-->
+                            <dl>
+                                <dt><span class=""></span>부가세</dt>
+                                <dd>
+                                    <!--/number/subs_tax_price/-->원
+                                </dd>
+                            </dl>
+                            <!--/end_if/-->
+
+                            <dl class="total">
+                                <dt><strong>총 결제 예정금액</strong></dt>
+                                <dd><strong>
+                                        <!--/number/subs_total_price/-->
+                                    </strong>원
+                                    <!--/if_subs_total_price(+1)/--><br /><span>*
+                                        <!--/subs_pay_date/--> 결제예정
+                                    </span>
+                                    <!--/end_if/-->
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="total-guide">
+                            <p><span>*</span>정기배송 상품은 자동결제 시점 기준 가격으로 결제금액이 변동될 수 있습니다.</p>
+                            <p><span>*</span>배송비는 배송업체마다 적용 기준이 다르며, 배송업체가 다른 경우 별도의 배송비가 부과됩니다.</p>
+                            <p><span>*</span>카드분실 및 한도초과 등으로 최초 자동결제가 실패된 경우 2번의 재결제가 진행되며, 재결제가 일어나지 않는 경우 자동 건너뛰기됩니다.
+                            </p>
+                        </div>
+                        <!--/end_if/-->
+                        <!-- //이번 배송일에 받을 상품 -->
+                        <!-- 함께 신청한 정기배송 상품 -->
+                        <!--/if_subs_together/-->
+                        <div id="subs_view">
+                            <p class="title">함께 신청한 정기배송 상품</p>
+                            <!--/loop_subs_together/-->
+                            <div id="togeter-wrap">
+                                <ul class="prd_order">
+                                    <!--/loop_subs_together@subs_product/-->
+                                    <li>
+                                        <figure>
+                                            <div class="basketLeft">
+                                                <a href="<!--/subs_together@subs_product@link/-->"><img
+                                                        src="<!--/subs_together@subs_product@product_img/-->"
+                                                        class="response100"
+                                                        alt="<!--/subs_together@subs_product@product_name/-->" /></a>
+                                            </div>
+                                            <figcaption class="basketRight">
+                                                <p class="brand">
+                                                    <!--/subs_together@name/-->
+                                                </p>
+                                                <p class="pname">
+                                                    <!--/subs_together@subs_product@product_name/-->
+                                                </p>
+                                                <!--/if_subs_together@subs_product@option/-->
+                                                <div class="option">
+                                                    <!--/subs_together@subs_product@option/-->
+                                                </div>
+                                                <!--/end_if/-->
+                                                <div class="reserve-point" style="display:none;">
+                                                    <!--/if_subs_together@subs_product@reserve_price/--><img
+                                                        src="/makeshop/newmanager/icons/icon_reserve.png" alt="적립금" />
+                                                    <!--/number/subs_together@subs_product@reserve_price/-->원 적립
+                                                    <!--/end_if/-->
+                                                    <!--/if_subs_together@subs_product@point_price/--><img
+                                                        src="/makeshop/newmanager/icons/icon_point.png" alt="포인트" />
+                                                    <!--/number/subs_together@subs_product@point_price/-->point 적립
+                                                    <!--/end_if/-->
+                                                </div>
+
+                                                <div class="psale"><strong><span>
+                                                            <!--/number/subs_together@subs_product@discount_price/-->
+                                                        </span>원</strong> <a href="javascript:"
+                                                        class="fa fa-angle-down btn-angle2"></a></div>
+                                                <div class="price-sale">
+                                                    <dl>
+                                                        <dt><span class="fa fa-level-up"></span> 상품가</dt>
+                                                        <dd>
+                                                            <!--/number/subs_together@subs_product@price/-->원
+                                                        </dd>
+                                                    </dl>
+                                                    <!--/if_subs_together@subs_product@discount_period(+1)/-->
+                                                    <dl>
+                                                        <dt><span class="fa fa-level-up"></span> 상품별 기간할인</dt>
+                                                        <dd><span class="fc-red">-
+                                                                <!--/number/subs_together@subs_product@discount_period/-->원
+                                                            </span></dd>
+                                                    </dl>
+                                                    <!--/end_if/-->
+                                                    <!--/if_subs_together@subs_product@discount_group(+1)/-->
+                                                    <dl>
+                                                        <dt><span class="fa fa-level-up"></span> 상품별 그룹할인</dt>
+                                                        <dd><span class="fc-red">-
+                                                                <!--/number/subs_together@subs_product@discount_group/-->원
+                                                            </span></dd>
+                                                    </dl>
+                                                    <!--/end_if/-->
+                                                    <!--/if_subs_together@subs_product@discount_subs(+1)/-->
+                                                    <dl>
+                                                        <dt><span class="fa fa-level-up"></span> 정기배송 할인</dt>
+                                                        <dd><span class="fc-red">-
+                                                                <!--/number/subs_together@subs_product@discount_subs/-->원
+                                                            </span></dd>
+                                                    </dl>
+                                                    <!--/end_if/-->
+                                                </div>
+
+                                                <div class="count">
+                                                    <div class="qty-wrap">
+                                                        <a href="<!--/subs_together@subs_product@link_amount_down/-->"><img
+                                                                src="/design/mkplanet/kkstore/img/qty_down.jpg"
+                                                                alt=""></a>
+                                                        <!--/subs_together@subs_product@input_amount/-->
+                                                        <a href="<!--/subs_together@subs_product@link_amount_up/-->"><img
+                                                                src="/design/mkplanet/kkstore/img/qty_up.jpg"
+                                                                alt=""></a>
+                                                    </div>
+                                                    <!--/if_subs_together@subs_product@link_amount_update/-->
+                                                    <span class="cnt_right">
+                                                        <a href="<!--/subs_together@subs_product@link_amount_update/-->"
+                                                            class="btn-modify">수량변경</a>
+                                                    </span>
+                                                    <!--/end_if/-->
+                                                </div>
+                                            </figcaption>
+                                        </figure>
+
+                                        <div class="basket-subs">
+                                            <div class="subs-period">
+                                                <span><em class="fa fa-sliders"></em>배송주기</span>
+                                                <strong><a href="<!--/subs_together@subs_product@link_subs_edit/-->"
+                                                        class="btn_subsedit">
+                                                        <!--/subs_together@subs_product@cycle/-->주 간격 /
+                                                        <!--/subs_together@subs_product@week/-->요일 배송 <em
+                                                            class="fa fa-angle-right"></em>
+                                                    </a></strong>
+                                            </div>
+                                            <div class="subs-date">
+                                                <span><em class="fa fa-calendar"></em>정기배송 예정일</span>
+                                                <strong>
+                                                    <!--/subs_together@subs_product@subs_next_date/-->(
+                                                    <!--/subs_together@subs_product@subs_next_week/-->)
+                                                </strong>
+                                            </div>
+                                            <div class="subs-btns">
+                                                <a href="<!--/subs_together@subs_product@link_subs_detail/-->"
+                                                    class="btn-normal">스케줄 관리</a>
+                                                <a href="<!--/subs_together@subs_product@link_subs_cancel/-->"
+                                                    class="btn-cancel">정기배송 취소</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!--/end_loop/-->
+                                </ul>
+                            </div>
+                            <!--/end_loop/-->
+                        </div>
+                        <!--/end_if/-->
+                        <!-- //함께 신청한 정기배송 상품 -->
+                        <!--/if_subs_receiver/-->
+                        <div class="subs_view">
+                            <!-- 배송지 정보 -->
+
+                            <section class="subsBody">
+                                <p class="title">배송지 정보</p>
+                                <div>
+                                    <table>
+                                        <colgroup>
+                                            <col width="120" />
+                                            <col width="*" />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>· 수령자명</th>
+                                                <td>
+                                                    <!--/subs_receiver/-->
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>· 수령인 연락처1</th>
+                                                <td>
+                                                    <!--/subs_mobile/-->
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>· 수령인 연락처2</th>
+                                                <td>
+                                                    <!--/subs_phone/-->
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>· 우편번호</th>
+                                                <td>
+                                                    <!--/subs_post/-->
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>· 배송지 주소</th>
+                                                <td>
+                                                    <!--/subs_address/-->
+                                                    <!--/subs_address2/-->
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>· 주문 요청 사항</th>
+                                                <td class="deli-msg subs-order-msg"><span>
+                                                        <!--/nl2br/subs_order_msg/-->
+                                                    </span>
+                                                    <a href="#subs_order_msg" class="fa btn-plus btn-angle">
+                                                        <img src="/design/mkplanet/kkstore/img/btn_more.png" alt="">
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr id="subs_order_msg" style="display:none;">
+                                                <td colspan="2">
+                                                    <!--/text_subs_order_msg/-->
+                                                    <p>* 100자 내외로 입력해주세요.</p>
+                                                    <div class="subs-btns">
+                                                        <a href="#none" class="btn-cancel">취소</a>
+                                                        <a href="<!--/link_order_msg_update/-->"
+                                                            class="btn-cancel">저장</a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>· 배송 요청 사항</th>
+                                                <td class="deli-msg subs-deli-msg"><span>
+                                                        <!--/nl2br/subs_delivery_msg/-->
+                                                    </span>
+                                                    <a href="#subs_deli_msg" class="fa btn-plus btn-angle">
+                                                        <img src="/design/mkplanet/kkstore/img/btn_more.png" alt="">
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr id="subs_deli_msg" style="display:none;">
+                                                <td colspan="2">
+                                                    <!--/text_subs_delivery_msg/-->
+                                                    <p>* 100자 내외로 입력해주세요.</p>
+                                                    <div class="subs-btns">
+                                                        <a href="#none" class="btn-cancel">취소</a>
+                                                        <a href="<!--/link_delivery_msg_update/-->"
+                                                            class="btn-cancel">요청사항 저장</a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <a href="<!--/link_delivery_addr/-->" class="btn-normal">배송지 변경</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </section>
+                            <!-- 자동 결제 설정 -->
+                            <div class="subsBody" style="display:none;">
+                                <table>
+                                    <colgroup>
+                                        <col width="*" />
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>자동 결제 설정</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>
+                                                <a href="#editCard" class="select-card subs-open-close"
+                                                    id="subs_pay_card">
+                                                    <!--/subs_pay_card/--> <strong class="fa fa-angle-right"></strong>
+                                                </a>
+
+                                                <a href="<!--/link_card_add2/-->" class="btn_Black"><span
+                                                        class="fa fa-plus-circle"
+                                                        style="font-size:16px; vertical-align:middle; margin:-2px 2px 0 0;"></span>
+                                                    카드 추가</a>
+                                            </th>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- //자동 결제 설정 -->
+                            <!-- 결제카드 변경 -->
+                            <div id="editCard">
+                                <div class="layer">
+                                    <div class="layer-pop">
+                                        <h3>결제카드 변경</h3>
+                                        <div class="txt">
+                                            <ul>
+                                                <!--/if_subs_cardlist/-->
+                                                <!--/loop_subs_cardlist/-->
+                                                <li><label>
+                                                        <!--/subs_cardlist@checkbox/--> <strong>
+                                                            <!--/subs_cardlist@card_name/-->
+                                                        </strong>
+                                                    </label></li>
+                                                <!--/end_loop/-->
+                                                <!--/end_if/-->
+                                            </ul>
+                                            <p>* 해당 정기배송의 결제 카드만 변경됩니다.</p>
+                                            <div class="btn-ctrl">
+                                                <a href="#editCard" class="btn_Grey subs-open-close">취소</a>
+                                                <a href="<!--/link_card_update/-->" class="btn_Black">확인</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //결제카드 변경 -->
+                            <!-- //배송지 정보 -->
+                            <div class="pd10 btn-next" style="display:none;">
+                                <a href="#cancelSubs" class="btn_White subs-open-close">정기배송 취소</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/end_if/-->
+                    <!-- 정기배송 취소 -->
+                    <div id="cancelSubs">
+                        <div class="layer">
+                            <div class="layer-pop">
+                                <h3>정기배송 취소</h3>
+                                <div class="txt">
+                                    <ul>
+                                        <li>결제가 진행되지 않은<br />정기배송 정보가 모두 삭제됩니다.<br />더 이상 정기배송을 받아 보지 않으시겠습니까?</li>
+                                    </ul>
+                                    <div class="btn-ctrl">
+                                        <a href="#cancelSubs" class="btn_Grey subs-open-close">닫기</a>
+                                        <a href="<!--/link_subs_cancel/-->" class="btn_Black">정기배송 취소</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //정기배송 취소 -->
+                    <!--/end_block/-->
+                    <!-- // 정기배송 상세내용 -->
+                </div>
+                <!--/end_block/-->
+                <!--/block_subs_billing/-->
+                <!-- 자동 결제카드 -->
+                <div class="subsBody">
+                    <p class="title">자동 결제카드</p>
+                    <table>
+                        <colgroup>
+                            <col width="*" />
+                        </colgroup>
+                        <tbody>
+                            <!--/if_user_billing/-->
+                            <!--/loop_user_billing/-->
+                            <tr>
+                                <th class="card-use">
+                                    <ul>
+                                        <li>
+                                            <div class="input">
+                                                <label class="check">
+                                                    <!--/user_billing@checkbox/-->
+                                                    <strong>
+                                                        <!--/user_billing@card_name/-->
+                                                    </strong><br />자동결제 등록 건 수 :
+                                                    <!--/user_billing@subs_cnt/-->건
+                                                </label>
+                                            </div>
+                                            <a href="<!--/user_billing@link_del/-->" class="btn-modify">삭제</a>
+                                        </li>
+                                    </ul>
+                                </th>
+                            </tr>
+                            <!--/end_loop/-->
+                            <!--/else/-->
+                            <tr>
+                                <th class="card-none">
+                                    <span class="fa fa-exclamation-circle"></span> 등록된 카드정보가 없습니다.<br />빠른 정기배송 신청을 위해
+                                    자동결제카드를 등록해주세요.<br /><br />
+                                    카드는 최대 5개까지 등록 가능하며,<br />정기배송 신청 시 자동결제 카드를 설정할 수 있습니다.
+                                </th>
+                            </tr>
+                            <!--/end_if/-->
+                        </tbody>
+                    </table>
+                    <div class="btn-next">
+                        <a href="<!--/link_card_add/-->" class="btn-normal type2">카드 추가 <span>* 최대 5개 등록 가능</span></a>
+                        <a href="<!--/link_card_default/-->" class="btn-normal">기본카드 설정</a>
+                        <a href="<!--/link_subs_cancel/-->" class="btn-cancel">정기배송 취소</a>
+                        
+                    </div>
+                </div>
+                <!-- //자동 결제카드 -->
+                
+                <!--/end_block/-->
+
+                <!--/block_subs_config/-->
+                <!--/if_link_user_save/-->
+                <!--/form_subs_config/-->
+                <!--/if_radio_use_coupon_yes/-->
+                <!-- 할인쿠폰 자동적용 여부 -->
+                <div class="subsBody">
+                    <table>
+                        <colgroup>
+                            <col width="*" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>할인쿠폰 자동적용 여부</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th class="pd10 coupon-use">
+                                    <label>
+                                        <!--/radio_use_coupon_no/--> 자동 적용하지 않음
+                                    </label><br />
+                                    <label>
+                                        <!--/radio_use_coupon_yes/--> 자동 적용
+                                    </label>
+                                    <!--/if_subs_order_list/-->
+                                    <a href="#MS_COUPON_SUBS_SORT" id="tbl_coupon_list"
+                                        class="btn_White mt5 subs-open-close">자동 적용 순서 설정</a>
+                                    <!--/end_if/-->
+                                    <br />
+                                    <p class="mt5"><span>*</span>자동 결제 시 보유한 상품 쿠폰 중 최대 할인 가능한 쿠폰 자동적용</p>
+                                    <p><span>*</span> 정기배송에 적용된 쿠폰은 다른 곳에 재사용이 불가</p>
+                                    <p><span>*</span><strong style="border-bottom:1px solid #000;">자동 적용 순서
+                                            설정</strong>으로 쿠폰 적용 우선순위 설정 가능</p>
+                                    <p class="mt5"><span>*</span>순서를 설정하지 않은 경우 , 정기배송 신청일 순으로 자동적용</p>
+                                </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- //할인쿠폰 자동적용 여부 -->
+                <!-- 자동 적용 순서 설정 -->
+                <!--/block_coupon_subs_sort/-->
+                <!--/if_subs_order_list/-->
+                <div id="couponList">
+                    <div class="layer">
+                        <div class=" layer-pop">
+                            <h3>쿠폰 자동적용 순서 설정</h3>
+                            <!--/block_coupon_subs_list/-->
+                            <!--/loop_subs_order_list/-->
+                            <li class="subs_li">
+                                <span class="w10p">
+                                    <!--/subs_order_list@sort/-->
+                                </span>
+                                <label>정기배송 신청일 :
+                                    <!--/subs_order_list@date/--><br />상품명 :
+                                    <!--/subs_order_list@product_name/--><br />자동 결제카드 :
+                                    <!--/subs_order_list@card_info/-->
+                                </label>
+                                <a href="<!--/subs_order_list@link_up/-->" class="btn_White fa fa-caret-up fa-2x"></a>
+                                <a href="<!--/subs_order_list@link_down/-->"
+                                    class="btn_White fa fa-caret-down fa-2x"></a>
+                            </li>
+                            <!--/end_loop/-->
+                            <!--/end_block/-->
+                            <div class="btn-ctrl">
+                                <a href="#MS_COUPON_SUBS_SORT" class="btn_Grey subs-open-close">취소</a>
+                                <a href="<!--/link_user_save/-->" class="btn_Black">저장</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/end_if/-->
+                <!--/end_block/-->
+                <!-- //자동 적용 순서 설정 -->
+                <!--/end_if/-->
+                <!--/if_radio_use_reserve_yes/-->
+                <!-- 적립금 사용 여부 -->
+                <div class="subsBody">
+                    <p class="title">적립금 사용 여부</p>
+                    <table>
+                        <colgroup>
+                            <col width="*" />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>
+                                    <div class="input wd120">
+                                        <label class="check">
+                                            <!--/radio_use_reserve_no/--> 사용하지 않음
+                                        </label>
+                                    </div>
+                                    <div class="input wd120">
+                                        <label class="check">
+                                            <!--/radio_use_reserve_yes/--> 자동 사용
+                                        </label>
+                                    </div>
+                                    <p class="mt5"><span>*</span>자동 결제 시점에 보유한 적립금이 있는 경우 사용</p>
+                                </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="btn-next">
+                        <a href="<!--/link_user_save/-->" class="btn-cancel">저장 및 변경</a>
+                    </div>
+                </div>
+                <!-- //적립금 사용 여부 -->
+                <!--/end_if/-->
+                
+                <!--/end_form/-->
+                <!--/end_if/-->
+                <!--/end_block/-->
+            </div>
+            <!-- 정기 배송 설정 변경 -->
+            <!--/block_subs_edit/-->
+            <div id="subsedit" class="subsedit">
+                <div class="layer">
+                    <div class="layer-pop">
+                        <h3>정기배송일 설정</h3>
+                        <div class="txt">
+                            <!--/form_subs_edit/-->
+                            <div class="subs-cnts">
+                                <div class="cnts01">
+                                    <!--/select_subs_cycle/-->
+                                    <ul class="day-btns clearfix">
+                                        <!--/loop_subs_week/-->
+                                        <li><a href="<!--/subs_week@link/-->"
+                                                class="<!--/if_subs_week@is_select/-->on<!--/end_if/-->">
+                                                <!--/subs_week@week/-->
+                                            </a></li>
+                                        <!--/end_loop/-->
+                                    </ul>
+                                </div>
+                                <div class="cnts02"><img src="/images/common/ico_calendar2.gif" alt=""> 다음 정기배송일:
+                                    <strong id="subs_order_date">
+                                        <!--/subs_next_date/-->(
+                                        <!--/subs_next_week/-->)
+                                    </strong></div>
+                            </div>
+                            <div class="subs-cnts02">
+                                <p><span>*</span>'다음 정기배송일'은 배송주기 변경 후 처음 배송되는 정기배송예정일입니다.</p>
+                                <p><span>*</span>정기배송일이 공휴일 및 휴무일인 경우 정기배송일 다음날 배송됩니다.</p>
+                            </div>
+                            <div class="subs-btns">
+                                <a href="#subsedit" class="btn_Grey subs-open-close"><span>취소</span></a>
+                                <a href="<!--/link_subs_edit_save/-->" class="btn_Black"><span>저장</span></a>
+                            </div>
+                        </div>
+                        <!--/end_form/-->
+                    </div>
+                </div>
+            </div>
+            <!--/end_block/-->
+        </div>
+
+    </div>
+    <!-- //contents -->
+</div>
+<!-- //container -->
+
+
+<!--/include_footer(1)/-->

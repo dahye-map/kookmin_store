@@ -1,0 +1,142 @@
+<!--/include_header(1)/-->
+<div id="containerWrap">
+    <div class="container">
+        <div id="content">
+            <div id="bbsData">
+                <div class="page-body">
+                    <div class="sub_title">
+                        <!--/now_board_name/-->
+                    </div>
+                    <!--/if_link/-->
+                    <dl class="prd-tinfo">
+                        <dt>
+                            <a href="<!--/link/-->"><img src="<!--/image_s/-->" /></a>
+                        </dt>
+                        <dd>
+                            <ul>
+                                <li class="name"><span class="tit">상 품 명:</span><a href="<!--/link/-->">
+                                        <!--/name(100)/-->
+                                    </a>
+                                    <!--/icons/-->
+                                    <!--/coupon_icon/-->
+                                    <!--/free_delivery_icon/-->
+                                </li>
+                                <li class="price"><span class="tit">상품가격:</span><strong>
+                                        <!--/number/price_sell/-->원
+                                    </strong></li>
+                            </ul>
+                        </dd>
+                    </dl>
+                    <!--/end_if/-->
+                    <div class="bbs-table-view">
+                        <table summary="게시글 보기">
+                            <caption>게시글 보기</caption>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <div class="tb-center subject">
+                                            <!--/subject/-->
+                                        </div>
+                                        <div class="hit"><span><em>Hits :</em>
+                                                <!--/hit/-->
+                                            </span></div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td>
+                                        <div class="data-bd-cont">
+                                            <!--/if_add_info/-->
+                                            <div class="add_info">
+                                                <div class="add_title">
+                                                    <!--/loop_add_info/-->
+                                                    <!--/add_info@title/--><br />
+                                                    <!--/end_loop/-->
+                                                </div>
+                                                <div class="add_content">
+                                                    <!--/loop_add_info/-->
+                                                    <!--/add_info@content/--><br />
+                                                    <!--/end_loop/-->
+                                                </div>
+                                            </div>
+                                            <!--/end_if/-->
+
+                                            <!--/content/-->
+                                        </div>
+                                        <!--/if_recommend_product/-->
+                                        <div class="fixed-img-collist">
+                                            <h3 class="list-tit">게시글 관련 상품</h3>
+                                            <ul class="clear">
+                                                <!--/loop_recommend_product/-->
+                                                <li>
+                                                    <a href="<!--/recommend_product@link/-->">
+                                                        <span class="prd"><img src="<!--/recommend_product@image_s/-->"
+                                                                alt="" title="" /></span>
+                                                        <span>
+                                                            <!--/recommend_product@name/-->
+                                                            <!--/recommend_product@icons/-->
+                                                        </span>
+                                                    </a>
+                                                    <p>
+                                                        <!--/number/recommend_product@price_sell/-->원
+                                                    </p>
+                                                </li>
+                                                <!--/if_step(6)/-->
+                                            </ul>
+                                            <ul class="clear">
+                                                <!--/end_if/-->
+                                                <!--/end_loop/-->
+                                            </ul>
+                                        </div>
+                                        <!--/end_if/-->
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="view-link">
+                            <dl class="bbs-link con-link">
+                                <dt></dt>
+                                <dd>
+                                    <!--/if_link_edit/--><a href="<!--/link_edit/-->" class="none">
+                                        <div class="board_btn03">수정</div>
+                                    </a>
+                                    <!--/end_if/-->
+                                    <!--/if_link_del/--><a href="<!--/link_del/-->">
+                                        <div class="board_btn03">삭제</div>
+                                    </a>
+                                    <!--/end_if/-->
+                                    <!--/if_link_answer/--><a href="<!--/link_answer/-->">
+                                        <div class="board_btn03">답변</div>
+                                    </a>
+                                    <!--/end_if/-->
+                                </dd>
+                            </dl>
+                            <dl class="bbs-link">
+                                <dt></dt>
+                                <dd>
+                                    <!--/if_link_write/--><a href="<!--/link_write/-->">
+                                        <div class="board_btn01">글쓰기</div>
+                                    </a>
+                                    <!--/end_if/-->
+                                    <!--/if_link_list/-->
+                                    <!--/if_not_link_write/-->
+                                    <!--/else/-->
+                                    <a href="<!--/link_list/-->">
+
+                                        <div class="board_btn03">목록</div>
+                                    </a>
+                                        
+                                    <!--/end_if/-->
+                                    <!--/end_if/-->
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div><!-- .page-body -->
+            </div><!-- #bbsData -->
+        </div><!-- #content -->
+    </div><!-- #contentWrap -->
+</div><!-- #contentWrapper-->
+<!--/include_footer(1)/-->

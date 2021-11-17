@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../lib/css/base.css">
+    <link rel="stylesheet" href="../lib/css/layout.css">
+    <link rel="stylesheet" href="../lib/css/mypage.css">
+    <link rel="stylesheet" href="../lib/css/swiper.min.css" />
+    <link href="//unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../lib/js/swiper.min.js"></script>
+    <script src="../lib/js/TweenMax.min.js"></script>
+    <script src="../lib/js/ScrollMagic.js"></script>
+    <script src="../lib/js/animation.gsap.js"></script>
+    <script src="../lib/js/debug.addIndicators.min.js"></script>
+    <script src="../lib/js/ui.js"></script>
+    
+
+
+    <title>국민상점</title>
+</head>
+
+<body id="main">
+    <div id="wrap">
+
+        <div id="headerWrap">
+            <div class="header">
+
+                <div class="logo"><a href="/"><img src="../img/img_logo.jpg" alt=""></a></div>
+                <div class="gnb-wrap">
+                    <ul class="top-cate">
+                        <li><a href="">베스트</a></li>
+                        <li><a href="">신상품·타임특가</a></li>
+                        <li><a href="">정기배송</a></li>
+                        <li><a href="">이벤트·쿠폰</a></li>
+                    </ul>
+                    <ul class="gnb">
+                        <li>
+                            <a href="#none">운동보충</a>
+                            <ul class="depth2">
+                                <li><a href="">보충제/부스터</a></li>
+                                <li><a href="">건강기능식품</a></li>
+                                <li><a href="">쉐이크/음료</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">식사</a>
+                            <ul class="depth2">
+                                <li><a href="">닭가슴살</a></li>
+                                <li><a href="">도시락</a></li>
+                                <li><a href="">간편식</a></li>
+                                <li><a href="">샐러드</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">간식</a>
+                            <ul class="depth2">
+                                <li><a href="">저칼로리간식</a></li>
+                                <li><a href="">단백질간식</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">세트</a>
+                            <ul class="depth2">
+                                <li><a href="">바디프로필세트</a></li>
+                                <li><a href="">급찐급빠세트</a></li>
+                                <li><a href="">멸치탈출세트</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">의류/용품</a>
+                            <ul class="depth2">
+                                <li><a href="">스포츠웨어</a></li>
+                                <li><a href="">스포츠용품</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="util-wrap">
+                    <ul class="util">
+                        <li><a href="">로그인</a></li>
+                        <li><a href="">회원가입</a></li>
+                        <li><a href="">입점·제휴문의</a></li>
+                        <li><a href="">기업회원</a></li>
+                    </ul>
+                    <div class="btn-wrap">
+                        <a href=""><img src="../img/ico_search.jpg" alt=""></a>
+                        <a href=""><img src="../img/ico_heart.jpg" alt=""></a>
+                        <a href=""><img src="../img/ico_bag.jpg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="containerWrap">
+            <div class="container">
+
+                <div class="mypage-wrap">
+                    <p class="title">마이페이지</p>
+
+                    <div class="user-info-wrap">
+                        <div class="user-info">
+                            <a href="" class="btn-link">회원 정보 관리 ></a>
+                            <p class="sub-title">기본 회원정보</p>
+
+                            <div class="detail">
+                                <p class="id">dahae5919 <span class="name">이다혜</span></p>
+
+                                <p class="etc">
+                                    <span class="phone">010-3135-6042</span> | 
+                                    <span class="email">dahae5919@naver.com</span> <br>
+                                    <span class="address">경기도 의정부시 평화로 483번길 42 드어반트라움 701호</span>
+                                </p>
+                            </div>
+                            
+                        </div>
+                        <div class="grade-info">
+                            <a href="" class="btn-link">등급 혜택 더보기 ></a>
+                            <p class="sub-title">회원등급</p>
+
+                            <div class="detail">
+                                <p class="user-thumb"><img src="../img/ico_beginner.png" alt=""></p>
+
+                                <div class="desc">
+                                    <p class="grade-name">비기너 등급 <span class="date">가입일 : 2015.09.02</span></p>
+
+                                    <ul class="benefit">
+                                        <li>결제 시 1% 적립</li>
+                                        <li>추가 2% 할인</li>
+                                        <li>무제한 무료배송</li>
+                                        <li>10%할인 쿠폰 2매</li>
+                                        <li>20% 할인쿠폰 1매</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="mypage-tab">
+                        <div class="tab">
+                            <a href="">
+                                <p class="ico"><img src="../img/ico_mypage01.png" alt=""></p>
+                                <p class="sub-title">주문/배송</p>
+                                <p class="num">2</p>
+                            </a>
+                        </div>
+                        <div class="tab">
+                            <a href="">
+                                <p class="ico"><img src="../img/ico_mypage02.png" alt=""></p>
+                                <p class="sub-title">상품후기</p>
+                                <p class="num">0</p>
+                            </a>
+                        </div>
+                        <div class="tab">
+                            <a href="">
+                                <p class="ico"><img src="../img/ico_mypage03.png" alt=""></p>
+                                <p class="sub-title">적립금</p>
+                                <p class="num">0</p>
+                            </a>
+                        </div>
+                        <div class="tab">
+                            <a href="">
+                                <p class="ico"><img src="../img/ico_mypage04.png" alt=""></p>
+                                <p class="sub-title">쿠폰</p>
+                                <p class="num">4</p>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <div class="mypage-detail-wrap">
+                        <div class="mypage-detail-tab">
+                            <a href="" class="active">주문내역</a>
+                            <a href="">나의 문의내역</a>
+                            <a href="">1:1 문의하기</a>
+                            <a href="">관심 상품</a>
+                            <a href="">배송지 관리</a>
+                        </div>
+
+                        <div class="mypage-detail">
+                            <p>블라블라블라</p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+        <div id="footerWrap">
+            <div class="footer">
+                <div class="footer-menu">
+                    <ul>
+                        <li><a href="">국민상점 브랜드스토리</a></li>
+                        <li><a href="">자주묻는질문</a></li>
+                        <li><a href="">제휴 · 입점 문의하기</a></li>
+                        <li><a href="">이용가이드</a></li>
+                        <li><a href="">개인정보 취급방침</a></li>
+                        <li><a href="">이용약관</a></li>
+                    </ul>
+                </div>
+                <div class="cs-section">
+                    <p class="title">즐거운 국민상점 고객센터</p>
+                    <p class="phone">070-7773-3152</p>
+
+                    <p class="work-hour">
+                        토, 일요일 및 공휴일 휴무 <br>
+                        오전 10시 - 오후 6시<br>
+                        점심 12시 - 오후 2시
+                    </p>
+                </div>
+                <div class="bank-section">
+                    <p class="title">우리은행 | 예금주 (주)쓰리케어코리아</p>
+                    <p class="account">1005-503-014636</p>
+
+                    <ul class="cs-board">
+                        <li><a href="">1:1 문의 게시판</a></li>
+                        <li><a href="">국민상점 입점 문의하기</a></li>
+                        <li><a href="">카카오톡 문의</a></li>
+                        <li><a href="">네이버 톡톡 문의</a></li>
+                    </ul>
+                </div>
+                <div class="footer-info">
+                    <p>
+                        <b>(주)쓰리케어코리아</b> <a href="">[사업자정보확인]</a><br><br>
+                        
+                        <span>
+                            대표자. 한대광 | 사업자등록번호. 274-81-00425 <br>
+                            통신판매업신고번호.  2019-서울성동-01824호<br>
+                            <br>
+                            서울특별시 성동구 아차산로17길 48, 1동 819-822호<br>
+                            제휴/입점문의. 3carekorea_ad@brandxcorp.com<br>
+                            개인정보보호 책임자. <br>
+                            이윤희 (yoonhee_90@brandxcorp.com)<br>
+                            호스팅사. (주)코리아센터
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

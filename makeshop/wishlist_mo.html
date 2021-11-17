@@ -1,0 +1,154 @@
+<!--/script_scroll(1)/-->
+<div id="wrap">
+    <!--/include_header(1)/-->
+    <div id="contentWrapper">
+        <div id="contentWrap">
+            <!--/include_menu(1)/-->
+            <div id="faq-content">
+                <div id="faqWrap">
+     
+
+
+<div class="titbox">
+ <div class="title">
+                   
+<!-- <span class="name">FAQ</span> -->
+</div> 
+
+</div><!-- titbox -->
+
+
+<!--
+<div class="sub_tit">
+<ul>
+<li><a href="/board/board.html?code=<!--/shop_id/-->_board7"><div class="sub_btn01">상품문의</div></a></li>
+<li><a href="/board/board.html?code=<!--/shop_id/-->_board10"><div class="sub_btn01">입금/결제문의</div></a></li>
+<li><a href="/board/board.html?code=<!--/shop_id/-->_board3"><div class="sub_btn01">변경&취소</div></a></li>
+<li><a href="/board/board.html?code=<!--/shop_id/-->_board8"><div class="sub_btn01">배송문의</div></a></li>
+<li><a href="/board/board.html?code=<!--/shop_id/-->_board9"><div class="sub_btn01">교환/반품문의</div></a></li>
+<li class="over"><a href="/shop/faq.html?page=1&mode=all"><div class="sub_btn01">FAQ</div></a></li>
+</ul>
+</div> -->
+
+
+                    <div class="page-body">
+                        <div class="faq-search">
+                            <!--/form_search_faq/-->
+                            <div class="search-wrap">
+                                <fieldset>
+                                    <legend>FAQ 검색 폼</legend>
+                                    <h4>FAQ 자주 묻는 질문</h4>
+                                    <div class="search_input">
+                                        <!--/select_category/-->
+                                        <!--/end_select/-->
+                                        <div class="keyword">
+                                        <!--/input_keyword/-->
+                                        </div>
+                                    </div>
+                                    <a href="<!--/link_search_faq/-->"><img alt="검색" src="/design/mkplanet/images/faq_ico.png" class="btn-submit" /></a>
+                                    <dl class="best-keyword">
+                                        <dt><strong>BEST검색어</strong> : <ins>섭취방법</ins> <ins>효능</ins> <ins>배송</ins> <ins>반품</ins></dt>
+                                        <dd>
+                                            <ul class="list">
+                                                <!--/loop_best_keyword/-->
+                                                <li><a href="<!--/best_keyword@link/-->"><!--/best_keyword@keyword/--></a></li>
+                                                <!--/end_loop/-->
+                                            </ul>
+                                        </dd>
+                                    </dl>
+                                </fieldset>
+                            </div><!-- .search-wrap -->
+                            <!--/end_form/-->
+                        </div><!-- .faq-search-->
+                        <div id="faq-category">
+                            <ul class="faq-menu">
+                                <!--/loop_category/-->
+                                <li><a href="<!--/category@link/-->"><!--/category@name/--></a></li>
+                                <!--/end_loop/-->
+                            </ul><!-- .faq-menu-->
+                        </div><!-- .faq-category-->
+                        <div id="faqTable">
+                            <table summary="분류 제목">
+                                <caption>질문/답변</caption>
+                                <colgroup>
+                                    <col width="55" />
+                                    <col width="150" />
+                                    <col width="*" />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">
+                                            <div class="tb-center">번호</div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="tb-center">분류</div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="tb-center">제목</div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!--/loop_faq/-->
+                                    <tr uid="<!--/faq@uid/-->">
+                                        <td>
+                                            <div class="tb-center"><!--/faq@num/--></div>
+                                        </td>
+                                        <td>
+                                            <div class="tb-center"><!--/faq@category/--></div>
+                                        </td>
+                                        <td>
+                                            <div class="tb-left"><!--/faq@subject/--></div>
+                                        </td>
+                                    </tr>
+                                    <tr class="slide-hide">
+                                        <td colspan="3">
+                                            <div class="tb-slide">
+                                                <dl class="qst">
+                                                    <dt><img alt="질문" src="/images/d3/modern_simple/common/icon_faq_qst.gif"></dt>
+                                                    <dd><!--/faq@question/--></dd>
+                                                </dl>
+                                                <dl class="adv">
+                                                    <dt><img alt="답변" src="/images/d3/modern_simple/common/icon_faq_adv.gif"></dt>
+                                                    <dd><!--/faq@answer/--></dd>
+                                                </dl>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <!--/end_loop/-->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div><!-- .page-body -->
+                    <div class="pager">
+                        <ol>
+                            <!--/if_pager_faq::first/-->
+                            <li class="first"><a href="<!--/pager_faq::first@link/-->"><img src="/images/d3/modern_simple/btn/btn_bmatch_paging_first.gif" alt="처음" title="" /></a></li>
+                            <!--/end_if/-->
+                            <!--/if_pager_faq::prev/-->
+                            <li class="prev"><a href="<!--/pager_faq::prev@link/-->"><img src="/images/d3/modern_simple/btn/btn_bmatch_paging_prev.gif" alt="이전" title="" /></a></li>
+                            <!--/end_if/-->
+                            <!--/if_pager_faq/-->
+                                <!--/loop_pager_faq::page/-->
+                                    <!--/if_pager_faq::page@current/-->
+                                    <li><strong><!--/pager_faq::page/--></strong></li>
+                                    <!--/else/-->
+                                    <li><a href="<!--/pager_faq::page@link/-->"><!--/pager_faq::page/--></a></li>
+                                    <!--/end_if/-->
+                                <!--/end_loop/-->
+                            <!--/end_if/-->
+                            <!--/if_pager_faq::next/-->
+                            <li class="next"><a href="<!--/pager_faq::next@link/-->"><img src="/images/d3/modern_simple/btn/btn_bmatch_paging_next.gif" alt="다음" title="" /></a></li>
+                            <!--/end_if/-->
+                            <!--/if_pager_faq::last/-->
+                            <li class="last"><a href="<!--/pager_faq::last@link/-->"><img src="/images/d3/modern_simple/btn/btn_bmatch_paging_last.gif" alt="끝" title="" /></a></li>
+                            <!--/end_if/-->
+                        </ol>
+                    </div>
+                </div><!-- #faqWrap -->
+            </div><!-- #content -->
+        </div><!-- #contentWrap -->
+    </div><!-- #contentWrapper-->
+    <hr />
+    <!--/include_footer(1)/-->
+</div><!-- #wrap -->

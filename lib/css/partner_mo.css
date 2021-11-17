@@ -1,0 +1,66 @@
+.mem-banner { position:relative; }
+.mem-banner .img img { width:100%; }
+
+.mem-banner .txt-box { position:absolute; left:50%; top:50%; transform:translate(-50%, -50%); width:80%; text-align:center; }
+.mem-banner .txt-box .sticker { position:absolute; left:-12px; top:-24px; width:50px }
+.mem-banner .txt-box .title { -webkit-text-stroke:1px #fff; color: transparent; font-size:50px; font-weight:bold; }
+.mem-banner .txt-box .desc { color:#fff; font-size:16px; font-weight:bold; padding-top:20px; }
+
+
+.partner-info-wrap .partner-info { position:relative; padding:80px 20px; }
+.partner-info-wrap .partner-info .sub-tit { color:#ff7600; font-size:15px; font-weight:600; padding-bottom:20px; }
+.partner-info-wrap .partner-info .title { color:#000; font-size:22px; font-weight:bold; line-height:1.37; }
+.partner-info-wrap .partner-info .desc { color:#929292; font-size:14px; line-height:1.6; padding-top:30px; }
+.partner-info-wrap .partner-info .img { width:70%; padding-top:50px; margin:0 auto; }
+
+.benefit-list-wrap { background:#f4f5f8; padding:80px 20px; }
+.benefit-list-wrap .benefit-list { position:relative; }
+.benefit-list-wrap .benefit-list .title { position:relative; font-size:30px; font-weight:bold; color:#ff7600; text-align:center; }
+.benefit-list-wrap .benefit-list .title .stick { position:absolute; right:80px; top:0; width:60px; }
+.benefit-list-wrap .benefit-list .desc { color:#929292; font-size:16px; line-height:1.6; padding-top:20px; text-align:center; }
+.benefit-list-wrap .benefit-list ul { padding:50px 0; }
+.benefit-list-wrap .benefit-list ul li { width:70%; padding-bottom:40px; }
+.benefit-list-wrap .benefit-list ul li:nth-child(2) { float:right; }
+.benefit-list-wrap .benefit-list ul li:nth-child(3) { clear:both; padding-left:30px; padding-bottom:0; }
+.benefit-list-wrap .benefit-list ul li .box { position:relative; background:#fff; height:300px; border-radius:20px;
+	box-shadow: 6px 5px 10px rgba(0, 0, 0, 0.1)  ; 
+	-webkit-box-shadow: 6px 5px 10px rgba(0, 0, 0, 0.1)  ; 
+	-moz-box-shadow: 6px 5px 10px rgba(0, 0, 0, 0.1)  ; 
+}
+.benefit-list-wrap .benefit-list ul li .img01 { position:absolute; right:0; top:-10px; width:80%; }
+.benefit-list-wrap .benefit-list ul li .img02 { position:absolute; right:0; top:75px; width:118%; }
+.benefit-list-wrap .benefit-list ul li .img03 { position:absolute; left:-20px; top:55px; width:120%; }
+
+.benefit-list-wrap .benefit-list ul li .benefit { position:relative; padding-left:15px; padding-bottom:10px; margin-top:-15px; font-size:20px; color:#000; font-weight:bold; line-height:1.37; z-index:1; }
+.benefit-list-wrap .benefit-list ul li .benefit-desc { padding-left:14px; font-size:14px; color:#888; line-height:1.4; word-break:keep-all; }
+.benefit-list-wrap .benefit-list ul li .benefit-desc span { display:block; color:#000; font-weight:bold; }
+
+
+.application-wrap .application { position:relative; padding:80px 0 0; }
+.application-wrap .application .title { font-size:30px; font-weight:bold; color:#ff7600; text-align:center; }
+.application-wrap .application .desc { color:#929292; font-size:15px; line-height:1.6; padding-top:10px; text-align:center; }
+.application-wrap .application .desc.type2 { color:#000; padding-top:20px; }
+.application-wrap .application .sub-tit { padding:60px 0 20px; font-size:16px; font-weight:bold; color:#0012ff; text-align:center; }
+.application-wrap .application .flow { text-align:center; padding:0 15px 80px; border-bottom:1px solid #e6e6e6; }
+.application-wrap .application .flow-tit { display:block; color:#818181; font-size:14px; padding-bottom:30px; padding-top:12px; text-align:center; }
+.application-wrap .application .type-list { padding:80px 15px; }
+.application-wrap .application .type-list div { padding-bottom:60px; text-align:center; }
+.application-wrap .application .type-list .name { font-size:25px; color:#000; font-weight:bold; padding-bottom:20px; }
+.application-wrap .application .type-list .sub-name { font-size:14px; color:#888; line-height:1.4; padding-bottom:30px; }
+.application-wrap .application .type-list .btn-tab { display:block; background:#111ec1; color:#fff; text-align:center; font-weight:bold; padding:18px 0; border-radius:36px; font-size:15px; margin-top:-12px; }
+
+
+.notice-wrap .notice { padding:0 10%; color:#1c1c1c; font-size:22px; font-weight:bold; }
+.notice-wrap .notice .title { color:#555; font-size:22px; font-weight:bold; padding-bottom:24px; }
+
+.partner-wrap .btn-wrap { position:relative; padding:0 5%; }
+.partner-wrap .btn-go { display:block; background:#ff7600; color:#fff; border-radius:100px; font-size:15px; padding:25px 0; text-align:center; margin-top:60px; margin-bottom:100px; }
+.partner-wrap .sticker { position:absolute; left:40px; top:-50px; width:75px; }
+
+.partner-wrap .con-list li { position:relative; color:#555; font-size:14px; line-height:1.42; padding-bottom:15px; padding-left:12px; word-break:keep-all; font-weight:normal; }
+.partner-wrap .con-list li:before { content:''; display:block; position:absolute; left:0; top:6px; width:6px; height:6px; border-radius:100%; background:#ff7600; }
+
+
+/* 기업회원 팝업 */
+#test_popup {width: 90%; top: 50%; transform: translate(0, -50%); left: 0; right: 0; margin: 0 auto;}
+.test_close_btn {text-align: right; box-sizing: border-box; padding: 5px 10px; background-color: #f9f9f9; border: 1px solid gray; cursor: pointer;}

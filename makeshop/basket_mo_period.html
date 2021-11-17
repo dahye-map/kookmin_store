@@ -1,0 +1,408 @@
+<!--/include_header(1)/-->
+
+<!-- 본문 -->
+<!-- container -->
+<div id="container">
+    <!-- contents -->
+    <div id="contents">
+        <!-- main -->
+        <main id="basket">
+            <!--/if_use_subs/-->
+            <div class="carttabWrap">
+                <ul class="cart-tab">
+                    <li><a href="<!--/link_normal_basket/-->"><span>일반구매 (
+                                <!--/number/user_normal_basket_count/-->)
+                            </span></a></li>
+                    <li class="now"><a href="<!--/link_subs_basket/-->"><span>정기배송 (
+                                <!--/number/user_subs_basket_count/-->)
+                            </span></a></li>
+                </ul>
+            </div>
+            <!--/else/-->
+            <div class="h_title">
+                <h3>장바구니
+                    <!--/if_user_basket_count(+1)/--><span>(
+                        <!--/user_basket_count/-->)
+                    </span>
+                    <!--/end_if/-->
+                </h3>
+            </div>
+            <!--/end_if/-->
+            <!--/if_provider/-->
+            <div class="btn-wrap clearFix">
+                <!--/if_link_multi_del/-->
+                <div>
+                    <a href="<!--/link_multi_del/-->" class="btn_White"><span>선택삭제</span></a>
+                </div>
+                <!--/end_if/-->
+                <div>
+                    <a href="<!--/link_clear_basket/-->" class="btn_Grey"><span>장바구니 비우기</span></a>
+                </div>
+            </div>
+            <div class="all-select">
+                <label>
+                    <!--/checkbox_multi_all/--> 상품 전체 선택/해제
+                </label>
+            </div>
+            <!--/end_if/-->
+            <!--/if_not_provider/-->
+            <div class="none-data">
+                <i class="fa fa-exclamation-triangle fa-2x"></i>
+                <p>장바구니 상품이 없습니다.</p>
+            </div>
+            <!--/end_if/-->
+            <!--/loop_provider/-->
+            <!--/if_not_provider@is_provider/-->
+            <ul data-type="vertical" data-open="on" data-checkbok="on" class="not_provider">
+                <!--/loop_provider@basket/-->
+                <li>
+                    <!--/provider@basket@form/-->
+                    <figure>
+                        <div class="basketLeft">
+                            <!--/provider@basket@checkbox_multi_basket/-->
+                            <a href="<!--/provider@basket@link/-->"><img src="<!--/provider@basket@mobile_image/-->"
+                                    alt="상품명" class="response100" /></a>
+                        </div>
+                        <figcaption class="basketRight">
+                            <p class="pname">
+                                <a href="<!--/provider@basket@link/-->">
+                                    <!--/if_provider@basket@is_provider_each/--><span class="blue-delivery">본사배송</span>
+                                    <!--/end_if/-->
+                                    <!--/notag/provider@basket@name(16)/-->
+                                </a>
+                                <a href="<!--/provider@basket@link_del/-->"><span class="fa fa-times fa-2x"></span></a>
+                            </p>
+                            <p>상품가 :
+                                <!--/number/provider@basket@price_sell/-->원
+                            </p>
+
+                            <!--/if_provider@basket@reserve/-->
+                            <p>
+                                <!--/if_provider@basket@used_mobile_reserve/--><span class="fa fa-mobile fa-lg"></span>
+                                <!--/end_if/--> 적립금 :
+                                <!--/number/provider@basket@reserve/-->원
+                            </p>
+                            <!--/end_if/-->
+                            <!--/if_provider@basket@point/-->
+                            <p>
+                                <!--/number/provider@basket@point/-->
+                                <!--/point_unit/-->
+                            </p>
+                            <!--/end_if/-->
+                            <!--/if_provider@basket@delivery_title/-->
+                            <p>배송비 : <a href="javascript:alert('<!--/provider@basket@delivery_detail/-->');"><span>
+                                        <!--/provider@basket@delivery_title/-->
+                                    </span> <span class="fa fa-info-circle fa-lg"></span></a></p>
+                            <!--/end_if/-->
+                            <!--/if_weightdeli_use/-->
+                            <p>상품무게 :
+                                <!--/provider@basket@weight/-->
+                            </p>
+                            <!--/end_if/-->
+                            <p>
+                                수량 :
+                                <!--/provider@basket@input_quantity(txt-input amount-input)/-->
+                                <a href="<!--/provider@basket@link_quantity_up/-->" class=""><span
+                                        class="fa fa-plus"></span></a>
+                                <a href="<!--/provider@basket@link_quantity_down/-->" class=""><span
+                                        class="fa fa-minus"></span></a>
+                                <a onclick="<!--/provider@basket@link_quantity_update/-->"
+                                    class="btn_Black"><span>수량변경</span></a>
+                            </p>
+                            <!--/if_provider@basket@option/-->
+                            <p>
+                                <!--/provider@basket@option/-->
+                                <!--/if_is_unify_option/-->
+                                <!--/if_provider@basket@option/-->
+                                <a href="<!--/provider@basket@link_option_modify/-->" class="btn_Black">선택사항 수정</a>
+                                <!--/end_if/-->
+                                <!--/end_if/-->
+                            </p>
+                            <!--/end_if/-->
+                            <p>배송주기 : <strong class="bold">
+                                    <!--/provider@basket@subs_cycle/-->주 간격 /
+                                    <!--/provider@basket@subs_week/-->
+                                </strong> <a href="<!--/provider@basket@link_subs_edit/-->"
+                                    class="btn_Black layer-open-close">배송주기 변경</a></p>
+                            <p>첫 정기배송 예정일 : <strong class="color_f1191f">
+                                    <!--/provider@basket@subs_delivery_date/-->
+                                </strong></p>
+                        </figcaption>
+                    </figure>
+                    <!--/end_form/-->
+                </li>
+                <!--/end_loop/-->
+            </ul>
+            <!--/end_if/-->
+            <!--/end_loop/-->
+            <!--/loop_provider/-->
+            <!--/if_not_provider@is_provider/-->
+            <!--/if_provider@total_price_sell(+1)/-->
+            <div class="price-each-info-top">
+                <div class="txt">
+                    상품가
+                    <!--/number/provider@total_price_sell/-->원
+                    <!--/if_provider@total_vat(+1)/--> + 부가세
+                    <!--/number/provider@total_vat/-->원
+                    <!--/end_if/-->
+                    <!--/if_provider@total_delivery(+1)/--> + 배송료
+                    <!--/number/provider@total_delivery/-->원
+                    <!--/end_if/-->
+                    <!--/if_provider@total_delivery_add(+1)/--> + 추가배송료
+                    <!--/number/provider@total_delivery_add/-->원
+                    <!--/end_if/-->
+                </div>
+            </div>
+            <div class="price-each-info-bottom">
+                <div class="txt">
+                    합계 :
+                    <!--/number/provider@total_price/-->원
+                    <!--/if_provider@total_reserve/-->(적립금
+                    <!--/number/provider@total_reserve/-->원)
+                    <!--/end_if/-->
+                </div>
+            </div>
+            <!--/end_if/-->
+            <!--/end_if/-->
+            <!--공급사여부-->
+            <!--/end_loop/-->
+            <!--/loop_provider/-->
+            <!--/if_provider@is_provider/-->
+            <ul data-type="vertical" data-open="on" data-checkbok="on" class="provider">
+                <!--/loop_provider@basket/-->
+                <li>
+                    <!--/provider@basket@form/-->
+                    <figure>
+                        <div class="basketLeft">
+                            <!--/provider@basket@checkbox_multi_basket/-->
+                            <a href="<!--/provider@basket@link/-->"><img src="<!--/provider@basket@mobile_image/-->"
+                                    alt="상품명" class="response100" /></a>
+                        </div>
+                        <figcaption class="basketRight">
+                            <p class="pname">
+                                <a href="<!--/provider@basket@link/-->"><span class="red-delivery">업체배송</span>
+                                    <!--/notag/provider@basket@name(16)/-->
+                                </a>
+                                <a href="<!--/provider@basket@link_del/-->" class="close"><span
+                                        class="fa fa-times fa-2x"></span></a>
+                            </p>
+
+                            <p>상품가 :
+                                <!--/number/provider@basket@price_sell/-->원
+                            </p>
+
+                            <!--/if_provider@basket@reserve(+1)/-->
+                            <p>
+                                <!--/if_provider@basket@used_mobile_reserve/--><span class="fa fa-mobile fa-lg"></span>
+                                <!--/end_if/--> 적립금 :
+                                <!--/number/provider@basket@reserve/-->원
+                            </p>
+                            <!--/end_if/-->
+                            <!--/if_provider@basket@point/-->
+                            <p>
+                                <!--/point_unit/--> :
+                                <!--/number/provider@basket@point/-->
+                            </p>
+                            <!--/end_if/-->
+                            <!--/if_provider@basket@delivery_title/-->
+                            <p>배송비 : <a href="javascript:alert('<!--/provider@basket@delivery_detail/-->');"><span>
+                                        <!--/provider@basket@delivery_title/-->
+                                    </span> <span class="fa fa-info-circle fa-lg"></span></a></p>
+                            <!--/end_if/-->
+                            <!--/if_weightdeli_use/-->
+                            <p>상품무게 :
+                                <!--/provider@basket@weight/-->
+                            </p>
+                            <!--/end_if/-->
+                            <p>
+                                수량 :
+                                <!--/provider@basket@input_quantity(txt-input amount-input)/-->
+                                <a href="<!--/provider@basket@link_quantity_up/-->" class=""><span
+                                        class="fa fa-plus"></span></a>
+                                <a href="<!--/provider@basket@link_quantity_down/-->" class=""><span
+                                        class="fa fa-minus"></span></a>
+                                <a onclick="<!--/provider@basket@link_quantity_update/-->"
+                                    class="btn_White"><span>변경</span></a>
+                            </p>
+                            <!--/if_provider@basket@option/-->
+                            <p>
+                                옵션 : <br />
+                                <!--/provider@basket@option/-->
+                                <!--/if_is_unify_option/-->
+                                <!--/if_provider@basket@option/-->
+                                <a href="<!--/provider@basket@link_option_modify/-->" class="btn_White">변경</a>
+                                <!--/end_if/-->
+                                <!--/end_if/-->
+                            </p>
+                            <!--/end_if/-->
+                            <p>배송주기 : <strong class="bold">
+                                    <!--/provider@basket@subs_cycle/-->주 간격 /
+                                    <!--/provider@basket@subs_week/-->
+                                </strong> <a href="<!--/provider@basket@link_subs_edit/-->"
+                                    class="btn_White layer-open-close">변경</a></p>
+                            <p>첫 정기배송 예정일 : <strong class="color_f1191f">
+                                    <!--/provider@basket@subs_delivery_date/-->
+                                </strong></p>
+                        </figcaption>
+                    </figure>
+                    <!--/end_form/-->
+                </li>
+                <!--/end_loop/-->
+            </ul>
+            <div class="price-each-info-top">
+                <p>
+                    상품가
+                    <!--/number/provider@total_price_sell/-->원
+                    <!--/if_provider@total_vat(+1)/--> + 부가세
+                    <!--/number/provider@total_vat/-->원
+                    <!--/end_if/-->
+                    <!--/if_provider@total_delivery(+1)/--> + 배송료
+                    <!--/number/provider@total_delivery/-->원
+                    <!--/end_if/-->
+                    <!--/if_provider@total_delivery_add(+1)/--> + 추가배송료
+                    <!--/number/provider@total_delivery_add/-->원
+                    <!--/end_if/-->
+                </p>
+            </div>
+            <div class="price-each-info-bottom">
+                <p>합계 :
+                    <!--/number/provider@total_price/-->원
+                    <!--/if_provider@total_reserve/-->(적립금
+                    <!--/number/provider@total_reserve/-->원)
+                    <!--/end_if/-->
+                </p>
+            </div>
+            <!--/end_if/-->
+            <!--/end_loop/-->
+            <div class="price-total-info-top">
+                <p>
+                    <!--/block_none_groupsale_total_price_sell/-->상품가
+                    <!--/number/none_groupsale_total_price_sell/-->원
+                    <!--/end_block/-->
+                    <!--/block_total_vat/--> + 부가세
+                    <!--/number/total_vat/-->원
+                    <!--/end_block/-->
+                    <!--/block_total_delivery/--> + 배송료
+                    <!--/number/total_delivery/-->원
+                    <!--/end_block/-->
+                    <!--/block_total_delivery_add/--> + 추가배송료
+                    <!--/number/total_delivery_add/-->원
+                    <!--/end_block/-->
+                    <!--/block_group_sale_price/--> - 그룹할인
+                    <!--/number/group_sale_price/-->원
+                    <!--/end_block/-->
+                </p>
+            </div>
+            <div class="price-total-info-bottom">
+                <p>
+                    총 정기배송 신청금액 : <span class="txt-price">
+                        <!--/block_total_price/-->
+                        <!--/number/total_price/-->원
+                        <!--/end_block/-->
+                    </span>
+                    <!--/block_total_reserve/--><br /><span class="txt-reserve">(적립금
+                        <!--/number/total_reserve/-->원)
+                    </span>
+                    <!--/end_block/-->
+                </p>
+            </div>
+
+
+            <div class="delivery-type">
+                <ul>
+                    <li>지역별 배송정책에 따라 배송비가 변동될 수 있습니다.</li>
+                    <!--/if_login/-->
+                    <!--/if_group_name/-->
+                    <li>
+                        <strong>
+                            <!--/user_name/-->
+                        </strong>님은
+                        <!--/if_group_free_delivery/-->기본배송비가 무료인
+                        <!--/end_if/-->
+                        <!--/if_group_allfree_delivery/-->전체 배송비가 무료인
+                        <!--/end_if/--><strong>[
+                            <!--/group_name/-->]
+                        </strong>회원입니다.<br />
+                        <!--/if_group_reserve_message/-->(
+                        <!--/group_reserve_message/-->)<br />
+                        <!--/end_if/-->
+                    </li>
+                    <!--/if_group_message/-->
+                    <li>
+                        <!--/group_message/-->
+                    </li>
+                    <!--/end_if/-->
+                    <!--/end_if/-->
+                    <!--/end_if/-->
+
+                    <!--/if_powerapp_message/-->
+                    <li>
+                        <!--/powerapp_message/-->
+                    </li>
+                    <!--/end_if/-->
+                </ul>
+            </div>
+
+            <!--/if_cart_free/-->
+            <div class="cart-free-wrap">
+                <p><span>
+                        <!--/number/cart_free_price/-->원
+                    </span> 이상 구매 시 기본 배송비 무료</p>
+                <a href="#none" class="btn-list-open btn-type-02 open">무료배송 추천상품 보기</a>
+                <div class="list-wrap">
+                    <!--/block_cart_free/-->
+                    <ul>
+                        <!--/loop_cart_free_list/-->
+                        <li>
+                            <dl>
+                                <dt><a href="<!--/cart_free_list@link/-->"><img
+                                            src="<!--/cart_free_list@mobile_image/-->" alt="" /></a></dt>
+                                <dd>
+                                    <!--/notag/cart_free_list@name/-->
+                                </dd>
+                                <dd>
+                                    <!--/number/cart_free_list@price_sell/-->원
+                                </dd>
+                            </dl>
+                        </li>
+                        <!--/end_loop/-->
+                    </ul>
+                    <!--/end_block/-->
+                    <!--/block_cart_free_more/-->
+                    <a href="<!--/link_more_cart_free_list/-->" class="btn-more">더 보기 <span></span></a>
+                    <!--/end_block/-->
+                </div>
+            </div>
+            <!--/end_if/-->
+
+            <div class="order-btn">
+                <a href="<!--/link_subs_apply/-->" class="btn_Red"><span>정기배송 신청</span></a>
+            </div>
+            <div class="delivery-type">
+                <ul>
+                    <li class="subs-txt color_f1191f">결제 예정금액은 현재 시점의 금액이며, 정기배송 자동결제 시점에는 금액이 변경될 수 있으니 쇼핑에 참고해 주세요.
+                    </li>
+                </ul>
+            </div>
+            <div class="cart-ft2">
+                <!--/if_btn_payco/-->
+                <!--/btn_payco/-->
+                <!--/end_if/-->
+                <!--/if_btn_nhn/-->
+                <div class="naver-checkout">
+                    <!--/btn_nhn/-->
+                </div>
+                <!--/end_if/-->
+                <!--/if_btn_app/-->
+                <!--/btn_app/-->
+                <!--/end_if/-->
+            </div>
+        </main>
+        <!-- //main -->
+    </div>
+    <!-- //contents -->
+</div>
+<!-- //container -->
+<!-- //본문 -->
+
+<!--/include_footer(1)/-->

@@ -1,0 +1,177 @@
+<!--/include_header(1)/-->
+
+<div id="containerWrap">
+    <div class="container">
+
+        <div class="mypage-wrap">
+
+            <p class="title">마이페이지</p>
+
+            <div class="mypage-list">
+                <a href="/shop/mypage.html?mypage_type=myorder">주문 내역</a>
+                <a href="/shop/mypage.html?mypage_type=mycoupon">쿠폰 내역</a>
+                <a href="/shop/mypage.html?mypage_type=myreserve">적립금 내역</a>
+                <a href="/shop/mypage.html?mypage_type=mywishlist" class="active">좋아요 상품</a>
+                <a href="/shop/mypage.html?mypage_type=myarticle">내 게시글</a>
+                <a href="/shop/mypage.html?mypage_type=myarticle&code=mkplanet_board1">상품리뷰</a>
+                <a href="/shop/mypage.html?mypage_type=mysubs">정기배송 관리</a>
+            </div>
+
+            <div class="mypage-detail-wrap">
+
+                <div class="mypage-detail">
+                    <div class="tbl">
+                        <table summary="사진,  상품명, 수량, 재고, 적립금, 가격, 장바구니">
+                            <caption>예치금 내역</caption>
+                            <colgroup>
+                                <col width="65" />
+                                <col width="*" />
+                                <col width="95" />
+                                <col width="95" />
+                                <col width="95" />
+                                <col width="95" />
+                            </colgroup>
+                            <!--/form_product/-->
+                            <thead>
+                                <tr>
+                                    <th scope="row">
+                                        <div class="tb-center">
+                                            <label class="check">
+                                                <!--/checkbox_all_check/-->
+                                            </label>
+                                        </div>
+                                    </th>
+                                    <th scope="row">
+                                        <div class="tb-center">상품정보</div>
+                                    </th>
+                                    <th scope="row">
+                                        <div class="tb-center">수량</div>
+                                    </th>
+                                    <th scope="row">
+                                        <div class="tb-center">적립금</div>
+                                    </th>
+                                    <th scope="row">
+                                        <div class="tb-center">가격</div>
+                                    </th>
+                                    <th scope="row">
+                                        <div class="tb-center">선택</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!--/if_product/-->
+                                <!--/loop_product/-->
+                                <tr>
+                                    <td>
+                                        <div class="tb-center">
+                                            <label class="check">
+                                                <!--/product@checkbox/-->
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="tb-left">
+                                            <a href="<!--/product@link_detail/-->" class="thumb">
+                                                <!--/if_product@image/--><img src="<!--/product@image/-->"
+                                                    style="width:120px;" />
+                                                <!--/else/--><img src="/images/mini.gif"
+                                                    style="width:120px;" />
+                                                <!--/end_if/-->
+                                            </a>
+                                            <a href="<!--/product@link_detail/-->" class="name"><!--/product@name/--></a>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="tb-center">
+                                            <!--/product@input_quantity(txt-input2 txt-right)/-->개
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="tb-center">
+                                            <!--/product@reserve/-->원
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="tb-center">
+                                            <!--/if_product@price_option/--><strong class="d-block fc-blue">
+                                                <!--/product@price_option/-->
+                                            </strong>
+                                            <!--/end_if/-->
+                                            <!--/number/product@price/-->원
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="tb-center tb-btns">
+                                            <a href="<!--/product@link_basket/-->" class="btn-view">장바구니</a>
+                                            <!--/if_importune/-->
+                                            <a href="<!--/product@link_importune/-->" class="btn-view">
+                                                <!--/if_product@importune_image/-->조르기
+                                                <!--/else/-->조르기
+                                                <!--/end_if/-->
+                                            </a>
+                                            <!--/end_if/-->
+                                            <a href="<!--/product@link_delete/-->" class="btn-view">삭제</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!--/end_loop/-->
+                                <!--/else/-->
+                                <tr>
+                                    <td colspan="8">
+                                        <div class="tb-center">보관하신 상품 내역이 없습니다.</div>
+                                    </td>
+                                </tr>
+                                <!--/end_if/-->
+                            </tbody>
+                            <!--/end_form/-->
+                        </table>
+                    </div>
+                    
+                    <div class="item-page">
+                        <!--/if_pager_product::first/-->
+                        <a href="<!--/pager_order_list::first@link/-->" class="paging-start">[처음]</a>
+                        <!--/end_if/-->
+                        <!--/if_pager_product::prev/-->
+                        <a href="<!--/page_product::prev@link/-->" class="paging-prev">[이전]</a>
+                        <!--/end_if/-->
+    
+                        <!--/if_pager_product/-->
+                        <!--/loop_pager_product::page/-->
+                        <!--/if_pager_product::page@current/-->
+                        <a href="<!--/pager_product::page@link/-->" class="now">
+                            <!--/pager_product::current/-->
+                        </a>
+                        <!--/else/-->
+                        <a href="<!--/pager_product::page@link/-->">
+                            <!--/page_product::page/-->
+                        </a>
+                        <!--/end_if/-->
+                        <!--/end_loop/-->
+                        <!--/end_if/-->
+
+                        <!--/if_pager_product::next/-->
+                        <a href="<!--/pager_product::next@link/-->" class="paging-next">[다음]</a>
+                        <!--/end_if/-->
+                        <!--/if_pager_product::last/-->
+                        <a href="<!--/pager_product::last@link/-->" class="paging-end">[끝]</a>
+                        <!--/end_if/-->
+                    </div>
+
+                    
+                </div>
+                <div class="btn-foot">
+                    <a href="<!--/multi_check_delete/-->" class="btn-delete">선택상품 삭제</a>
+                    <!--/if_importune/-->
+                    <a href="<!--/link_importune_all/-->" class="hvr-rectangle-in btn-scart">모든상품 조르기</a>
+                    <a href="<!--/link_importune_select/-->" class="hvr-rectangle-in btn-scart">선택상품 조르기</a>
+                    <!--/end_if/-->
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+<!--/include_footer(1)/-->

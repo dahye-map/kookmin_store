@@ -1,0 +1,103 @@
+.clear-fix { position:relative; }
+.clear-fix:after { content:''; display:block; overflow:hidden; clear:both; }
+
+.main-banner-wrap { position:relative; float:left; width:750px; height:100vh; overflow:hidden; }
+.main-banner-wrap.fixed { position:fixed !important; top:0; }
+.main-banner-wrap.absolute { position:absolute !important; top:auto; bottom:0; }
+.main-banner-wrap .swiper-slide a { display:block; height:100%; }
+.main-banner-wrap .swiper-slide img { width:100%; height:100%; object-fit:cover; }
+.right-con { float:right; width:calc(100% - 750px); padding-top:100px; padding-left:35px; padding-right:35px; padding-bottom:100px; }
+
+
+.tit { font-size:30px; font-weight:bold; margin-bottom:35px; }
+
+
+.prd-list { display:flex; display:-webkit-flex; flex-wrap:wrap; margin-left:-15px; margin-right:-15px; }
+.prd-list.col2 .prd { width:50%; padding:0 15px; }
+.prd-list.col2 .prd:nth-child(even) { margin-top:98px; }
+.prd-list.col3 .prd { width:33.33333%; padding:0 15px; margin-bottom:80px; }
+.prd-list .prd .thumb img { width:100%; }
+.prd-list .prd .info .title { font-size:24px; color:#000; font-weight:bold; opacity:.8; margin-top:32px; margin-bottom:18px; }
+.prd-list .prd .info .sub-title { font-size:14px; line-height:1.57; word-break:keep-all; }
+.prd-list .prd .info { position:relative; }
+.prd-list .prd .info .name { font-size:16px; color:#000; margin-top:10px; margin-bottom:30px; font-weight:500; }
+.prd-list .prd .info .price-wrap { display:flex; display:-webkit-flex; align-items:center; font-weight:500; }
+.prd-list .prd .info .price-wrap .percent { font-size:15px; color:#ff4000; padding-right:10px; }
+.prd-list .prd .info .price-wrap .price01 { font-size:14px; color:#808080; text-decoration-line:line-through; }
+.prd-list .prd .info .price-wrap .price02 { font-size:15px; color:#333; padding-right:10px; }
+.reviewtop { position:absolute; right:0; top:0; }
+
+
+
+.best-sec { margin-top:90px; }
+.prd-sec-wrap { margin-top:150px; }
+
+
+
+.ranking-sec { display:flex; display:-webkit-flex; justify-content:flex-end; }
+.ranking-sec ul li { margin:10px 0; overflow:hidden; transition:all .3s; vertical-align:top; }
+.ranking-sec ul li.active { font-weight:bold; }
+.ranking-sec ul li.new { background:url('/design/mkplanet/kkstore/img/ico_new.jpg') right center no-repeat; }
+.ranking-sec ul li.up { background:url('/design/mkplanet/kkstore/img/ico_up.jpg') 97% center no-repeat; }
+.ranking-sec ul li.down { background:url('/design/mkplanet/kkstore/img/ico_down.jpg') 97% center no-repeat; }
+.ranking-sec ul li.stop { background:url('/design/mkplanet/kkstore/img/ico_stop.jpg') 95% center no-repeat; }
+.ranking-sec ul li a { font-size:14px; display:block; }
+.ranking-sec .rank-brand { margin-right:70px; }
+.ranking-sec .title { color:#000; font-size:16px; font-weight:bold; padding-bottom:15px; }
+.ranking-sec .name { display:inline-block; padding-right:30px; line-height:1; }
+.rank-sell .name { width:190px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.ranking-sec .num { display:inline-block; color:#ff6700; font-weight:bold; padding-right:12px; }
+
+
+.magazine-wrap { position:relative; padding-top:250px; }
+.magazine-wrap .bg-float { position:absolute; top:30%; right:0; z-index:50; }
+.magazine-wrap .magazine-list { display:flex; display:-webkit-flex; justify-content:space-between; }
+.magazine-wrap .magazine-list .list { position:relative; }
+.magazine-wrap .magazine-list .list:nth-child(even) { margin-top:200px; }
+.magazine-wrap .tag {  position: absolute; font-size:15px; top:-26px; left:100%; padding-bottom:8px; white-space:nowrap; transform:rotate(90deg); transform-origin:left bottom; -ms-transform:rotate(90deg); -ms-transform-origin:left bottom; color:#ff8800; font-weight:500; }
+.magazine-wrap .title { font-size:26px; color:#000; font-weight:bold; opacity:.8; margin-top:32px; margin-bottom:18px; }
+.magazine-wrap .sub-title { font-size:14px; line-height:1.57; word-break:keep-all; }
+
+
+
+.insta-wrap { margin-top:250px; margin-bottom:250px; }
+.insta-wrap .insta-tab ul li { display:inline-block; margin-left:9px; padding:5px 14px 7px; border-radius:5px; font-size:14px; background-color:#EBE9EC; cursor:pointer; }
+.insta-wrap .insta-tab ul li:first-child { margin-left:0; }
+.insta-wrap .insta-tab ul li.active { background-color:#e2904d; color:#fff; }
+
+.insta-con .inner { display:none; margin-top:32px; }
+.insta-con .inner.active { display:flex; display:-webkit-flex;}
+.insta-con .inner .banner { width:560px; }
+.insta-con .inner .insta-prd-sec { padding-left:70px; }
+.insta-con .inner .intro-desc { font-size:26px; font-weight:bold; color:#b1b1b1; line-height:1.9; }
+.insta-con .inner .intro-desc .highlight { position:relative; color:#000; }
+.insta-con .inner .intro-desc .highlight:after { content:''; display:block; position:absolute; left:-22px; top:-8px; background:url('/design/mkplanet/kkstore/img/insta_highlight.png') center no-repeat; width:140px; height:50px; }
+
+.insta-con .user { display:flex; display:-webkit-flex; align-items:center; margin-top:20px; }
+.insta-con .user .thumb { padding-right:14px; }
+.insta-con .user .id { font-size:15px; color:#000; opacity:.5; font-weight:500; }
+
+.event-wrap { margin-top:250px; }
+.event-wrap .info { margin-top:26px; }
+.event-wrap .info .title { font-size:20px; color:#000; opacity:.8; padding-bottom:20px; }
+.event-wrap .info .period { font-size:14px; color:#000; opacity:.4; font-style:oblique; }
+.event-wrap .swiper-slide { width:auto !important; }
+
+@media all and (min-width:1920px) {
+    .prd-list.col2 .prd { width:33.3333%; margin-bottom:80px; }
+    .prd-list.col3 .prd { width:25%; }
+    .prd-list.col2 .prd:nth-child(even) { margin-top:0; }
+}
+
+
+.item-wrap { padding-top:200px; padding-bottom:200px; }
+
+.cate-title { font-size:32px; font-weight:bold; margin-bottom:20px; }
+.cate-list { display:flex; display:-webkit-flex; }
+.cate-list a { position:relative; padding:20px 15px; display:block; font-size:15px; color:#9d9d9d; }
+.cate-list a.active { color:#ff4e09; font-weight:bold; }
+.cate-list a.active:after { content:''; display:block; position:absolute; left:0; top:15px; border:1px solid #ff4e09; border-radius:100%; transform:rotate('45deg'); width:100%; height:33px; }
+
+
+
+

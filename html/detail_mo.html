@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="../lib/css/base.css">
+    <link rel="stylesheet" href="../lib/css/detail_mo.css">
+    <link rel="stylesheet" href="../lib/css/font-awesome.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../lib/js/ui.js"></script>
+
+    <script src="../lib/js/TweenMax.min.js"></script>
+    <script src="../lib/js/ScrollMagic.js"></script>
+    <script src="../lib/js/animation.gsap.js"></script>
+    <script src="../lib/js/debug.addIndicators.min.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    
+
+    <div id="wrap">
+
+        <header id="headerWrap">
+            <div class="header">
+                <div class="menu"><i class="fa fa-bars"></i></div>
+                <div class="logo"><img src="../img/logo.jpg" alt=""></div>
+                <div class="cart"><i class="fa fa-shopping-cart"></i></div>
+            </div>
+        </header>
+
+        <div id="containerWrap">
+            <div class="container">
+
+                
+                <!-- s:prd-wrap -->
+                <div class="prd-wrap">
+                    <div class="prd-header">
+
+                        <div class="prd-header-center">
+                            <div class="prd-header-tit">
+                                <p class="name">도시락 누적판매1위!국내도시락 최다후기 점심대용식 세트 (12종12팩/12종18팩)</p>
+                            </div>
+                            <div class="prd-tab">
+                                <ul>
+                                    <li><a href="">상세</a></li>
+                                    <li><a href="">리뷰</a></li>
+                                    <li><a href="">추천</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    
+
+                    <div id="trigger1"></div>
+                    <div class="prd-thumb">
+                        <p class="img"><img src="../img/pro_thumb.jpg" alt=""></p>
+                    </div>
+
+                    
+
+                    <div class="prd-info-wrap">
+                        <div class="prd-info">
+                            <p class="tit">도시락 누적판매1위!국내도시락 최다후기 점심대용식 세트 (12종12팩/12종18팩)</p>
+                            <p class="price">16,490원</p>
+                            <p class="">16,490원</p>
+                            <p class="">16,490원</p>
+                            <p class="">16,490원</p>
+                            <p class="">16,490원</p>
+                        </div>
+                    </div>
+
+                    <div class="prd-detail-wrap" id="detail">
+                        <p class="sec-tit">상세 정보</p>
+                        <img src="http://ftp.xexymix.jpg3.kr/3carekorea/3care/2care/pocketdosirak/common/instagram.gif">
+                        <img
+                            src="http://ftp.xexymix.jpg3.kr/3carekorea/3care/2care/pocketdosirak/common/top_banner_01.jpg">
+                        <img src="http://ftp.xexymix.jpg3.kr/3carekorea/3care/2care/pocketdosirak/lunch/1.jpg">
+                        <img
+                            src="http://ftp.xexymix.jpg3.kr/3carekorea/3care/2care/pocketdosirak/common/top_banner_02.jpg">
+                    </div>
+
+                    <div class="review-wrap" id="review">
+                        <p class="sec-tit">리뷰당</p>
+                    </div>
+
+                    <div class="recommend-wrap" id="recommend">
+                        <p class="sec-tit">추천한당</p>
+                    </div>
+                </div>
+                <!-- //e:prd-wrap -->
+
+            </div>
+        </div>
+    </div>
+    <script>
+        var controller = new ScrollMagic.Controller();
+
+        var smaller = 
+        new TimelineMax().add([
+            // hero block animations
+            TweenMax.to(".prd-thumb", 1, {transformOrigin:"50% 2%", scale:'0.1', borderRadius:'50%', ease:Linear.easeNone}),
+            TweenMax.to(".prd-thumb", 1, {left:'40%', delay:1, ease:Linear.easeNone})
+        ])
+
+        var scene = new ScrollMagic.Scene({
+            triggerElement: ".prd-thumb", //트리거 설정
+            triggerHook:0,
+            duration:400
+        })
+        .setTween(smaller)
+        .setPin(".prd-thumb", {pushFollowers: true})
+        .addTo(controller);
+
+
+    </script>
+
+</body>
+
+</html>

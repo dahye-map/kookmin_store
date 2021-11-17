@@ -1,0 +1,18 @@
+body { background:#fafafa; }
+#headerWrap .header { border-bottom:1px solid #f0f0f0; }
+
+
+/* 쿠폰 등록 */
+.coupon-list .coupon-num { position:relative; background:#fff; padding:0 20px 30px; border-bottom:1px solid #f0f0f0; margin-bottom:10px; }
+.coupon-list .coupon-num ul li input { width:100%; padding:14px 10px; margin:7px 0; border:1px solid #cfcfcf; border-radius:10px; height:auto; text-align:left !important; } 
+.coupon-list .coupon-num ul li a.sc-btn-insert { position:relative; display:block; background:#ff7600; border:1px solid #ff7600; color:#fff; text-align:center; padding:15px 0; margin:7px 0; width:100%; border-radius:10px; }
+.coupon-list .coupon-num ul li p { padding-top:10px; color:#ff7600; font-size:154x; }
+
+/* 쿠폰 리스트 */
+.coupon-list .couponList { padding:30px 20px; background:#fff; }
+.coupon-list .couponList .title { font-size:18px; color:#000; font-weight:bold; padding-bottom:20px; }
+
+
+.couponList .coupon-tit { background:#f4f4f4; color:#888; font-size:14px; height:45px; line-height:45px; text-align:center; border-radius:15px; }
+.couponList .coupon-con { margin-top:20px; margin-bottom:30px; }
+.couponList .coupon-con p { display:-webkit-flex; display:flex; justify-content:space-between; align-items:center; padding:5px 0; font-size:14px; color:#888; }

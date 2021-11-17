@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+        let now = new Date();   //현재시간
+
+        month1 = new Date(Date.parse(now) + 1 * 1000 * 60 * 60 *24).getMonth() + 1
+        month2 = new Date(Date.parse(now) + 2 * 1000 * 60 * 60 *24).getMonth() + 1
+        month3 = new Date(Date.parse(now) + 3 * 1000 * 60 * 60 *24).getMonth() + 1
+        month4 = new Date(Date.parse(now) + 4 * 1000 * 60 * 60 *24).getMonth() + 1
+
+        date1 = new Date(Date.parse(now) + 1 * 1000 * 60 * 60 *24).getDate()
+        date2 = new Date(Date.parse(now) + 2 * 1000 * 60 * 60 *24).getDate()
+        date3 = new Date(Date.parse(now) + 3 * 1000 * 60 * 60 *24).getDate()
+        date4 = new Date(Date.parse(now) + 4 * 1000 * 60 * 60 *24).getDate()
+
+        hour = now.getHours();   //현재 시간 중 시간.
+        if ((hour + "").length < 2) {
+            hour = "0" + hour;
+        }
+        var minutes = now.getMinutes();	// 분
+        if ((minutes + "").length < 2) {
+            minutes = "0" + minutes;
+        }
+
+        var week = ['일', '월', '화', '수', '목', '금', '토'];
+        var dayOfToday = now.getDay();
+        var dayOfTodayp1 = now.getDay() + 1;
+        var dayOfTodayp2 = now.getDay() + 2;
+        var dayOfWeek_tm = week[dayOfTodayp1];
+        var dayOfWeek_ttm = week[dayOfTodayp2];
+
+        today = hour + "" + minutes; //오늘 날짜 완성.
+
+
+        $(document).ready(function () {
+
+            // 일반배송
+            // 15시 이전
+            if (today <= 1500) {
+                if (dayOfToday == 5) {
+                    $('.month').html(month3);
+                    $('.daily .date').html(date3);
+                    $('.day').text('월');
+                } else {
+                    $('.month').html(month1);
+                    $('.daily .date').html(date1);
+                    $('.day').text(dayOfWeek_tm);
+                }
+
+            }
+            //15시 이후
+            else {
+                if (dayOfToday == 5) {
+                    $('.month').html(month4);
+                    $('.daily .date').html(date4);
+                    $('.daily .day').text('화');
+                } else {
+                    $('.month').html(month2);
+                    $('.daily .date').html(date2);
+                    $('.daily .day').text(dayOfWeek_ttm);
+                }
+                
+            }
+
+
+
+            // 새벽배송
+            // 16시 30분 이전
+            if (today <= 1630) {
+                if (dayOfToday == 5) {
+                    $('.month').html(month3);
+                    $('.dawn .date').html(date3);
+                    $('.dawn .day').text('월');
+                } else {
+                    $('.month').html(month1);
+                    $('.dawn .date').html(date1);
+                    $('.dawn .day').text(dayOfWeek_tm);
+                }
+            }
+            //16시 30분 이후
+            else {
+                if (dayOfToday == 5) {
+                    $('.month').html(month4);
+                    $('.dawn .date').html(date4);
+                    $('.dawn .day').text('화');
+                } else {
+                    $('.month').html(month2);
+                    $('.dawn .date').html(date2);
+                    $('.dawn .day').text(dayOfWeek_ttm);
+                }
+            }
+
+        });
+
+    </script>
+
+
+    <!-- 
+    일반 배송
+    8/16 오후 3시1분 ~ 8/17 오후 3시 -> 도착예정 8/18
+    8/17 오후 3시1분 ~ 8/18 오후 3시 -> 도착 예정 8/19
+
+    새벽배송 
+    8/16 오후 4시 31분 ~ 8/17 오후 4시30분 -> 도착예정 8/18 오전7시 이전
+    8/17 오후 4시 31분 ~ 8/18 오후 4시30분 -> 도착예정 8/19 오전7시 이전 
+-->
+
+    <div class="delivery-info">
+        <p class="tit">배송마감시간</p>
+
+        <div class="desc daily">
+            <p class="sub-tit">일반배송</p>
+            <p class="time">지금 주문 시 <span class="month"></span>/<span class="date"></span>(<span class="day"></span>)
+                도착예정</p>
+        </div>
+        <div class="desc dawn">
+            <p class="sub-tit">새벽배송</p>
+            <p class="time">지금 주문 시 <span class="month"></span>/<span class="date"></span>(<span class="day"></span>) 오전 7시 이전 도착예정</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

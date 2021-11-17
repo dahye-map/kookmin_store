@@ -1,0 +1,266 @@
+<!--/include_header(1)/-->
+<div id="containerWrap">
+    <div class="container">
+
+        <div id="bbsData">
+            <div class="community-wrap">
+
+                <div class="commu-tit-wrap">
+                    <p class="title">즐거운 국민상점 고객센터</p>
+                    <div class="commu-depth2">
+                        <a href="/shop/faq.html">자주묻는질문</a>
+                        <a href="/board/board.html?code=mkplanet" class="active">문의하기</a>
+                    </div>
+                </div>
+
+
+
+
+                <!--
+
+  <div class="bbs-hd">
+                            <ul class="link">
+                                <!--/loop_top_board_list/-->
+                <!--/if_idx(1)/-->
+                <li class="last">
+                    <!--/else/-->
+                <li>
+                    <!--/end_if/-->
+                    <a href="<!--/top_board_list@link/-->">
+                        <!--/top_board_list@name/-->
+                    </a>
+                </li>
+                <!--/end_loop/-->
+                </ul>
+
+                -->
+
+
+                <div class="community-con-wrap">
+
+                    <div class="commu-table">
+                        <table summary="No, content,Name,Data,Hits">
+                            <caption>일반게시판 게시글</caption>
+                            <colgroup>
+                                <col width="*" />
+                                <col width="100" />
+                                <col width="100" />
+                            </colgroup>
+                            <tbody>
+                                <!--/if_oneline_notice/-->
+                                <tr>
+                                    <!--/if_is_product_image/-->
+                                    <!-- .상품정보가 있을 경우에만 나타남 -->
+                                    <td>
+                                        <div class="tb-left">
+                                            <!--/oneline_notice/-->
+                                        </div>
+                                    </td>
+                                    <!--/else/-->
+                                    <td>
+                                        <div class="tb-left"><img src="<!--/notice_image/-->" /> </div>
+                                    </td>
+                                    <td>
+                                        <div class="tb-left">
+                                            <!--/oneline_notice/-->
+                                        </div>
+                                    </td>
+                                    <!--/end_if/-->
+                                </tr>
+                                <!--/end_if/-->
+                                <!--/if_notice_list/-->
+                                <!-- .공지사항 리스트 시작 -->
+                                <!--/loop_notice_list/-->
+                                <tr>
+                                    <td>
+                                        <div class="tb-left">
+                                            <img src="<!--/notice_list@head_icon_image/-->" />
+                                            <a href="<!--/notice_list@link/-->">
+                                                <!--/notice_list@subject/-->
+                                            </a>
+                                            <!--/if_is_product_info/-->
+                                            <!--/if_notice_list@hit_icon_image/--><img
+                                                src="<!--/notice_list@hit_icon_image/-->" />
+                                            <!--/end_if/-->
+                                            <!--/end_if/-->
+                                            <!--/if_notice_list@comment_cnt/--> (
+                                            <!--/notice_list@comment_cnt/-->)
+                                            <!--/end_if/-->
+                                            <!--/if_notice_list@new_icon_image/--><img
+                                                src="<!--/notice_list@new_icon_image/-->" />
+                                            <!--/end_if/-->
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="tb-center">
+                                            <!--/if_notice_list@img_admin_icon/-->
+                                            <img src="<!--/notice_list@img_admin_icon/-->" />
+                                            <!--/else/-->
+                                            <!--/notice_list@writer/-->
+                                            <!--/end_if/-->
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="tb-center">
+                                            <!--/notice_list@cnt_read/-->
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!--/end_loop/-->
+                                <!--/end_if/-->
+                                <!--. 공지사항 리스트 끝! -->
+
+                                <!--/loop_list(10)/-->
+                                <!--. 게시글 리스트 시작(한페이지당 게시글 수) -->
+                                <tr>
+                                    <td>
+                                        <div class="tb-left">
+                                            <!--/if_list@is_original_del/-->
+                                            <div style="font-size:11px;">* 아래 답변의 최초게시물을 게시자가 삭제하였습니다.</div>
+                                            <!--/end_if/-->
+                                            <img src="<!--/list@head_icon_image/-->"
+                                                style="padding-left: <!--/list@depth/-->0px;" />
+                                            <!--/if_list@product_name/-->
+                                            <a href="<!--/list@link_product/-->"><b>[
+                                                    <!--/notag/list@product_name/-->]
+                                                </b></a>
+                                            <!--/end_if/-->
+
+                                            <!--/if_list@link/-->
+                                            <!--. 스팸글 처리 -->
+                                            <span style="color:#000; padding-left:10px;"><a href="<!--/list@link/-->">
+                                                    <!--/list@subject/-->
+                                                </a></span>
+                                            <!--/else/-->
+                                            <!--/list@spam_subject/-->
+                                            <!--/end_if/-->
+                                            <!--/if_list@comment_cnt/-->
+                                            <!--. 코멘트갯수처리 -->
+                                            (
+                                            <!--/list@comment_cnt/-->)
+                                            <!--/end_if/-->
+                                            <!--/if_is_product_info/-->
+                                            <!--. 상품정보가 있을때 조회수가 10이상이면 hit아이콘보여주기 -->
+                                            <!--/if_list@hit_icon_image/-->
+                                            <img src="<!--/list@hit_icon_image/-->" />
+                                            <!--/end_if/-->
+                                            <!--/end_if/-->
+                                            <!--/if_list@new_icon_image/-->
+                                            <!--. new아이콘처리 -->
+                                            <img src="<!--/list@new_icon_image/-->" />
+                                            <!--/end_if/-->
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="tb-center">
+                                            <!--/if_list@img_admin_icon/-->
+                                            <img src="<!--/list@img_admin_icon/-->" />
+                                            <!--/else/-->
+                                            <!--/if_list@user_icon_image/-->
+                                            <img src="<!--/list@user_icon_image/-->" />
+                                            <!--/end_if/-->
+                                            <!--/list@writer/-->
+                                            <!--/end_if/-->
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="tb-center">
+                                            <!--/list@cnt_read/-->
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!--/end_loop/-->
+                                <!--. 게시글 리스트 끝 -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div style="width:100%;border:0px solid #000;">
+
+                        <div class="bbs-sch">
+                            <!--/form_board/-->
+                            <!-- .검색 폼시작 -->
+                            <fieldset>
+                                <legend>게시판 검색 폼</legend>
+                                <label>
+                                    <!--/radio_name/-->
+                                    이름
+                                </label>
+                                <label>
+                                    <!--/radio_subject/-->
+                                    제목
+                                </label>
+                                <label>
+                                    <!--/radio_content/-->
+                                    내용
+                                </label>
+                                <!--/if_radio_product/-->
+                                <!-- .상품정보가 있을 경우에만 나타남 -->
+                                <label>
+                                    <!--/radio_product/-->
+                                    상품
+                                </label>
+                                <!--/end_if/-->
+                                <span class="key-wrap">
+                                    <!--/input_keyword/-->
+                                    <a href="<!--/link_search/-->">
+                                        <div class="board_btn02">검색</div>
+                                    </a>
+                                </span>
+                            </fieldset>
+                            <!--/end_form/-->
+                            <!-- .검색 폼 끝 -->
+                        </div><!-- .bbs-sch -->
+
+
+
+
+                        <div class="bbs-link-btm"><a href="<!--/link_write/-->" class="-btn10 hvr-rectangle-in">글쓰기</a>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+                <div class="item-page">
+                    <!--/if_pager_list::first/-->
+                    <a href="<!--/if_pager_list::first@link/--><!--/pager_list::first@link/--><!--/else/-->javascript:;<!--/end_if/-->"
+                        class="paging-start">[처음]</a>
+                    <!--/end_if/-->
+                    <!--/if_pager_list::prev/-->
+                    <a href="<!--/if_pager_list::prev@link/--><!--/pager_list::prev@link/--><!--/else/-->javascript:;<!--/end_if/-->"
+                        class="paging-prev">[이전]</a>
+                    <!--/end_if/-->
+
+                    <!--/loop_pager_list::page/-->
+                    <!--/if_pager_list::page@current/-->
+                    <a href="<!--/pager_list::current@link/-->" class="now">
+                        <!--/pager_list::current/-->
+                    </a>
+                    <!--/else/-->
+                    <a href="<!--/pager_list::page@link/-->">
+                        <!--/pager_list::page/-->
+                    </a>
+                    <!--/end_if/-->
+                    <!--/end_loop/-->
+                    <!--/if_pager_list::next/-->
+                    <a href="<!--/if_pager_list::next@link/--><!--/pager_list::next@link/--><!--/else/-->javascript:;<!--/end_if/-->"
+                        class="paging-next">[다음]</a>
+                    <!--/end_if/-->
+                    <!--/if_pager_list::last/-->
+                    <a href="<!--/if_pager_list::last@link/--><!--/pager_list::last@link/--><!--/else/-->javascript:;<!--/end_if/-->"
+                        class="paging-end">[끝]</a>
+                    <!--/end_if/-->
+                </div>
+
+            </div><!-- .page-body -->
+        </div><!-- #bbsData -->
+
+    </div><!-- #contentWrap -->
+</div><!-- #contentWrapper-->
+
+
+
+<!--/include_footer(1)/-->

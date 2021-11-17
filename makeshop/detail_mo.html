@@ -1,0 +1,761 @@
+<!--/include_header(1)/-->
+
+<!-- s:containerWrap -->
+<div id="containerWrap">
+    <!-- s:container -->
+    <div class="container">
+
+        <!-- s:detail-wrap -->
+        <div class="detail-wrap">
+            <!-- s:thumb-wrap -->
+            <div class="thumb-wrap">
+                <div class="thumb"><img src="<!--/mobile_image/-->" class="response100"></div>
+            </div>
+            <!-- //e:thumb-wrap -->
+
+            
+
+
+            <div class="btn-fixed-order">
+                <!--/if_soldout/-->
+                <p class="soldout">상품이 품절되었습니다.</p>
+                <!--/else/-->
+                <div class="prd-btns">
+                    <!--/if_not_soldout/-->
+                    <a href="#" class="btn-period">정기배송 신청 <span>-5%</span></a>
+                    <a href="#" class="btn-buy">바로 구매하기</a>
+                    <!--/end_if/-->
+                </div>
+                <!--/end_if/-->
+            </div>
+            
+
+            <!-- s:detail-info-wrap -->
+            <div class="detail-info-wrap">
+                <div class="detail-info">
+                    <p class="brand"><!--/brand/--></p>
+                    <p class="name"><!--/name/--></p>
+                    <p class="subname"><!--/subname/--></p>
+
+                    <div class="price-wrap">
+
+                        <p class="percent"><!--/discount_percent/-->%</p>
+
+                        <!--/if_dc_price_sell/-->
+                        <p class="price-sell">
+                            <!--/number/dc_price_origin/-->원
+                            <!--/number/dc_price_sell/-->원
+                        </p>
+                        <!--/else/-->
+                        <p class="price-sell">
+                            <!--/if_replace_price/-->
+                            <!--/replace_price/-->
+                            <!--/else/-->
+                            <!--/number/price_sell/-->원
+                            <!--/end_if/-->
+                        </p>
+                        <!--/end_if/-->
+
+                        <!--/if_price_consumer(+1)/-->
+                        <p class="price-origin"><!--/number/price_consumer/-->원</p>
+                        <!--/end_if/-->
+                    </div>
+
+
+                    <div class="btn-etc-wrap">
+                        <div class="open">
+                            <a href="<!--/link_immediate/-->">구매</a>
+                            <a href="<!--/link_basket/-->"><img src="/design/mkplanet/kkstore/img/btn_basket_dt_mo.png" alt=""></a>
+                            <a href="<!--/link_wishlist/-->"><img src="/design/mkplanet/kkstore/img/btn_wish_dt_mo.png" alt=""></a>
+                        </div>
+                        <div class="close">
+                            <a href="#none" class="btn-open active"><img src="/design/mkplanet/kkstore/img/btn_basket_dt_mo.png" alt=""></a>
+                            <a href="#none" class="btn-close"><img src="/design/mkplanet/kkstore/img/btn_close_dt_mo.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="delivery-info">
+                    <div class="desc daily">
+                        <p class="sub-tit">일반배송</p>
+                        <p class="time">
+                            지금 주문 시
+                            <span class="highlight">
+                                <span class="month"></span>/<span class="date"></span>(<span class="day"></span>)
+                            </span>
+                            도착예정
+                        </p>
+                    </div>
+                    <div class="desc dawn">
+                        <p class="sub-tit">새벽배송</p>
+                        <p class="time">
+                            지금 주문 시
+                            <span class="highlight">
+                                <span class="month"></span>/<span class="date"></span>(<span class="day"></span>) 오전 7시 이전
+                            </span>
+                            도착예정
+                        </p>
+                    </div>
+                </div>
+
+                <div class="fee-info">
+                    <div class="desc">
+                        <p class="sub-tit">배송</p>
+                        <p class="con">
+                            <span>새벽배송 <a href="#none" onclick="openPopup('dawn_popup')"><img src="/design/mkplanet/kkstore/img/ico_buy_info.jpg" alt=""></a></span>
+                            <span>정기배송 <a href="#none" onclick="openPopup('period_popup')"><img src="/design/mkplanet/kkstore/img/ico_buy_info.jpg" alt=""></a></span>
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <p class="sub-tit">배송비</p>
+                        <p class="con">
+                            <a href="javascript:alert('<!--/delivery_detail/-->');">
+                                <span>조건별</span>
+                                <span><img src="/design/mkplanet/kkstore/img/ico_buy_info.jpg" alt=""></span>
+                            </a>
+                            <!--/if_link_delivery_country/-->
+                            <a href="<!--/link_delivery_country/-->">
+                                <span class="region">지역별</span> 
+                                <span><img src="/design/mkplanet/kkstore/img/ico_buy_info.jpg" alt=""></span>
+                            </a>
+                            <!--/end_if/-->
+                        </p>
+                    </div>
+                </div>
+
+                <!-- s:고정 옵션 창 -->
+                <div class="option-wrap">
+
+                    <div class="fixed-only">
+                        <p class="name"><!--/name/--></p>
+                        <div class="btn-util-wrap">
+                            <a href="<!--/link_wishlist/-->" class="btn-wish"><img src="/design/mkplanet/kkstore/img/btn_wish_mo.png" alt=""></a>
+                            <a href="#none" class="btn-share"><img src="/design/mkplanet/kkstore/img/btn_share_mo.png" alt=""></a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="detail-select-wrap">
+                        <!--/if_not_multi_option/-->
+                        <!--/if_option/-->
+                        <!--/loop_option/-->
+                        <p>
+                            <span class="detail-select">
+                                <!--/option@select/-->
+                            </span>
+                        </p>
+                        <!--/end_loop/-->
+                        <!--/end_if/-->
+                        <!--/if_not_multi_option_box/-->
+                        <p class="shopdetailInfoCount">
+                            <span class="shopdetailInfoName">수량</span>
+                            <span class="shopdetailInfoCont">
+                                <!--/input_quantity/-->
+                                <a href="<!--/link_quantity_up/-->"><span class="fa fa-plus"></span></a>
+                                <a href="<!--/link_quantity_down/-->"><span class="fa fa-minus"></span></a>
+                            </span>
+                        </p>
+                        <!--/end_if/-->
+                        <!--/end_if/-->
+                        <!--/if_is_unify_option/-->
+                        <!--/if_option_add/-->
+                        <p class="add-option-sel">+ 추가 옵션 선택</p>
+                        <!--/loop_option_add/-->
+                        <p class="shopdetailInfoCount add-option">
+                            <span class="shopdetailInfoName">
+                                <!--/option_add@title/-->
+                            </span>
+                            <span class="shopdetailInfoCont">
+                                <!--/option_add@select/-->
+                                <!--/option_add@input_quantity/-->
+                                <a href="<!--/option_add@link_quantity_up/-->"><span
+                                        class="fa fa-plus"></span></a><a
+                                    href="<!--/option_add@link_quantity_down/-->"><span
+                                        class="fa fa-minus"></span></a>
+                            </span>
+                        </p>
+                        <!--/end_loop/-->
+                        <!--/end_if/-->
+                        <!--/end_if/-->
+                    </div>
+
+                    <!--/if_not_multi_option_box/-->
+                    <!--/if_option_price_sell/-->
+                    <div class="shopdetailTotal">
+                        <p>옵션 적용가 
+                            <em class="bold">
+                                <!--/number/option_price_sell/-->
+                            </em>원
+                        </p>
+                    </div>
+                    <!--/end_if/-->
+                    <!--/end_if/-->
+
+                    <div class="detail-select-wrap">
+                        <!--/if_multi_option/-->
+                        <!--/loop_multi_option/-->
+                        <!--/if_multi_option@title/-->
+                        <p>
+                            <span class="detail-opt-name">
+                                <!--/multi_option@title/-->
+                            </span>
+                            <span class="detail-opt-con" style="width:100%;">
+                                <!--/multi_option@select/-->
+                            </span>
+                        </p>
+                        <!--/else/-->
+                        <p>
+                            <!--/multi_option@select/-->
+                        </p>
+                        <!--/end_if/-->
+                        <!--/end_loop/-->
+                        <!--/if_is_unify_option/-->
+                        <!--/if_link_option_select_complete/-->
+                        <p class="opt-com">
+                            <a href="<!--/link_option_select_complete/-->"><img
+                                    src="/images/d3/modern_simple/btn/btn_h18_select_complete.gif"
+                                    title="옵션 선택 완료" alt="옵션 선택 완료" /></a>
+                        </p>
+                        <!--/end_if/-->
+                        <!--/end_if/-->
+                        <!--/end_if/-->
+
+                        <!--/if_is_unify_option/-->
+                        <!--/if_multi_option_add/-->
+                        <p class="add-option-sel">+ 추가 옵션 선택</p>
+                        <!--/loop_multi_option_add/-->
+                        <p>
+                            <span class="shopdetailInfoName">
+                                <!--/multi_option_add@title/-->
+                            </span>
+                            <span class="shopdetailInfoCont">
+                                <!--/multi_option_add@select/-->
+                            </span>
+                        </p>
+                        <!--/end_loop/-->
+                        <!--/end_if/-->
+                        <!--/end_if/-->
+                    </div>
+
+                    <!--/if_is_unify_option/-->
+                    <div class="shopdetailInfoMultiSelect">
+                        <!-- 통합옵션 멀티옵션 수량, 가격 -->
+                        <!--/if_multi_option_box/-->
+                        <div class="MK_optAddWrap">
+                            <div id="MK_innerOptWrap">
+                                <div id="MK_innerOptScroll">
+                                    <!--/multi_option_box/-->
+                                    <!--/multi_option_add_box/-->
+                                </div>
+                                <div id="MK_innerOptTotal" class="total">
+                                    <span class="MK_txt-total">총 상품 금액</span>
+                                    <strong class="MK_total" id="MK_p_total">
+                                        <!--/multi_option_total_price/-->원
+                                    </strong>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //통합옵션 멀티옵션 수량, 가격 -->
+                        <!--/end_if/-->
+                    </div>
+                    <!--/else/-->
+                    <div class="shopdetailInfoMultiSelect">
+                        <!-- 멀티옵션 수량, 가격 -->
+                        <!--/if_multi_option_box/-->
+                        <!--/multi_option_box/-->
+                        <!--/end_if/-->
+                        <!-- //멀티옵션 수량, 가격 -->
+                    </div>
+                    <!--/end_if/-->
+                </div>
+
+                <div class="btn-wrap">
+                    <!--/if_soldout/-->
+                    <p class="soldout">상품이 품절되었습니다.</p>
+                    <!--/else/-->
+                    <div class="prd-btns">
+                        <!--/if_not_soldout/-->
+                        <a href="<!--/link_subs/-->" class="btn-period">정기배송 신청 <span>-5%</span></a>
+                        <a href="<!--/link_immediate/-->" class="btn-buy">바로 구매하기</a>
+                        <!--/end_if/-->
+                    </div>
+                    <div class="sns-btns">
+                        <!--/if_btn_kakaopay/-->
+                        <!--/btn_kakaopay/-->
+                        <!--/end_if/-->
+                        <!--/if_btn_payco/-->
+                        <!--/btn_payco/-->
+                        <!--/end_if/-->
+                        <!--/if_btn_nhn/-->
+                        <!--/btn_nhn/-->
+                        <!--/end_if/-->
+                        <!--/if_btn_app/-->
+                        <!--/btn_app/-->
+                        <!--/end_if/-->
+                    </div>
+                    <!--/end_if/-->
+                </div>
+                <!-- //e:고정 옵션 창 -->
+
+            </div>
+            <!-- //e:detail-info-wrap -->
+
+
+            <!-- s:prd-info-wrap -->
+            <!--/if_product_info/-->
+            <div class="prd-info-wrap">
+                <p class="title">상품 정보</p>
+                <div class="prd-info-con">
+                    <!--/loop_product_info(3)/-->
+                    <dl>
+                        <dt>
+                            <!--/product_info@title/-->
+                        </dt>
+                        <dd>
+                            <!--/product_info@content/-->
+                        </dd>
+                    </dl>
+                    <!--/end_loop/-->
+                </div>
+            </div>
+            <!--/end_if/-->
+            <!-- //e:prd-info-wrap -->
+
+
+            <!-- s:related-prd-wrap -->
+            <!--/if_related_product/-->
+            <div class="related-prd-wrap">
+                <p class="title">이 상품이랑 잘 어울려요.</p>
+                <!--/form_related_product/-->
+                <div class="related-prd swiper-container">
+                    <ul class="swiper-wrapper">
+                        <!--/loop_related_product/-->
+                        <li class="swiper-slide">
+                            <a href="<!--/related_product@link/-->">
+                                <p class="thumb"><img src="<!--/related_product@mobile_image/-->" class="listPic" alt="" /></p>
+                                <div class="prd-item-info">
+                                    <p class="name">
+                                        <!--/if_related_product@mobile_name/-->
+                                        <!--/related_product@mobile_name/-->
+                                        <!--/else/-->
+                                        <!--/related_product@name/-->
+                                        <!--/end_if/-->
+                                    </p>
+
+                                    <div class="price-wrap">
+                                        <!-- 할인율 -->
+                                        <span class="percent"><!--/related_product@discount_percent/-->%</span>
+                                        <!-- //할인율 -->
+
+                                        <!--/if_related_product@is_soldout/-->
+                                        <p class="soldout">(품절)</p>
+                                        <!--/else/-->
+                                        <!--/if_related_product@price_replace/-->
+                                        <p class="replce"><!--/related_product@price_replace/--></p>
+                                        <!--/else/-->
+
+                                        <!--/if_related_product@price_discount/-->
+                                        <p class="price"><del><!--/number/related_product@price_sell/--></del> <span><!--/number/related_product@price_discount/--></span>원</p>
+                                        <!--/else/-->
+
+                                        <!--/if_related_product@price_consumer(+1)/-->
+                                        <p class="price"> <span><!--/number/related_product@price_sell/--></span>원 <del><!--/number/related_product@price_consumer/-->원</del></p>
+                                        <!--/else/-->
+                                        <p class="price"><span><!--/number/related_product@price_sell/--></span>원</p>
+                                        <!--/end_if/-->
+
+                                        <!--/end_if/-->
+                                        <!--/end_if/-->
+                                        <!--/end_if/-->
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <!--/end_loop/-->
+                    </ul>
+                </div>
+                <!--/end_form/-->
+            </div>
+            <!--/end_if/-->
+            <!-- //e:related-prd-wrap -->
+
+
+            <!-- s:detail-con-wrap -->
+            <div class="detail-con-wrap">
+                <p class="title">상품을 소개할게요-</p>
+
+                <div class="contents">
+                    <!--/mobile_detail/-->
+                </div>
+
+                <div class="btn-more-wrap">
+                    <a href="#none" class="btn-more"><img src="/design/mkplanet/kkstore/img/bg_select_on.jpg" alt=""> 더보기</a>
+                </div>
+            </div>
+            <!-- //e:detail-con-wrap -->
+
+
+            <!--/if_coupon/-->
+            <section class="shopdetailCoupon">
+                <h3>클릭 쿠폰 받기</h3>
+                <div class="shopdetailCouponGet">
+                    <ul>
+                        <!--/loop_coupon/-->
+                        <a href="<!--/coupon@link/-->">
+                            <li>
+                                <!--/if_coupon@image_src/-->
+                                <img src="<!--/coupon@image_src/-->" class="image_src">
+                                <!--/else/-->
+                                <dl class="MS_coupon">
+                                    <dt><strong>
+                                            <!--/coupon@attr_val/-->
+                                            <!--/coupon@attr_unit/-->
+                                        </strong></dt>
+                                    <dd>
+                                        <h4>
+                                            <!--/coupon@subject/-->
+                                        </h4>
+                                        <p><span>기간 :
+                                                <!--/date(%M/%D)/coupon@start_date/--> ~
+                                                <!--/date(%M/%D)/coupon@end_date/-->
+                                            </span></p>
+                                    </dd>
+                                </dl>
+                                <!--/end_if/-->
+                            </li>
+                        </a>
+                        <!--/end_loop/-->
+                    </ul>
+                </div>
+            </section>
+            <!--/end_if/-->
+
+
+            <!-- s:review-wrap -->
+            <div class="review-wrap">
+                <p class="title">kk고객들의 리얼후기<span class="crema-product-reviews-count"
+                    data-product-code="<!--/number/-->" data-hide-if-zero="1"></span></p>
+                <!-- cre.ma / 리스트형 위젯 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
+                <div class="crema-product-reviews" data-widget-id="23" data-product-code="<!--/number/-->"></div>
+            </div>
+            <!-- //e:review-wrap -->
+
+
+            <!-- s:prd-noti-wrap -->
+            <div class="prd-noti-wrap">
+                <p class="title">배송·반품  꼭!  읽어보세요.</p>
+                <div class="prd-noti">
+                    <p class="sub-tit">쓰리케어 배송안내</p>
+                    <ul>
+                        <li>
+                            <dt>교환 및 반품<br>가능한 경우</dt>
+                            <dd>
+                                - 제품 수령 후 7일 이내 쓰리케어 고객센터를 통해 교환/반품 접수 완료 시 (개인변심, 제품불량 등. 단, 냉동 제품의 경우 단순변심으로 인한 교환 및 반품이
+                                불가합니다.)<br>
+                                (쓰리케어 고객센터를 통하여 접수하지 않고 임의로 발송하여 분실,훼손될 경우 쓰리케어는 책임지지 않습니다.)<br>
+                                - 제품 하자에 의한 교환 및 반품 : 배송비 무료<br>
+                                단순변심에 의한 교환 및 반품 : 왕복배송비 6,000원 <br>(제품의 효능,효과로 인한 교환 및 반품은 고객변심에 해당)<br>
+                                - 제품 하자로 인한 교환/환불 시에는 운송장번호, 제품명, 파손 사진을 보내주시면 빠른 처리가 가능합니다.<br>
+                                - 환불을 지연한 때에는 그 지연기간에 대하여 [전자상거래 등에서의 소비자보호에 관한 법률 시행령] 제21조의3에서 정하는 지연이자율을 곱하여 산정한 지연이자를
+                                지급합니다.
+                                기타 교환 환불과 관련한 내용에 대해선 관계법령에 따릅니다.<br>
+    
+                            </dd>
+                        </li>
+                        <li>
+                            <font color="#ff0000">
+                                <dt>교환 및 반품<br>불가능한 경우</dt>
+                            </font>
+                            <dd>
+                                - 제품 수령일로부터 7일이 경과되었을 경우 (단순 변심)<br>
+                                - 제품 수령일로부터 30일이 경과되었을 경우 (제품 하자)<br>
+                                - 제품 하자로 인한 교환/환불 시 사진으로 확인 불가능한 경우<br>
+                                - 취급 부주의로 인하여 상품가치가 훼손되었을 경우<br>
+    
+                            </dd>
+                        </li>
+                        <li>
+                            <dt>교환 및 반품<br>접수 방법</dt>
+                            <dd>
+                                - 고객센터(070-7773-3152) 및 게시판으로 교환 및 반품 접수 부탁드립니다. <br>
+                                ※ 택배 운송 중 파손으로 인한 교환 접수 시, 운송장 번호와 파손 사진을 필수로 전달주셔야 빠른 처리가 가능합니다.<br><br>
+                                - 택배 기사님께서 수거하실 수 있도록 택배 포장 후 기사님께 상품 전달 부탁드립니다. <br>
+                                - 상품 수거 완료 후 교환 및 환불처리가 진행되며 당사 취소 완료일 기준으로 작성되었습니다. <br>
+                                ※ 신용카드 / 실시간계좌이체 : 영업일 기준 3~5일 후 확인 가능 <br>
+                                ※ 체크카드 : 영업일 기준 1~2일 후 확인 가능 <br>
+                                ※ 무통장입금 : 고객님 계좌정보로 환불 진행 <br>(쓰리케어 고객센터에 계좌 정보 전달 필수)<br>
+                                ※ 휴대폰 소액 결제 : 결제 당월 1일 ~ 말일까지만 취소 가능 <br>(익월 취소 불가)
+                            </dd>
+                        </li>
+                    </ul>
+                </div>
+                <div class="prd-noti">
+                    <p class="sub-tit">쓰리케어 교환/반품 안내</p>
+                    <ul>
+                        <li>
+                            <dt>고객센터</dt>
+                            <dd>
+                                <b>070-7773-3152</b> <br>
+                                평일 10:00 ~ 18:00 | 점심:12:00~14:00 <br> 주말,공휴일 휴무
+    
+                            </dd>
+                        </li>
+                        <li>
+                            <dt>배송방법</dt>
+                            <dd>
+                                <b>냉동 제품 : 롯데택배 1588-2121<br>상온 제품 : CJ대한통운 1588-1255</b>
+    
+                            </dd>
+                        </li>
+                        <li>
+                            <dt>배송기간</dt>
+                            <dd>
+                                <b>15시 이전 입금 완료 시 당일발송</b>
+                                <br>※ 배송준비중으로 변경 시, 냉동식품은 취소/교환/환불 불가 (그 외, 교환/환불 시 교환/반품안내 정책 적용) <br><br>
+    
+                                - 월,화요일은 주문량이 많아 당일 발송이 지연될 수 있습니다 <br>
+                                - 도서산간지역 및 공휴일 포함 시, 수령일은 최대 5일까지 소요될 수 있습니다.
+                            </dd>
+                        </li>
+                        <li>
+                            <dt>주의사항</dt>
+                            <dd>
+                                <b> [공통사항]<br> </b>
+                                <font color="#ff0000"> - 주문 상태가 배송준비중일 경우, 주소변경 및 주문취소 불가 <br></font>
+                                - 희망배송일 설정은 냉동식품에만 해당<br>
+                                <font color="#6e6e6e">※희망배송일 : 상품을 수령받고 싶은 날짜(=택배수령일)</font><br>
+                                <font color="#ff0000"> - 배송지 오류 및 연락 불가로 인하여 반송될 경우 택배비는 고객님의 부담이니 꼭 주소,연락처 확인 부탁드립니다. <br>
+                                </font>
+                                (가공·건강식품에 한함. 냉동식품은 하단 내용 참조)<br>
+                                - 냉동식품과 가공식품을 함께 구매 시, 동일하게 CJ대한통운으로 배송되나 분리배송되는 점 양해부탁드립니다.<br>
+                                - 배송비 : 3,000원 (5만원 이상 구매 시 무료배송 / 도서산간지역 추가 배송비 발생)<br>
+                                <font color="#ff0000"> - 송장 조회는 다음날 이후로 가능하며, 제품 수령 시각 설정은 절대 불가합니다. (택배사 또는 지역 택배기사의 문의 후
+                                    조율 부탁드립니다) <br></font>
+                                ※택배사 사정에 따라서 오후 6시 이후에 제품을 받으실 수 있음을 양해 부탁드립니다.<br>
+                                ※전자상거래 분쟁과 관련하여 고객의 피해구제신청이 있는 경우에는 공정거래위원회 또는 시, 도지사가 의뢰하는 분쟁조정기관의 조정에 따를수 있습니다.<br>
+                                ※거래에 관한 약관의 내용은 홈페이지 하단의 이용약관을 통해 확인 가능합니다.<br>
+                                ※미성년자가 물품을 구매하는 경우, 법정대리인이 동의하지 않으면 미성년자 본인 또는 법정대리인이 구매를 취소할 수 있습니다.<br><br>
+    
+                                <b>[냉동식품]<br></b>
+                                <font color="#ff0000">- 아래와 같이 고객님 과실에 해당하는 경우, 교환/반품/환불 불가</font><br>
+                                <font color="#6e6e6e">※소비자보호법에 관한 법류(전자상거래법)제17조3항에 의함</font><br>
+                                <font color="#ff0000">1. 토요일에 수령불가한 경우, 희망배송일 미지정 또는 "주말수령불가" 미기입 시(예:회사,여행etc.)</font><br>
+                                <font color="#6e6e6e">※배송지가 회사인 경우, 주소만으로 회사임을 구분할 수 없으므로 반드시 희망배송일 또는 주문메세지 작성요망</font><br>
+                                <font color="#ff0000">2. 안심번호 사용에 의하여 연락(문자 포함) 수신불가 또는 택배기사님과의 연락 불가로 수령불가/반송/훼손 시</font>
+                                <br>
+                                <font color="#6e6e6e">※안심번호 사용 시, 문자 수신이 불가하여 택배 기사님의 연락이 전달되지 않을 수 있으며, 그에 대하여 쓰리케어는 책임지지
+                                    않습니다.</font><br><br>
+                                - 제주/도서/산간지역 : 금요일 출고 불가 (냉동 식품의 경우, 여름에는 특히 해동될 수 있으므로 금요일에 출고되지 않습니다.)<br>
+                                - 군부대는 부대 특성상 배송이 지연되기 때문에 냉동식품 주문이 불가합니다.
+    
+    
+    
+    
+                            </dd>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- //e:prd-noti-wrap -->
+
+        </div>
+        <!-- //e:detail-wrap -->
+ 
+    </div>
+
+    <!-- //e:container -->
+</div>
+<!-- //e:containerWrap -->
+
+
+<!-- WIDERPLANET ITEM SCRIPT START 2019.8.28 -->
+<script type='text/javascript'>var wp_page_type = 'Item';</script>
+<span style="display:none;" name="wp_detection" tag="i">[BRANDUID]</span>
+<!-- // WIDERPLANET ITEM SCRIPT END 2019.8.28 -->
+
+<!--/include_footer(1)/-->
+
+
+
+<div class="layerpopup" id="period_popup">
+    <p><img src="http://xexymix.jpg3.kr/3carekorea/3care/popup/3care_period_delivery.jpg" alt="정기배송안내"></p>
+</div>
+<div class="layerpopup" id="dawn_popup">
+    <p><img src="http://xexymix.jpg3.kr/3carekorea/3care/popup/3care_dawn_delivery_01.jpg" alt="새벽배송안내"></p>
+    <p><a href="https://tms.teamfresh.co.kr/popup/deliveryAreaSearchPopupForCustomer.do" target="_blank"><img src="http://xexymix.jpg3.kr/3carekorea/3care/popup/3care_dawn_delivery_02.jpg" alt="새벽배송안내"></a></p>
+</div>
+<div class="block"></div>
+
+
+
+
+
+<!-- cre.ma / 팝업을 띄우는 코드 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
+<div class="crema-popup"></div>
+
+<!-- cre.ma / Mobile 리뷰 초기화 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
+<script>(function (i, s, o, g, r, a, m) { if (s.getElementById(g)) { return }; a = s.createElement(o), m = s.getElementsByTagName(o)[0]; a.id = g; a.async = 1; a.src = r; m.parentNode.insertBefore(a, m) })(window, document, 'script', 'crema-jssdk', '//widgets.cre.ma/3care.co.kr/mobile/init.js');</script>
+
+
+<!-- Mobon Shop Log Tracker v3.1 start -->
+<script type="text/javascript">
+
+    function mobRfShop() {
+        var sh = new EN();
+        var price = "<!--/if_dc_price_sell/--> <!--/dc_price_sell/--> <!--/else/--> <!--/price_sell/--> <!--/end_if/-->";
+        // [상품상세정보]
+        sh.setData("sc", "683fcaffebb43dfa13719611f7fa6648");
+        sh.setData("userid", "3care");
+        sh.setData("pcode", "< !--/code/--> ");
+        sh.setData("pnm", encodeURIComponent(encodeURIComponent('< !--/name/--> ')));
+        var img = location.protocol + "//" + location.hostname + (location.port ? ":" + location.port : '') + "< !--/image_m/--> ";
+        sh.setData("img", encodeURIComponent(img));
+        sh.setData("price", price);
+        sh.setData("cate1", encodeURIComponent(encodeURIComponent(sh.getParam(location.href, "xcode"))));
+        sh.setSSL(true);
+        sh.sendRfShop();
+
+        // 장바구니 버튼 클릭 시 호출 메소드(사용하지 않는 경우 삭제)
+        document.getElementById("cartBtn").onmouseup = sendCart;
+        document.getElementById("cartBtn2").onmouseup = sendCart;
+        function sendCart() {
+            sh.sendCart();
+        }
+        // 찜,Wish 버튼 클릭 시 호출 메소드(사용하지 않는 경우 삭제)
+        document.getElementById("wishBtn").onmouseup = sendWish;
+        function sendWish() {
+            sh.sendWish();
+        }
+    }
+    
+</script>
+<script src="https://cdn.megadata.co.kr/js/enliple_min2.js" defer="defer" onload="mobRfShop()"></script>
+<!-- Mobon Shop Log Tracker v3.1 end  -->
+
+<!-- bigin product tracking START -->
+<script>
+    function getBiginProduct() {
+        try {
+            var biginProduct = {};
+            var imageSrc = '<!--/image_l/-->'.indexOf('mini.gif') === -1 ? '<!--/image_l/-->' : '<!--/image_m/-->';
+            biginProduct.id = '<!--/number/-->';
+            biginProduct.thumbnail = [window.location.protocol + '//' + window.location.hostname + imageSrc];
+            biginProduct.category = ['<!--/cate1_name/-->', '<!--/cate2_name/-->', '<!--/cate3_name/-->'].filter(function (item) { return item; });
+            biginProduct.brand = '쓰리케어';
+
+            var biginRawName = '<!--/name/-->';
+            if (typeof biginRawName === 'string') {
+                biginProduct.name = biginRawName.replace(/(<([^>]+)>)/ig, '');
+            }
+
+            var biginRawPrice = '<!--/dc_price_sell/-->' || '<!--/number/price_sell/-->';
+            if (typeof biginRawPrice === 'string') {
+                biginProduct.price = parseInt(biginRawPrice.replace(/[\D]/g, ''));
+            }
+
+            return biginProduct;
+        } catch (e) {
+            return {};
+        }
+    }
+
+    function getBiginProductList() {
+        try {
+            var biginProduct = getBiginProduct();
+            var biginProductList = [];
+            var biginBasicProductArr = window.option_manager.data.basic;
+            var biginAdditionProductArr = window.option_manager.data.addition;
+
+            // 기본 옵션
+            biginBasicProductArr.forEach(function (basicProduct) {
+                var tempBiginProduct = {};
+                tempBiginProduct.id = biginProduct.id;
+                tempBiginProduct.name = biginProduct.name;
+                tempBiginProduct.price = biginProduct.price;
+                tempBiginProduct.quantity = basicProduct[0]['opt_stock'];
+
+                var variantArr = [];
+                basicProduct.forEach(function (option) {
+                    variantArr.push(option['opt_value']);
+                    var rawOptionPrice = typeof option['opt_price'] === 'string'
+                        ? parseInt(option['opt_price'])
+                        : option['opt_price'];
+                    tempBiginProduct.price = tempBiginProduct.price + rawOptionPrice;
+                });
+
+                if (variantArr.length > 0) {
+                    tempBiginProduct.variant = variantArr.join(',');
+                }
+                if (biginProduct.category) {
+                    tempBiginProduct.category = biginProduct.category;
+                }
+                if (biginProduct.thumbnail) {
+                    tempBiginProduct.thumbnail = biginProduct.thumbnail;
+                }
+                if (biginProduct.brand) {
+                    tempBiginProduct.brand = biginProduct.brand;
+                }
+
+                if (tempBiginProduct.id && tempBiginProduct.name && tempBiginProduct.price && tempBiginProduct.quantity) {
+                    biginProductList.push(tempBiginProduct);
+                }
+            });
+
+            // 추가 옵션
+            biginAdditionProductArr.forEach(function (additionProd) {
+                var tempBiginProduct = {};
+                tempBiginProduct.id = biginProduct.id;
+                tempBiginProduct.name = biginProduct.name;
+                tempBiginProduct.price = biginProduct.price;
+                tempBiginProduct.price = additionProd[0]['opt_price'];
+                tempBiginProduct.quantity = additionProd[0]['opt_stock'];
+                tempBiginProduct.variant = additionProd[0]['opt_value'];
+                if (tempBiginProduct.id && tempBiginProduct.name && tempBiginProduct.price && tempBiginProduct.quantity) {
+                    biginProductList.push(tempBiginProduct);
+                }
+            });
+
+            return biginProductList;
+        } catch (e) {
+            return [];
+        }
+    }
+
+    window.addEventListener('load', function () {
+        var biginProduct = getBiginProduct();
+        if (window.bigin && window.bigin.event && biginProduct && biginProduct.id && biginProduct.name && biginProduct.price) {
+            bigin.event('bg:viewProduct', biginProduct)
+        }
+
+        function addBiginEventListener(selector, eventName, listener) {
+            try {
+                var targetElem = document.querySelector(selector);
+                targetElem.addEventListener(eventName, listener);
+            } catch (e) { }
+        }
+
+        addBiginEventListener('.cart', 'click', function () {
+            try {
+                var biginProductList = getBiginProductList();
+                if (biginProductList.length > 0) {
+                    bigin.event('bg:addToCart', {
+                        products: biginProductList
+                    });
+                }
+            } catch (e) { }
+        });
+
+        addBiginEventListener('.buy', 'click', function () {
+            try {
+                var biginProductList = getBiginProductList();
+                if (biginProductList.length > 0) {
+                    bigin.event('bg:checkout', {
+                        step: 0,
+                        products: biginProductList
+                    });
+                }
+            } catch (e) { }
+        });
+    });
+</script>
+<!-- bigin product tracking END -->

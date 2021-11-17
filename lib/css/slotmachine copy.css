@@ -1,0 +1,67 @@
+.slot-wrap { max-width:1300px; margin:0 auto; }
+.slot-wrap a { display:block; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.slotMachineNoTransition {
+    transition: none !important;
+}
+
+.slotMachineBlurFast {
+    filter: blur(5px);
+}
+
+.slotMachineBlurMedium {
+    filter: blur(3px);
+}
+
+.slotMachineBlurSlow {
+    filter: blur(2px);
+}
+
+.slotMachineBlurTurtle {
+    filter: blur(1px);
+}
+
+.machine { position:relative; }
+.machine .wrap { position:absolute; top:222px; left:50%; transform:translate(-50%, 0); width:675px; margin:0 auto; }
+
+.slotMachine {
+	width:214px;
+	height:400px;
+	overflow: hidden;
+	display: inline-block;
+	text-align: center;
+	background-color: #ffffff;
+    border-radius:15px;
+    margin:0 4px;
+}
+.noBorder{
+	border:none !important;
+	background: transparent !important;
+}
+.slotMachine .slot{
+	width:214px;
+	height:400px;
+    text-indent:-9999px;
+}
+.slot1{
+	background-image: url("../../img/slot/slot_option1.jpg");
+}
+.slot2{
+	background-image: url("../../img/slot/slot_option2.jpg");
+}
+.slot3{
+	background-image: url("../../img/slot/slot_option3.jpg");
+}

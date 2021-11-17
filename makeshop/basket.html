@@ -1,0 +1,449 @@
+<!--/include_header(1)/-->
+
+<!-- s:containerWrap -->
+<div id="containerWrap">
+    <!-- s:container -->
+    <div class="container">
+
+        <div class="basket-wrap">
+            <p class="title">장바구니</p>
+            <!--/if_use_subs/-->
+            <div class="basket-tab-wrap">
+                <div class="basket-tab">
+                    <a href="<!--/link_normal_basket/-->" class="active">일반구매(<!--/number/user_normal_basket_count/-->)</a>
+                    <a href="<!--/link_subs_basket/-->">정기배송(<!--/number/user_subs_basket_count/-->)</a>
+                </div>
+            </div>
+            <!--/end_if/-->
+
+
+            <div class="left-wrap">
+
+                
+                <!--/if_provider/-->
+                <!--/loop_provider/-->
+                <!--/if_not_provider@is_provider/-->
+                <div class="table-cart table-fill-prd">
+                    <table summary="사진, 제품명, 수량, 적립, 가격, 배송비, 취소">
+                        <caption>장바구니 담긴 상품</caption>
+                        <colgroup>
+                            <col width="60" />
+                            <col width="*" />
+                            <col width="100" />
+                            <col width="100" />
+                            <col width="100" />
+                            <col width="100" />
+                            <col width="100" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>
+                                    <div class="tb-center"><label class="check"><!--/checkbox_multi_all/--></label></div>
+                                </th>
+                                <th scope="col">
+                                    <div class="tb-center">상품정보</div>
+                                </th>
+                                <th scope="col">
+                                    <div class="tb-center">수량</div>
+                                </th>
+                                <th scope="col">
+                                    <div class="tb-right">가격</div>
+                                </th>
+                                <th scope="col">
+                                    <div class="tb-center">배송비</div>
+                                </th>
+                                <th scope="col">
+                                    <div class="tb-center">상품금액</div>
+                                </th>
+                                <th scope="col">
+                                    <div class="tb-center">선택</div>
+                                </th>
+                            </tr>
+                        </thead>
+                        
+                        <tbody>
+                            <!--/loop_provider@basket/-->
+                            <!--/provider@basket@form/-->
+                            <tr>
+                                <td>
+                                    <div class="tb-center">
+                                        <label class="check"><!--/provider@basket@checkbox_multi_basket/--></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="tb-left tb-info">
+                                        <div class="thumb">
+                                            <a href="<!--/provider@basket@link/-->"><img
+                                                    src="<!--/provider@basket@image_s/-->" alt="상품 섬네일"
+                                                    title="상품 섬네일" /></a>
+                                        </div>
+                                        <div class="info">
+                                            <p class="brand"><!--/best_product@brand/--></p>
+                                            <p class="name"><a href="<!--/provider@basket@link/-->"> <!--/provider@basket@name/--> </a></p>
+                                            <!--/if_provider@basket@option/-->
+                                            <p class="option"><!--/provider@basket@option/--></p>
+                                            <!--/end_if/-->
+                                            <!--/if_is_unify_option/-->
+                                            <!--/if_provider@basket@option/-->
+                                            <p class="modify"><a href="<!--/provider@basket@link_option_modify/-->">옵션변경</a></p>
+                                            <!--/end_if/-->
+                                            <!--/end_if/-->
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="tb-center">
+                                        <div class="opt-spin">
+                                            <a href="<!--/provider@basket@link_quantity_down/-->"><img src="/design/mkplanet/kkstore/img/qty_down.jpg" alt=""></a>
+                                            <!--/provider@basket@input_quantity(txt-spin)/-->
+                                            <a href="<!--/provider@basket@link_quantity_up/-->"><img src="/design/mkplanet/kkstore/img/qty_up.jpg" alt=""></a>
+                                        </div>
+                                        <a href="<!--/provider@basket@link_quantity_update/-->" class="btn-opt-modi">수정</a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="tb-center tb-price">
+                                        <span class="price01"><!--/provider@basket@price_consumer/--></span>
+                                        <span class="price02"><!--/number/provider@basket@price_sell/--></span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="tb-center tb-delivery">
+                                        <!--/provider@basket@delivery/-->
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="tb-center tb-price">
+                                        <span class="price02"><!--/number/provider@basket@price_sell/-->원</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="tb-center">
+                                        <a href="<!--/provider@basket@link_wish/-->" class="btn-normal">관심상품</a>
+                                        <a href="<!--/provider@basket@link_del/-->" class="btn-normal">삭제</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                            <!--/end_form/-->
+                            <!--/end_loop/-->
+                        </tbody>
+                        
+                    </table>
+                </div>
+                <!--/end_if/-->
+                <!--/end_loop/-->
+                <!--/else/-->
+                <div class="empty-basket">
+                    <p>장바구니에 담긴 상품이 없습니다.</p>
+                </div>
+                <!--/end_if/-->
+                
+
+                <!--/loop_provider/-->
+                <!--/if_provider@is_provider/-->
+                <div class="basket-tab-wrap">
+                    <div class="basket-tab">
+                        <a href="#none" class="active">개별배송 상품</a>
+                    </div>
+                </div>
+
+                <div class="table-cart table-fill-prd">
+                    <table summary="사진, 제품명, 수량, 적립, 가격, 배송비, 취소">
+                        <caption>장바구니 담긴 상품</caption>
+                        <colgroup>
+                            <col width="60" />
+                            <col width="*" />
+                            <col width="100" />
+                            <col width="100" />
+                            <col width="100" />
+                            <col width="100" />
+                            <col width="100" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>
+                                    <div class="tb-center"><label class="check"><!--/checkbox_multi_all/--></label></div>
+                                </th>
+                                <th scope="col">
+                                    <div class="tb-center">상품정보</div>
+                                </th>
+                                <th scope="col">
+                                    <div class="tb-center">수량</div>
+                                </th>
+                                <th scope="col">
+                                    <div class="tb-right">가격</div>
+                                </th>
+                                <th scope="col">
+                                    <div class="tb-center">배송비</div>
+                                </th>
+                                <th scope="col">
+                                    <div class="tb-center">상품금액</div>
+                                </th>
+                                <th scope="col">
+                                    <div class="tb-center">선택</div>
+                                </th>
+                            </tr>
+                        </thead>
+                        
+                        <tbody>
+                            <!--/loop_provider@basket/-->
+                            <!--/provider@basket@form/-->
+                            <tr>
+                                <td>
+                                    <div class="tb-center">
+                                        <label class="check"><!--/provider@basket@checkbox_multi_basket/--></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="tb-left tb-info">
+                                        <div class="thumb">
+                                            <a href="<!--/provider@basket@link/-->"><img
+                                                    src="<!--/provider@basket@image_s/-->" alt="상품 섬네일"
+                                                    title="상품 섬네일" /></a>
+                                        </div>
+                                        <div class="info">
+                                            <p class="brand"><!--/best_product@brand/--></p>
+                                            <p class="name"><a href="<!--/provider@basket@link/-->"> <!--/provider@basket@name/--> </a></p>
+                                            <!--/if_provider@basket@option/-->
+                                            <p class="option"><!--/provider@basket@option/--></p>
+                                            <!--/end_if/-->
+                                            <!--/if_is_unify_option/-->
+                                            <!--/if_provider@basket@option/-->
+                                            <p class="modify"><a href="<!--/provider@basket@link_option_modify/-->">옵션변경</a></p>
+                                            <!--/end_if/-->
+                                            <!--/end_if/-->
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="tb-center">
+                                        <div class="opt-spin">
+                                            <a href="<!--/provider@basket@link_quantity_down/-->"><img src="/design/mkplanet/kkstore/img/qty_down.jpg" alt=""></a>
+                                            <!--/provider@basket@input_quantity(txt-spin)/-->
+                                            <a href="<!--/provider@basket@link_quantity_up/-->"><img src="/design/mkplanet/kkstore/img/qty_up.jpg" alt=""></a>
+                                        </div>
+                                        <a href="<!--/provider@basket@link_quantity_update/-->" class="btn-opt-modi">수정</a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="tb-center tb-price">
+                                        <span class="price01"><!--/provider@basket@price_consumer/--></span>
+                                        <span class="price02"><!--/number/provider@basket@price_sell/--></span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="tb-center tb-delivery">
+                                        <!--/provider@basket@delivery/-->
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="tb-center tb-price">
+                                        <span class="price02"><!--/number/provider@basket@price_sell/-->원</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="tb-center">
+                                        <a href="<!--/provider@basket@link_wish/-->" class="btn-normal">관심상품</a>
+                                        <a href="<!--/provider@basket@link_del/-->" class="btn-normal">삭제</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!--/end_form/-->
+                            <!--/end_loop/-->
+                        </tbody>
+                    </table>
+                </div>
+                <!--/end_if/-->
+                <!--/end_loop/-->
+            </div>
+
+            
+            <div class="right-wrap">
+                <p class="title">주문금액</p>
+                <!--/if_total_price/-->
+                <div class="price-total-wrap">
+                    <div class="txt">
+                        <!--/block_none_groupsale_total_price_sell/--> 
+                        <p>
+                            <span class="title">총 상품 금액</span>
+                            <span class="price"><!--/number/none_groupsale_total_price_sell/-->원 </span>
+                        </p>
+                        <!--/end_block/-->
+                        
+                        <!--/block_total_delivery/-->
+                        <p>
+                            <span class="title">배송비</span>
+                            <span class="price"><!--/number/total_delivery/-->원</span>
+                        </p>
+                        <!--/end_block/-->
+                        <!--/block_total_price/-->
+                        <p class="total">
+                            <span class="title">총 결제금액</span>
+                            <span class="price"><!--/number/total_price/-->원</span>
+                        </p>
+                        <!--/end_block/-->
+                        <!--/block_total_point/-->
+                        <p class="point">
+                            <span class="title">적립예정 포인트</span>
+                            <span class="price"><!--/number/basket@point/--></span>
+                        </p>
+                        <!--/end_block/-->
+                    </div>
+                </div>
+                <!--/else/-->
+                <div class="price-total-wrap">
+                    <div class="txt">
+                        <!--/if_none_groupsale_total_price_sell(+1)/-->
+                        <p>
+                            <span class="title">총 주문 금액</span>
+                            <span class="price"><!--/number/none_groupsale_total_price_sell/--></span>
+                        </p>
+                        <!--/end_if/-->
+                        <!--/if_total_delivery(+1)/-->
+                        <p>
+                            <span class="title">총 배송비</span>
+                            <span class="price"><!--/number/total_delivery/-->원</span>
+                        </p>
+                        <!--/end_if/-->
+                        <p class="total">
+                            <span class="title">총 결제금액</span>
+                            <span class="price"><!--/number/total_price/-->원</span>
+                        </p>
+                    </div>
+                </div>
+                <!--/end_if/-->
+
+                <div class="btn-order-ctrl">
+                    <a href="<!--/link_order/-->" class="btn-order">선택상품 주문하기</a>
+                    <a href="<!--/link_multi_del/-->" class="btn-delete">선택상품 삭제</a>
+
+                    <div class="cart-ft2">
+                        <!--/if_btn_kakaopay/-->
+                        <!--/btn_kakaopay/-->
+                        <!--/end_if/-->
+                        <!--/if_btn_payco/-->
+                        <!--/btn_payco/-->
+                        <!--/end_if/-->
+                        <!--/if_btn_nhn/-->
+                        <!--/btn_nhn/-->
+                        <!--/end_if/-->
+                        <!--/if_btn_app/-->
+                        <!--/btn_app/-->
+                        <!--/end_if/-->
+                    </div>
+                </div>
+            </div>
+
+            
+        
+            <!--/if_login/-->
+            <h3 class="tit-cart"><img src="/images/d3/modern_simple/cart_wish_prd_tit.gif" alt="관심상품"
+                    title="관심상품" /></h3>
+            <div class="table-cart table-fill-prd">
+                <table summary="사진, 제품명, 수량, 적립, 재고, 가격, 처리">
+                    <caption>관심상품</caption>
+                    <colgroup>
+                        <col width="70" />
+                        <col width="*" />
+                        <col width="70" />
+                        <col width="70" />
+                        <col width="90" />
+                        <col width="90" />
+                        <col width="90" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">
+                                <div class="tb-center">사진</div>
+                            </th>
+                            <th scope="col">
+                                <div class="tb-center">제품명</div>
+                            </th>
+                            <th scope="col">
+                                <div class="tb-center">수량</div>
+                            </th>
+                            <th scope="col">
+                                <div class="tb-center">적립</div>
+                            </th>
+                            <th scope="col">
+                                <div class="tb-center">재고</div>
+                            </th>
+                            <th scope="col">
+                                <div class="tb-center">가격</div>
+                            </th>
+                            <th scope="col">
+                                <div class="tb-center">처리</div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!--/loop_wishlist/-->
+                        <!--/wishlist@form/-->
+                        <!--/if_idx(1)/-->
+                        <tr class="nbg">
+                            <!--/else/-->
+                        <tr>
+                            <!--/end_if/-->
+                            <td>
+                                <div class="tb-center">
+                                    <div class="thumb">
+                                        <a href="<!--/wishlist@link/-->"><img src="<!--/wishlist@image_s/-->"
+                                                alt="상품 섬네일" title="상품 섬네일" /></a>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="tb-left">
+                                    <!--/wishlist@name(30)/-->
+                                </div>
+                            </td>
+                            <td>
+                                <div class="tb-center">
+                                    <!--/wishlist@input_quantity(txt-right)/-->개
+                                </div>
+                            </td>
+                            <td>
+                                <div class="tb-center">
+                                    <!--/number/wishlist@reserve_price/-->
+                                    <!--/wishlist@wish_point/-->
+                                </div>
+                            </td>
+                            <td>
+                                <div class="tb-center">
+                                    <!--/wishlist@stock/-->
+                                </div>
+                            </td>
+                            <td>
+                                <div class="tb-center tb-bold">
+                                    <!--/number/wishlist@price_sell/-->원
+                                </div>
+                            </td>
+                            <td>
+                                <div class="tb-center">
+                                    <span class="d-block"><a href="<!--/wishlist@link_basket/-->"><img
+                                                src="/images/d3/modern_simple/btn/btn_h19_cart.gif" alt="장바구니"
+                                                title="장바구니" /></a></span>
+                                    <span class="d-block"><a href="<!--/wishlist@link_del/-->"><img
+                                                src="/images/d3/modern_simple/btn/btn_h19_del.gif" alt="삭제"
+                                                title="삭제" /></a></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <!--/end_form/-->
+                        <!--/end_loop/-->
+                    </tbody>
+                </table>
+            </div><!-- .table-fill-prd -->
+            <!--/end_if/-->
+        </div>
+
+    </div>
+    <!-- //e:container -->
+</div>
+<!-- //e:containerWrap-->
+
+
+
+
+<!--/include_footer(1)/-->

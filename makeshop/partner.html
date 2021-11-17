@@ -1,0 +1,225 @@
+<script>
+    function clickcoupon(temp) {
+        document.coupon.couponnum.value = temp; document.coupon.submit();
+    }
+</script>
+
+<form name=coupon action=/shop/shopdetail.html method=post>
+    <input type=hidden name=type value="coupon">
+    <input type=hidden name=brandcode value="ALL">
+    <input type=hidden name=couponnum>
+</form>
+
+<!--/include_header(1)/-->
+
+<!-- 기업회원 팝업 -->
+<div id="test_popup" style="position:fixed; bottom:10px; left:10px; z-index: 99;">
+    <img src="/design/mkplanet/kkstore/img/brandstory/partner_pop.gif">
+    <div class="test_close_btn" style="cursor: pointer;">[닫기]</div>
+</div>
+<!-- 기업회원 팝업 -->
+
+<div id="containerWrap">
+    <div class="container">
+
+        <!-- s:기업회원 -->
+        <div class="partner-wrap">
+
+            <div class="mem-banner">
+                <p class="img"><img src="/design/mkplanet/kkstore/img/brandstory/mbn.gif" alt=""></p>
+                <div class="txt-box">
+                    <p class="sticker"><img src="/design/mkplanet/kkstore/img/brandstory/st_1.png" alt=""></p>
+                    <p class="title">
+                        New Partner
+                    </p>
+                    <p class="desc">
+                        국민상점의 새로운 파트너가 되어주세요
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="partner-info-wrap">
+                <div class="partner-info">
+                    <p class="img"><img src="/design/mkplanet/kkstore/img/brandstory/k_an.gif" alt=""></p>
+                    <p class="sub-tit">Partner Membership</p>
+                    <p class="title">
+                        국민상점과 함께<br>
+                        비즈니스 성공을 이끌<br>
+                        파트너를 모집합니다
+                    </p>
+                    <p class="desc">
+                        다양한 기업 및 피트니스/요가/필라테스 등<br>
+                        관련 업종에 종사하는 회원분들께 특별한 혜택을 드리고<br>
+                        나아가 국민상점과 함께 비즈니스 성공을 이끌어 나갈<br>
+                        기업 비즈니스 회원을 모집합니다
+                    </p>
+                </div>
+            </div>
+
+
+
+            <div class="benefit-list-wrap">
+                <div class="benefit-list">
+                    <p class="title">
+                        Benefits
+                        <span class="stick"><img src="/design/mkplanet/kkstore/img/brandstory/st_2.png" alt=""></span>
+                    </p>
+                    <p class="desc">
+                        국민상점 PB상품에 한하여 할인 가능하며<br>
+                        파트너사 상품은 할인에서 제외됩니다
+                    </p>
+
+                    <ul>
+                        <li>
+                            <div class="box">
+                                <p class="img01"><img src="/design/mkplanet/kkstore/img/brandstory/bf_1.png" alt=""></p>
+                            </div>
+                            <p class="benefit">
+                                최소 결제금액 <br>
+                                20만원 이상 구매 시
+                            </p>
+                            <p class="benefit-desc">
+                                <span>판매 가격에서 복지 할인 혜택을 드립니다.</span><br>
+                                <br>
+                                할인 혜택은 유형별로 상이하며 위 인증페이지에서<br>
+                                자세한 혜택을 확인하실 수 있습니다.
+                            </p>
+                        </li>
+                        <li>
+                            <div class="box">
+                                <p class="img02"><img src="/design/mkplanet/kkstore/img/brandstory/bf_2.png" alt=""></p>
+                            </div>
+                            <p class="benefit">
+                                국민상점 홈페이지 <br>
+                                로그인 시
+                            </p>
+                            <p class="benefit-desc">
+                                <span>기업·파트너 회원 할인 가격으로 볼 수 있습니다.</span><br>
+                                <br>
+                                최소 결제금액 20만원 미만인 경우<br>
+                                구매 불가합니다.
+                            </p>
+                        </li>
+                        <li>
+                            <div class="box">
+                                <p class="img03"><img src="/design/mkplanet/kkstore/img/brandstory/bf_3.png" alt=""></p>
+                            </div>
+                            <p class="benefit">
+                                제품 구매 시 <br>
+                                결제 수단
+                            </p>
+                            <p class="benefit-desc">
+                                <span>일반회원과 동일하게 현금 · 카드 결제 가능합니다.</span>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="application-wrap">
+                <div class="application">
+                    <p class="title">Partner Application</p>
+                    <p class="desc type2">
+                        국민상점 ‘파트너 신청’하시면 <br>
+                        특별한 혜택을 받아 보실 수 있습니다.
+                    </p>
+                    <p class="desc">
+                        신청 후 2~5일 이내 확인하여 승급 진행이 됩니다
+                    </p>
+
+
+                    <p class="sub-tit">신청 방법</p>
+                    <div class="flow">
+                        <p>
+                            <img src="/design/mkplanet/kkstore/img/brandstory/flow01.jpg" alt="">
+                            <span class="flow-tit">하단 링크 클릭</span>
+                        </p>
+                        <p><img src="/design/mkplanet/kkstore/img/brandstory/flow_arrow.jpg" alt=""></p>
+                        <p>
+                            <img src="/design/mkplanet/kkstore/img/brandstory/flow02.jpg" alt="">
+                            <span class="flow-tit">신청방법 내용 확인</span>
+                        </p>
+                        <p><img src="/design/mkplanet/kkstore/img/brandstory/flow_arrow.jpg" alt=""></p>
+                        <p>
+                            <img src="/design/mkplanet/kkstore/img/brandstory/flow03.jpg" alt="">
+                            <span class="flow-tit">양식에 맞춰 정보작성</span>
+                        </p>
+                    </div>
+
+                    <div class="type-list">
+                        <div>
+                            <p class="name">기업회원</p>
+                            <p class="sub-name">
+                                일반 기업 <br>
+                                (B2B 및 기업 복지)
+                            </p>
+                            <p class="img"><img src="/design/mkplanet/kkstore/img/brandstory/type_1.png" alt=""></p>
+                            <a href="" class="btn-tab">기업회원 혜택 및 인증</a>
+                        </div>
+                        <div>
+                            <p class="name">파트너회원</p>
+                            <p class="sub-name">
+                                피트니스,요가 등<br>
+                                강사회원 및 운동 동호회
+                            </p>
+                            <p class="img"><img src="/design/mkplanet/kkstore/img/brandstory/type_2.png" alt=""></p>
+                            <a href="" class="btn-tab">기업회원 혜택 및 인증</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="notice-wrap">
+                <div class="notice">
+                    <p class="title">기업/파트너 회원 주의사항</p>
+
+                    <ul class="con-list">
+                        <li>기업/파트너 회원 ID는 제3자 공유 X</li>
+                        <li>교환 / 반품 070-7773-3152 or 국민상점 상담톡</li>
+                        <li>기업/파트너 회원 적립금, 쿠폰 사용 불가 (예치금 사용 가능)</li>
+                        <li>기업/파트너 회원님들은 세금계산서 발행이 안되는 부분으로 참고 부탁드립니다. (사이트 내에 현금영수증 & 사업자 지출증빙 신청 가능)</li>
+                        <li>저작물에 대한 부분은 사전 승낙 필요합니다</li>
+                        <li>SNS 및 개인 사이트에 정확한 할인율 기재 금지</li>
+                        <li>문의사항은 기업/파트너 회원 고객센터 <span class="highlight">국민상점 상담톡</span> 이용해주세요.</li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+            <div class="btn-wrap">
+                <a href="" class="btn-go">그럼 이제, 저희와 손을 잡고 함께 걸어갈까요?</a>
+                <p class="sticker" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true"
+                    data-aos-delay="500"><img src="/design/mkplanet/kkstore/img/brandstory/st_3.png" alt=""></p>
+            </div>
+
+
+        </div>
+        <!-- //e:기업회원 -->
+
+        <!-- #content -->
+    </div><!-- #contentWrap -->
+</div><!-- #contentWrapper -->
+
+
+<!--/include_footer(1)/-->
+
+
+
+
+<!-- 기업회원 팝업 -->
+<script language="Javascript">
+    cookiedata = document.cookie;
+    if (cookiedata.indexOf("maindiv=done") < 0) {
+        document.all['onepage_pop'].style.visibility = "visible";
+    }
+    else {
+        document.all['onepage_pop'].style.visibility = "hidden";
+    }
+</script>
+<!-- 기업회원 팝업 -->

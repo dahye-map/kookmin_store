@@ -1,0 +1,81 @@
+<script>
+    function clickcoupon(couponnum, brandcode) {
+    jQuery.ajax({
+    type: 'POST',
+    url: '/shop/download_coupon.ajax.html',
+    dataType: 'html',
+    async: false,
+    data: {
+    'couponnum': couponnum,
+    'brandcode': brandcode,
+    'type': 'coupon',
+    'r': Math.random()
+    },
+    success: function(req) {
+    var flag = req.substring(0,1);
+    var msg = req.substring(2);
+    alert(msg);
+    if(flag == 'Y') {
+    location.href='/m/login.html';
+    }
+    }
+    });
+    return;
+    }
+    </script>
+    
+    
+    
+    
+    
+    
+    <!--/script_scroll(1)/-->
+    <div id="wrap">
+        <!--/include_header(1)/-->
+    
+               
+                <div id="content">
+                    <div class="brandStory">
+    
+    
+    
+    
+    <!-- ▼ 이벤트 이미지-시작 -->
+                        <IMG width=100% SRC="//ftp.xexymix.jpg3.kr/3carekorea/3care/other/main/resort_fitness/0611/0611_event_page_01.jpg">
+                                    <a href="https://www.3care.co.kr/shop/member.html?type=login">
+                                     <IMG width=100% SRC="//ftp.xexymix.jpg3.kr/3carekorea/3care/other/main/resort_fitness/0611/0611_event_page_02.jpg"></a>
+                                    <a href="https://3care.co.kr/m/board.html?code=mkplanet" target="blank">
+                                     <IMG width=100% SRC="//ftp.xexymix.jpg3.kr/3carekorea/3care/other/main/resort_fitness/0618/0621_event_page_03.jpg"></a>
+                                    <a href="//pf.kakao.com/_QLsWd/chat" target="blank">
+                                     <IMG width=100% SRC="//ftp.xexymix.jpg3.kr/3carekorea/3care/other/main/resort_fitness/0618/0621_event_page_04.jpg"></a>
+                     <a href="//3care.co.kr/m/product_list.html?xcode=033&mcode=001&type=Y&scode=&sort=manual&viewtype=gallery">
+                                     <IMG width=100% SRC="//ftp.xexymix.jpg3.kr/3carekorea/3care/other/main/resort_fitness/0611/0611_event_page_04.jpg"></a>
+                    
+                                     <a href="//3care.co.kr/shop/shopdetail.html?branduid=1961784">
+                                     <IMG width=100% SRC="//ftp.xexymix.jpg3.kr/3carekorea/3care/other/main/resort_fitness/0611/0611_event_page_05.jpg"></a>
+       
+                            <a href="//3care.co.kr/shop/shopdetail.html?branduid=1970548">
+                     <IMG width=100% SRC="//ftp.xexymix.jpg3.kr/3carekorea/3care/other/main/resort_fitness/0611/0611_event_page_06.jpg" alt="곤약면"></a>
+    
+                        <a href="//3care.co.kr/shop/shopdetail.html?branduid=119">
+                     <IMG width=100% SRC="//ftp.xexymix.jpg3.kr/3carekorea/3care/other/main/resort_fitness/0611/0611_event_page_07.jpg" alt="클린디"></a>
+     
+                                    <a href="//3care.co.kr/shop/shopbrand.html?xcode=033&mcode=001&type=Y">
+                     <IMG width=100% SRC="//ftp.xexymix.jpg3.kr/3carekorea/3care/other/main/resort_fitness/0611/0611_event_page_08.jpg" alt="베스트"></a>
+    
+    <!-- ▲ 이벤트 이미지-종료 -->
+    
+    
+    
+    
+    
+    
+    
+    
+                   <!-- #content -->
+                <hr />
+            </div><!-- #contentWrap -->
+        </div><!-- #contentWrapper -->
+        <hr />
+        <!--/include_footer(1)/-->
+    </div><!-- #wrap -->

@@ -1,0 +1,95 @@
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Pull To Refresh Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style id="pull-to-refresh-js-style">
+        .ptr--ptr {
+            box-shadow: inset 0 -3px 5px rgba(0, 0, 0, 0.12);
+            pointer-events: none;
+            font-size: 0.85em;
+            font-weight: bold;
+            top: 0;
+            height: 0;
+            transition: height 0.3s, min-height 0.3s;
+            text-align: center;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            align-items: flex-end;
+            align-content: stretch;
+        }
+
+        .ptr--box {
+            padding: 10px;
+            flex-basis: 100%;
+        }
+
+        .ptr--pull {
+            transition: none;
+        }
+
+        .ptr--text {
+            margin-top: .33em;
+            color: rgba(0, 0, 0, 0.3);
+        }
+
+        .ptr--icon {
+            color: rgba(0, 0, 0, 0.3);
+            transition: transform .3s;
+        }
+
+        /* When at the top of the page, disable vertical overscroll so passive touch listeners can take over. */
+        .ptr--top {
+            touch-action: pan-x pan-down pinch-zoom;
+        }
+
+        .ptr--release .ptr--icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="wrap">
+            <h1>Demo</h1>
+        </div>
+    </header>
+    <div id="main">
+        <div class="wrap">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <p class="links"><a href="raw.html">Raw</a><a href="basic.html">Basic</a><a href="shouldptr.html">Should
+                    pull to refresh?</a><a href="trigger.html">Trigger</a><a href="promise.html">Promise</a><a
+                    href="callback.html">Callback</a><a href="multiple.html">Multiple Instances</a><a
+                    href="tolerance.html">With tolerance</a></p>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="wrap">
+            <ul class="footer-links">
+                <li><a href="https://github.com/sponsors/BoxFactura"><strong>💖 Sponsor this project</strong></a></li>
+                <li><a href="https://www.boxfactura.com/pulltorefresh.js/">PullToRefresh.js</a></li>
+                <li><a href="https://github.com/BoxFactura/pulltorefresh.js">Contribute on Github</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="//unpkg.com/hammer-touchemulator@0.0.2/touch-emulator.js"></script>
+    <script>TouchEmulator()</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pulltorefreshjs/0.1.14/pulltorefresh.min.js"></script>
+    <script>
+        /* global PullToRefresh */
+        PullToRefresh.init({
+            onRefresh: function () { alert('refresh'); },
+        });
+    </script>
+</body>
+
+</html>

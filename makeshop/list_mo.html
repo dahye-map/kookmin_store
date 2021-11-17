@@ -1,0 +1,263 @@
+<!--/include_header(2)/-->
+
+<!-- s:containerWrap -->
+<div id="containerWrap">
+    <!-- s:container -->
+    <div class="container">
+
+        <div class="shop-list-wrap">
+
+            <!-- s:중분류 -->
+            <!--/if_category/-->
+            <div class="mid-cate-list">
+                <!--/if_cate1_name/-->
+                <a href="<!--/link_cate1/-->" class="active">전체</a>
+                <!--/else/-->
+                <!--/end_if/-->
+                <!--/loop_category/-->
+                <a href="<!--/category@link/-->"><!--/category@name/--></a>
+                <!--/end_loop/-->
+            </div>
+            <!--/else/-->
+            <div class="mid-cate-list">
+                <!--/if_cate2_name/-->
+                <a href="<!--/link_cate1/-->" class="cate_none">전체</a>
+                <!--/else/-->
+                <!--/end_if/-->
+                <!--/if_cate3_name/-->
+                <a href="<!--/link_cate2/-->">전체</a>
+                <!--/else/-->
+                <!--/end_if/-->
+                <!--/loop_same_level_category/-->
+                <a href="<!--/same_level_category@link/-->"class="<!--/if_same_level_category@is_sel/-->active<!--/end_if/-->"><!--/same_level_category@name/--></a>
+                <!--/end_loop/-->
+            </div>
+            <!--/end_if/-->
+
+            <!--/if_cate3_name/-->
+            <style>
+                .cate_none {
+                    display: none !important;
+                }
+            </style>
+            <!--/end_if/-->
+            <!-- //e:중분류 -->
+
+
+
+
+
+            <div class="shopbrandTitle">
+                <!--/if_category_title_img_mobile/-->
+                <img src="<!--/category_title_img_mobile/-->" />
+                <!--/end_if/-->
+                <!--/if_category_title_html_mobile/-->
+                <!--/category_title_html_mobile/-->
+                <!--/end_if/-->
+            </div>
+
+
+
+            <div class="prd-list-top">
+                <p class="cate-title"><!--/now_cate_name/--></p>
+
+                <div class="list-sort">
+                    <!--/select_sort/-->
+                </div>
+            </div>
+            
+
+
+        
+            <!--/block_product/-->
+            <!--/if_product_list/-->
+            <!--/if_product_list_viewtype(list)/-->
+            <div class="list_shopping1x">
+                <ul data-type="vertical" data-open="on" class="prd-item-list">
+                    <!--/loop_product_list(6)/-->
+                    <li>
+                        <a href="<!--/product_list@link/-->">
+                            <p class="thumb"><img src="<!--/product_list@mobile_image/-->" class="listPic" /></p>
+                            <div class="prd-item-info">
+                                <p class="brand"><!--/product_list@brand/--></p>
+                                <p class="name">
+                                    <!--/if_product_list@mobile_name/-->
+                                    <!--/product_list@mobile_name/-->
+                                    <!--/else/-->
+                                    <!--/product_list@name/-->
+                                    <!--/end_if/-->
+                                </p>
+
+                                <div class="price-wrap">
+
+                                    <p class="percent"><!--/product_list@discount_percent/-->%</p>
+
+                                    <!--/if_product_list@is_soldout/-->
+                                    <p class="soldout">(품절)</p>
+                                    <!--/else/-->
+                                    <!--/if_product_list@price_replace/-->
+                                    <p class="replace">
+                                        <!--/product_list@price_replace/-->
+                                    </p>
+                                    <!--/else/-->
+                                    <!--/if_product_list@price_discount/-->
+                                    <p class="price"><del><!--/number/product_list@price_sell/--></del><span><!--/number/product_list@price_discount/--></span>원</p>
+                                    <!--/else/-->
+
+                                    <!--/if_product_list@price_consumer(+1)/-->
+                                    <p class="price"><span><!--/number/product_list@price_sell/--></span>원 <del><!--/number/product_list@price_consumer/--></del></p>
+                                    <!--/else/-->
+
+                                    <p class="price"><span><!--/number/product_list@price_sell/--></span>원</p>
+                                    <!--/end_if/-->
+                                    <!--/end_if/-->
+                                    <!--/end_if/-->
+                                    <!--/end_if/-->
+                                </div>
+                                
+                                <!-- 리뷰수  -->
+                                <span class="crema-product-reviews-count reviewtop"
+                                    data-product-code="<!--/product_list@uid/-->"
+                                    data-format="리뷰 <b>{{{count}}}</b>" data-hide-if-zero="1"></span>
+
+                            </div>
+                        </a>
+                    </li>
+                    <!--/end_loop/-->
+                </ul>
+            </div>
+            <!--/end_if/-->
+            <!--/if_product_list_viewtype(gallery)/-->
+            <div class="list_shopping2x">
+                <ul data-type="gallery" data-open="on" class="prd-item-list">
+                    <!--/loop_product_list(6)/-->
+                    <li>
+                        <a href="<!--/product_list@link/-->">
+                            <p class="thumb"><img src="<!--/product_list@mobile_image/-->" class="listPic" /></p>
+                            <div class="prd-item-info">
+                                <p class="brand"><!--/product_list@brand/--></p>
+                                <p class="name">
+                                    <!--/if_product_list@mobile_name/-->
+                                    <!--/product_list@mobile_name/-->
+                                    <!--/else/-->
+                                    <!--/product_list@name/-->
+                                    <!--/end_if/-->
+                                </p>
+
+                                <div class="price-wrap">
+
+                                    <p class="percent"><!--/product_list@discount_percent/-->%</p>
+
+                                    <!--/if_product_list@is_soldout/-->
+                                    <p class="soldout">(품절)</p>
+                                    <!--/else/-->
+                                    <!--/if_product_list@price_replace/-->
+                                    <p class="replace">
+                                        <!--/product_list@price_replace/-->
+                                    </p>
+                                    <!--/else/-->
+                                    <!--/if_product_list@price_discount/-->
+                                    <p class="price"><del><!--/number/product_list@price_sell/--></del><span><!--/number/product_list@price_discount/--></span>원</p>
+                                    <!--/else/-->
+
+                                    <!--/if_product_list@price_consumer(+1)/-->
+                                    <p class="price"><span><!--/number/product_list@price_sell/--></span>원 <del><!--/number/product_list@price_consumer/--></del></p>
+                                    <!--/else/-->
+
+                                    <p class="price"><span><!--/number/product_list@price_sell/--></span>원</p>
+                                    <!--/end_if/-->
+                                    <!--/end_if/-->
+                                    <!--/end_if/-->
+                                    <!--/end_if/-->
+                                </div>
+                                
+                                <!-- 리뷰수  -->
+                                <span class="crema-product-reviews-count reviewtop"
+                                    data-product-code="<!--/product_list@uid/-->"
+                                    data-format="리뷰 <b>{{{count}}}</b>" data-hide-if-zero="1"></span>
+
+                            </div>
+                        </a>
+                    </li>
+                    <!--/end_loop/-->
+                </ul>
+            </div>
+            <!--/end_if/-->
+            <!--/else/-->
+            <div class="none-data">
+                <i class="fa fa-exclamation-triangle fa-2x"></i>
+                <p>상품 준비중 입니다.</p>
+            </div>
+            <!--/end_if/-->
+            <!--/end_block/-->
+            <!--/block_product_more/-->
+            <div class="more">
+                <a href="<!--/link_more_product_list/-->" class="btn_moreGray"><span class="more-title">더보기 ▼</span></a>
+            </div>
+            <!--/end_block/-->
+        </div>
+        <!-- //main -->
+
+
+
+    </div>
+    <!-- //e:container -->
+</div>
+<!-- //e:containerWrap -->
+
+
+
+
+
+
+<!--/include_footer(1)/-->
+
+<!-- cre.ma / Mobile 리뷰 초기화 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
+<script>(function (i, s, o, g, r, a, m) { if (s.getElementById(g)) { return }; a = s.createElement(o), m = s.getElementsByTagName(o)[0]; a.id = g; a.async = 1; a.src = r; m.parentNode.insertBefore(a, m) })(window, document, 'script', 'crema-jssdk', '//widgets.cre.ma/3care.co.kr/mobile/init.js');</script>
+
+
+<!-- bigin impression tracking START -->
+<script>
+    function biginImpression() {
+        try {
+            var clickedElement = this;
+            var itemWrapper = $(clickedElement).closest('.list_shopping2x>ul>li')[0];
+            var biginProductImage = itemWrapper.querySelector('img.listPic').src;
+            var biginProductName = itemWrapper.querySelector('.listName').textContent.trim().replace(/(<([^>]+)>)/ig, '');
+            var rawBiginPrice = itemWrapper.querySelector('.listPrice>span').textContent.trim().replace(/[\D]/g, '');
+            var biginProductPrice = parseInt(rawBiginPrice);
+            var biginProductLocation = itemWrapper.querySelector('a[href*="/m/product.html"]');
+            var biginProduct = {};
+
+            if (biginProductName) {
+                biginProduct.name = biginProductName;
+            }
+            if (biginProductPrice) {
+                biginProduct.price = biginProductPrice;
+            }
+            if (biginProductImage) {
+                biginProduct.thumbnail = [biginProductImage];
+            }
+            if (biginProductLocation) {
+                var rawBiginProdId = biginProductLocation.search.match(/branduid=([^&]*)/);
+                biginProduct.id = rawBiginProdId && rawBiginProdId.length > 1 ? rawBiginProdId[1] : '';
+            }
+            var biginProductIndex = $(itemWrapper).index('.list_shopping2x>ul>li');
+            if (biginProductIndex > -1) {
+                biginProduct.position = biginProductIndex + 1;
+            }
+            biginProduct.list = window.location.href;
+
+            if (biginProduct && biginProduct.id && biginProduct.name) {
+                window.bigin.event('bg:impression', biginProduct)
+            }
+        } catch (e) { }
+    }
+
+    setTimeout(function () {
+        if ($ && $('a[href*="m/product.html"][href*="branduid"]') && $('a[href*="m/product.html"][href*="branduid"]').length > 0) {
+            $('a[href*="m/product.html"][href*="branduid"]').click(biginImpression);
+        }
+    }, 2000);
+</script>
+<!-- bigin impression tracking END -->

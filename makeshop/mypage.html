@@ -1,0 +1,220 @@
+<!--/include_header(1)/-->
+
+<div id="containerWrap">
+    <div class="container">
+
+        <div class="mypage-wrap">
+            <p class="title">마이페이지</p>
+
+            <div class="mypage-list">
+                <a href="/shop/mypage.html?mypage_type=myorder">주문 내역</a>
+                <a href="/shop/mypage.html?mypage_type=mycoupon">쿠폰 내역</a>
+                <a href="/shop/mypage.html?mypage_type=myreserve">적립금 내역</a>
+                <a href="/shop/mypage.html?mypage_type=mywishlist">좋아요 상품</a>
+                <a href="/shop/mypage.html?mypage_type=myarticle">내 게시글</a>
+                <a href="/shop/mypage.html?mypage_type=myemail">상품리뷰</a>
+                <a href="/shop/mypage.html?mypage_type=mysubs">정기배송 관리</a>
+            </div>
+
+            
+            <div class="user-info-wrap">
+                <div class="user-info">
+                    <a href="<!--/link_join/-->" class="btn-link">회원 정보 관리 ></a>
+                    <p class="sub-title">기본 회원정보</p>
+
+                    <div class="detail">
+                        <p class="id">
+                            <!--/user_id/--> <span class="name">
+                                <!--/user_name/-->
+                            </span>
+                        </p>
+
+                        <p class="etc">
+                            <span class="phone">
+                                <!--/user_mobile/-->
+                            </span> |
+                            <span class="email">
+                                <!--/user_email/-->
+                            </span> <br>
+                            <span class="address">
+                                <!--/user_address/-->
+                            </span>
+                        </p>
+                    </div>
+
+                </div>
+                <div class="grade-info">
+                    <a href="/shop/page.html?id=6" class="btn-link">등급 혜택 더보기 ></a>
+                    <p class="sub-title">회원등급</p>
+
+                    <div class="detail">
+                        <p class="user-thumb"><img src="<!--/group_image/-->" alt=""></p>
+
+                        <div class="desc">
+                            <p class="grade-name">
+                                <span class="group-name"><!--/group_name/--></span> <span class="date">가입일 : <!--/join_date/--></span>
+                            </p>
+                            
+                        
+                            <ul class="benefit beginner">
+                                <li>결제 시 1% 적립</li>
+                            </ul>
+                            <ul class="benefit junior">
+                                <li>결제 시 1% 적립</li>
+                                <li>추가 1% 할인</li>
+                                <li>무료배송쿠폰 1매</li>
+                            </ul>
+                            <ul class="benefit pro">
+                                <li>결제 시 1% 적립</li>
+                                <li>추가 2% 할인</li>
+                                <li>무제한 무료배송</li>
+                                <li>10% 할인 쿠폰 1매</li>
+                            </ul>
+                            <ul class="benefit master">
+                                <li>결제 시 1% 적립</li>
+                                <li>추가 2% 할인</li>
+                                <li>무제한 무료배송</li>
+                                <li>10% 할인 쿠폰 2매</li>
+                                <li>20% 할인 쿠폰 1매</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="mypage-tab">
+                <div class="tab">
+                    <a href="/shop/mypage.html?mypage_type=myorder">
+                        <p class="ico"><img src="/design/mkplanet/kkstore/img/ico_mypage01.png" alt=""></p>
+                        <p class="sub-title">주문/배송</p>
+                        <p class="num">
+                            <!--/order_count/-->
+                        </p>
+                    </a>
+                </div>
+                <div class="tab">
+                    <a href="/shop/mypage.html?mypage_type=myemail">
+                        <p class="ico"><img src="/design/mkplanet/kkstore/img/ico_mypage02.png" alt=""></p>
+                        <p class="sub-title">상품후기</p>
+                        <p class="num crema-my-reviews-count" data-type="pending">0</p>
+                    </a>
+                </div>
+                <div class="tab">
+                    <a href="/shop/mypage.html?mypage_type=myreserve">
+                        <p class="ico"><img src="/design/mkplanet/kkstore/img/ico_mypage03.png" alt=""></p>
+                        <p class="sub-title">적립금</p>
+                        <p class="num">
+                            <!--/number/user_reserve/-->
+                        </p>
+                    </a>
+                </div>
+                <div class="tab">
+                    <a href="/shop/mypage.html?mypage_type=mycoupon">
+                        <p class="ico"><img src="/design/mkplanet/kkstore/img/ico_mypage04.png" alt=""></p>
+                        <p class="sub-title">쿠폰</p>
+                        <p class="num">
+                            <!--/coupon_count/-->
+                        </p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="mypage-detail-wrap">
+                <div class="mypage-detail-tab">
+                    <a href="/shop/mypage.html" class="active">최근 주문 정보</a>
+                    
+                </div>
+
+                <div class="mypage-detail">
+                    <div class="tbl">
+                        <table summary="주문일자, 상품명, 결제금액, 주문상세">
+                            <caption>최근 주문 정보 목록</caption>
+                            <colgroup>
+                                <col width="150">
+                                <col width="*">
+                                <col width="140">
+                                <col width="140">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <div class="tb-center">주문일자</div>
+                                    </th>
+                                    <th>
+                                        <div class="tb-center">상품명</div>
+                                    </th>
+                                    <th>
+                                        <div class="tb-center">결제금액</div>
+                                    </th>
+                                    <th>
+                                        <div class="tb-center">주문상세</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!--/if_order_list/-->
+                                <!--/loop_order_list(5)/-->
+                                <tr>
+                                    <td>
+                                        <div class="tb-center">
+                                            <!--/order_list@order_date/-->
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="tb-left">
+                                            <!--/order_list@brand_name/-->
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="tb-center">
+                                            <!--/number/order_list@order_price/-->원
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="tb-center"><a href="<!--/order_list@link_order/-->" class="btn-view">조회하기</a></div>
+                                    </td>
+                                </tr>
+                                <!--/end_loop/-->
+                                <!--/else/-->
+                                <tr>
+                                    <td colspan="4">
+                                        <div class="tb-center">주문 내역이 없습니다.</div>
+                                    </td>
+                                </tr>
+                                <!--/end_if/-->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
+<!--/include_footer(1)/-->
+
+
+<script>
+    var group_name = $('.group-name').text();
+
+    if( group_name == '[국민상점]비기너') {
+        $('.benefit.beginner').addClass('active');
+    }
+    if( group_name == '[국민상점]주니어') {
+        $('.benefit.junior').addClass('active');
+    }
+    if( group_name == '[국민상점]프로') {
+        $('.benefit.pro').addClass('active');
+    }
+    if( group_name == '[국민상점]마스터') {
+        $('.benefit.master').addClass('active');
+    }
+</script>
+
+
+<!-- cre.ma / init 스크립트 (PC) / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
+<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/3care.co.kr/init.js');</script>

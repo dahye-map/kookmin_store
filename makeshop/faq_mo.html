@@ -1,0 +1,116 @@
+<!--/include_header(2)/-->
+
+<!-- 본문 -->
+<!-- s:containerWrap -->
+<div id="containerWrap">
+    <!-- s:container -->
+    <div class="container">
+
+        <div class="community-wrap">
+
+            <div class="commu-tit-wrap">
+                <p class="title">커뮤니티</p>
+                <div class="commu-list-wrap">
+                    <div class="commu-list">
+                        <div class="list active"><a href="/m/faq.html">
+                                <p class="title">자주묻는질문</p>
+                            </a></div>
+                        <div class="list"><a href="/m/board.html?code=mkplanet_board2">
+                                <p class="title">공지사항</p>
+                            </a></div>
+                        <div class="list"><a href="">
+                                <p class="title">멤버쉽혜택</p>
+                            </a></div>
+                        <div class="list"><a href="/m/board.html?code=mkplanet_board1">
+                                <p class="title">구매후기</p>
+                            </a></div>
+                        <div class="list"><a href="">
+                                <p class="title">케어별 관리법</p>
+                            </a></div>
+                        <div class="list"><a href="/m/board.html?code=mkplanet">
+                                <p class="title">질문과대답</p>
+                            </a></div>
+                        <div class="list"><a href="/m/board.html?code=mkplanet_board6">
+                                <p class="title">이벤트</p>
+                            </a></div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="community-con-wrap">
+
+                <!--/form_search_faq/-->
+                <!--/if_faq(+1)/-->
+                <div class="faq-wrap">
+                    <!--/loop_faq/-->
+                    <div class="question">
+                        <div class="tag"><!--/faq@category/--></div>
+                        <div class="subject"><!--/faq@subject/--></div>
+                    </div>
+                    <div class="answer">
+                        <div class="tag"></div>
+                        <div class="subject">
+                            <!--/faq@answer/-->
+                        </div>
+                    </div>
+                    <!--/end_loop/-->
+                </div>
+
+                <div class="paging">
+                    <!--/if_pager_faq::prev/-->
+                    <a href="<!--/pager_faq::prev@link/-->" class="prev"><span class="fa fa-angle-left"></span></a>
+                    <!--/end_if/-->
+                    <!--/if_pager_faq/-->
+                    <!--/loop_pager_faq::page(5)/-->
+                    <!--/if_pager_faq::page@current/-->
+                    <a href="javascript:return false;" class="now">
+                        <!--/pager_faq::page/-->
+                    </a>
+                    <!--/else/-->
+                    <a href="<!--/pager_faq::page@link/-->">
+                        <!--/pager_faq::page/-->
+                    </a>
+                    <!--/end_if/-->
+                    <!--/end_loop/-->
+                    <!--/end_if/-->
+                    <!--/if_pager_faq::next/-->
+                    <a href="<!--/pager_faq::next@link/-->" class="next"><span class="fa fa-angle-right"></span></a>
+                    <!--/end_if/-->
+                </div>
+
+
+                <div class="search-wrap">
+                    <!-- .검색 폼시작 -->
+                    <fieldset>
+                        <div class="item-search">
+                            <label>
+                                <!--/select_category(custom-blue)/-->
+                            </label>
+                            <div class="wrap">
+                                <!--/input_keyword(comm)/-->
+                            </div>
+                            <a href="<!--/link_search_faq/-->" class="btn-gray-h25"><strong>검색</strong></a>
+                        </div>
+                    </fieldset>
+                    <!-- .검색 폼 끝 -->
+                </div><!-- .search-wrap -->
+
+
+                <!--/end_if/-->
+                <!--/end_form/-->
+
+
+            </div>
+        </div>
+        <!-- //border-list -->
+
+    </div>
+    <!-- //contents -->
+</div>
+<!-- //container -->
+<!-- //본문 -->
+
+<!--/include_footer(1)/-->

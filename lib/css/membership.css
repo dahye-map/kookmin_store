@@ -1,0 +1,79 @@
+.mem-banner { position:relative; }
+.mem-banner .img img { width:100%; }
+.mem-banner .img-float { position:absolute; right:0; bottom:-12%; }
+.mem-banner .txt-box { position:absolute; left:10%; top:15%; }
+.mem-banner .txt-box .sub-title { color:#eb021e; font-size:24px; font-weight:600; padding-bottom:15px; }
+.mem-banner .txt-box .title { color:#fff; font-size:45px; font-weight:600; line-height:1.46; padding-bottom:25px; }
+.mem-banner .txt-box .desc { color:#fff; font-size:19px; opacity:.6; line-height:1.4; padding-bottom:25px; }
+
+.benefit-list-wrap { background:#f4f5f8; padding:300px 0; }
+.benefit-list-wrap:after { content:''; display:block; overflow:hidden; clear:both; }
+.benefit-list { display:flex; max-width:1360px; margin:0 auto; }
+.benefit-list .list { position:relative; width:33.3333%; padding:0 32px; }
+.benefit-list .list .num { font-size:20px; font-weight:bold; color:#eb021e; padding-bottom:18px; }
+.benefit-list .list .box { background:#fff; padding:54px 48px; border-radius:20px; min-height:452px;
+    box-shadow: 6px 5px 10px rgba(0, 0, 0, 0.1)  ; 
+	-webkit-box-shadow: 6px 5px 10px rgba(0, 0, 0, 0.1)  ; 
+	-moz-box-shadow: 6px 5px 10px rgba(0, 0, 0, 0.1)  ; 
+}
+.benefit-list .list .box .title { color:#333; font-size:33px; font-weight:bold; padding-bottom:25px; }
+.benefit-list .list .box .sub-title { color:#555; font-size:19px; min-height:100px; line-height:1.42; }
+.benefit-list .list .img01 { position:absolute; right:-65px; bottom:-45px; z-index:50; }
+.benefit-list .list .img02 { position:absolute; right:60px; bottom:-80px; z-index:50; }
+.benefit-list .list .img03 { position:absolute; right:50px; bottom:-45px; z-index:50; }
+.benefit-list-wrap .btn-wrap { max-width:1300px; margin:0 auto; text-align:right; }
+.benefit-list-wrap .btn-plus { display:inline-block; background:#d50917 url('../../img/images/bg_btn_go_small.png') 85% center no-repeat; color:#fff; border-radius:100px; font-size:19px; padding:25px 140px 24px 95px; margin-top:30px; }
+
+.level-wrap .level { max-width:1300px; margin:0 auto; padding:220px 0; }
+.level-wrap .level .title { color:#1c1c1c; font-size:20px; font-weight:bold; padding-bottom:32px; }
+.level-table th { padding:20px 0 26px; text-align:center; font-size:19px; color:#555; border-top:4px solid #000; }
+.level-table td { padding:30px 0; text-align:center; font-size:19px; color:#555; border-top:1px solid #e5e5e5; }
+.level-table td.name { font-weight:bold; font-size:22px; }
+.level-table td.benefit { text-align:left; padding-left:40px; }
+.level-table td.benefit .notice { font-size:18px; color:#555; display:block; padding-top:10px; opacity:.6; }
+
+.notice-wrap .notice { max-width:1300px; margin:0 auto; padding-bottom:220px; }
+.notice-wrap .notice .title { color:#555; font-size:22px; font-weight:bold; padding-bottom:40px; padding-top:20px; border-top:4px solid #000; }
+
+.membership-wrap .btn-wrap { position:relative; max-width:1300px; margin:0 auto; }
+.membership-wrap .btn-go { display:block; background:#092aa7 url('../../img/images/bg_btn_go_small.png') 95% center no-repeat; color:#fff; border-radius:100px; font-size:28px; padding:50px 0; text-align:center; margin-bottom:200px; }
+.membership-wrap .sticker { position:absolute; left:40px; top:-84px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.membership-wrap .con-list li { position:relative; color:#555; font-size:19px; line-height:1.42; padding-bottom:30px; padding-left:18px; }
+.membership-wrap .con-list li:before { content:''; display:block; position:absolute; left:0; top:6px; width:8px; height:8px; border-radius:100%; background:#ff356b; }

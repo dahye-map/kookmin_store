@@ -1,0 +1,18 @@
+#containerWrap .container { background:#f9f9f9; }
+
+
+.reserve-list-wrap { display:-webkit-flex; display:flex; }
+.reserve-list-wrap .notice-list { margin-top:40px; }
+.reserve-list-wrap .notice-list li { color:#bebebe; line-height:2; font-size:16px; }
+
+.reserve-list-wrap .reserve-box { width:467px; }
+.reserve-list-wrap .reserve-box .inner {  background:#fff; padding:70px; border-radius:15px; margin-right:30px; }
+.reserve-list-wrap .reserve-box .tit { font-size:30px; color:#000; line-height:1.4; padding-bottom:45px; font-weight:bold; }
+.reserve-list-wrap .reserve-box .tit .icon { display:inline-block; color:#ff7600; font-size:22px; border:3px solid #ff7600; border-radius:100%; width:30px; height:30px; line-height:20px; text-align:center; vertical-align:middle; }
+.reserve-list-wrap .reserve-box .cash { font-size:64px; font-weight:bold; color:#000; }
+
+.reserve-list-wrap .tbl { background:#fff; width:calc(100% - 467px); padding:20px 46px; border-radius:15px; }
+.reserve-list-wrap .tbl thead th { border-top:none; }
+.reserve-list-wrap .tbl .date { color:#a4a4a4; font-size:18px; font-weight:300; }
+.reserve-list-wrap .tbl .subject { color:#000; font-size:18px; }
+.reserve-list-wrap .tbl .price { color:#a4a4a4; font-size:18px; font-weight:300; }

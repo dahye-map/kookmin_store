@@ -1,0 +1,140 @@
+<!--/include_header(1)/-->
+
+<div id="containerWrap">
+    <div class="container">
+
+        <div class="mypage-wrap">
+
+            <p class="title">마이페이지</p>
+
+            <div class="mypage-list">
+                <a href="/shop/mypage.html?mypage_type=myorder" class="active">주문 내역</a>
+                <a href="/shop/mypage.html?mypage_type=mycoupon">쿠폰 내역</a>
+                <a href="/shop/mypage.html?mypage_type=myreserve">적립금 내역</a>
+                <a href="/shop/mypage.html?mypage_type=mywishlist">좋아요 상품</a>
+                <a href="/shop/mypage.html?mypage_type=myarticle">내 게시글</a>
+                <a href="/shop/mypage.html?mypage_type=myarticle&code=mkplanet_board1">상품리뷰</a>
+                <a href="/shop/mypage.html?mypage_type=mysubs">정기배송 관리</a>
+            </div>
+
+
+            <div id="myOrder">
+
+                <div class="mypage-detail-wrap">
+                    <div class="mypage-detail">
+                        <div class="tbl">
+                            <table summary="번호, 주문일자, 상품명, 결제금액, 주문상세, 배송현황">
+                                <caption>주문내역</caption>
+                                <colgroup>
+                                    <col width="95" />
+                                    <col width="*" />
+                                    <col width="100" />
+                                    <col width="75" />
+                                    <col width="75" />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="tb-center">주문일자</div>
+                                        </th>
+                                        <th scope="row">
+                                            <div class="tb-center">상품명</div>
+                                        </th>
+                                        <th scope="row">
+                                            <div class="tb-center">결제금액</div>
+                                        </th>
+                                        <th scope="row">
+                                            <div class="tb-center">주문상세</div>
+                                        </th>
+                                        <th scope="row">
+                                            <div class="tb-center">배송현황</div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!--/if_order_list/-->
+                                    <!--/loop_order_list/-->
+                                    <tr>
+                                        <td>
+                                            <div class="tb-center">
+                                                <!--/order_list@order_date/-->
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="tb-left">
+                                                <!--/order_list@brand_name/-->
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="tb-center tb-bold">
+                                                <!--/number/order_list@order_price/-->원
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="tb-center"><a href="<!--/order_list@link_order/-->"
+                                                    class="hvr-rectangle-in btn-scart">상세조회</a></div>
+                                        </td>
+                                        <td>
+                                            <div class="tb-center"><a href="<!--/order_list@link_delivery/-->"
+                                                    class="hvr-rectangle-in btn-scart">배송조회</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <!--/end_loop/-->
+                                    <!--/else/-->
+                                    <tr>
+                                        <td colspan="6">
+                                            <div class="tb-center">주문내역이 없습니다.</div>
+                                        </td>
+                                    </tr>
+                                    <!--/end_if/-->
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="item-page">
+                            <!--/if_pager_order_list::first/-->
+                            <a href="<!--/pager_order_list::first@link/-->" class="paging-start">[처음]</a>
+                            <!--/end_if/-->
+                            <!--/if_pager_order_list::prev/-->
+                            <a href="<!--/pager_order_list::prev@link/-->" class="paging-prev">[이전]</a>
+                            <!--/end_if/-->
+        
+                            <!--/if_pager_order_list/-->
+                            <!--/loop_pager_order_list::page/-->
+                            <!--/if_pager_order_list::page@current/-->
+                            <a href="<!--/pager_order_list::page@link/-->" class="now">
+                                <!--/pager_order_list::current/-->
+                            </a>
+                            <!--/else/-->
+                            <a href="<!--/pager_list::page@link/-->">
+                                <!--/pager_order_list::page/-->
+                            </a>
+                            <!--/end_if/-->
+                            <!--/end_loop/-->
+                            <!--/end_if/-->
+
+                            <!--/if_pager_order_list::next/-->
+                            <a href="<!--/pager_order_list::next@link/-->" class="paging-next">[다음]</a>
+                            <!--/end_if/-->
+                            <!--/if_pager_order_list::last/-->
+                            <a href="<!--/pager_order_list::last@link/-->" class="paging-end">[끝]</a>
+                            <!--/end_if/-->
+                        </div>
+
+                        <ul class="foot-dsc">
+                            <li>상품명 또는 주문상세의 조회 버튼을 클릭하시면, 주문상세 내역을 확인하실 수 있습니다.</li>
+                            <li>배송현황의 조회 버튼을 클릭하시면, 해당 주문의 배송 현황을 한눈에 확인하실 수 있습니다.</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div><!-- #myOrder -->
+
+        </div>
+        
+    </div><!-- #contentWrap -->
+</div><!-- #contentWrapper-->
+
+<!--/include_footer(1)/-->

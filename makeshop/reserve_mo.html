@@ -1,0 +1,75 @@
+<!--/include_header(1)/-->
+
+<!-- s:containerWrap -->
+<div id="containerWrap">
+    <!-- s:container -->
+    <div class="container">
+        <!-- main -->
+        <main id="reserve-list">
+        
+            <div class="mypage-sub-tab">
+                <div class="mypage-sub">
+                    <div class="tab"><a href="/m/coupon_list.html">쿠폰내역</a></div>
+                    <div class="tab"><a href="/m/order_list.html">주문내역</a></div>
+                    <div class="tab"><a href="/m/mypage.html?mypage_type=myreserve" class="active">적립금내역</a></div>
+                    <div class="tab"><a href="/m/wishlist.html">관심상품</a></div>
+                    <div class="tab"><a href="/m/mypage.html?mypage_type=myarticle">내 게시글보기</a></div>
+                </div>
+            </div>
+            
+            <div class="notice-info">
+                <p class="tit">
+                    <!--/user_name/--> 님의 <br>
+                    총 보유 적립금 <span class="icon">c</span>
+                </p>
+                <p class="cash">
+                    <!--/number/user_reserve/-->원
+                </p>
+                <!--<p>출석체크 누적 적립금액 /number/attendance_reserve/원</p> -->
+            </div>
+            
+            <div class="cautionBox">
+                <p></p>
+            </div>
+            
+            <div class="reserve-list">
+                <p class="title">적립내역</p>
+                <table class="list">
+                    <!--/if_reserve/-->
+                    <!--/loop_reserve/-->
+                    <tr>
+                        <th>
+                            <p class="name"><!--/reserve@content/--></p>
+                            <p class="reserve-date"><!--/reserve@date/--></p>
+                        </th>
+                        <td>
+                            <p class="reserve-price"><!--/number/reserve@price/-->원</p>
+                        </td>
+                    </tr>
+                    <!--/end_loop/-->
+                    <!--/else/-->
+                    <tr>
+                        <th class="no_data"> 적립금 내역이 없습니다.</th>
+                    </tr>
+                    <!--/end_if/-->
+                </table>
+    
+                <div class="notice-list">
+                    <ul>
+                        <li>· 적립된 금액이 <!--/number/usable_reserve/-->원 이상 누적되었을때, 사용하실수 있습니다.</li>
+                        <li>· 결제 시 적립금 사용 여부를 확인할 수 있는 안내문이 나옵니다.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            
+        </main>
+        <!-- //main -->
+        
+        
+    </div>
+    <!-- //contents -->
+</div>
+<!-- //container -->
+
+<!--/include_footer(1)/-->

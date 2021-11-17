@@ -1,0 +1,338 @@
+<div id="footerWrap">
+    <div class="footer">
+        <div class="footer-menu">
+            <ul>
+                <li><a href="">국민상점 브랜드스토리</a></li>
+                <li><a href="">자주묻는질문</a></li>
+                <li><a href="">제휴 · 입점 문의하기</a></li>
+                <li><a href="<!--/link_useinfo/-->">이용가이드</a></li>
+                <li><a href="<!--/link_privacy/-->">개인정보 취급방침</a></li>
+                <li><a href="<!--/link_join_terms/-->">이용약관</a></li>
+            </ul>
+        </div>
+        <div class="cs-section">
+            <p class="title">즐거운 국민상점 고객센터</p>
+            <p class="phone"><!--/shop_tel/--></p>
+
+            <p class="work-hour">
+                토, 일요일 및 공휴일 휴무 <br>
+                오전 10시 - 오후 6시<br>
+                점심 12시 - 오후 2시
+            </p>
+        </div>
+        <div class="bank-section">
+            <p class="title">우리은행 | 예금주 (주)쓰리케어코리아</p>
+            <p class="account">1005-503-014636</p>
+
+            <ul class="cs-board">
+                <li><a href="">1:1 문의 게시판</a></li>
+                <li><a href="">국민상점 입점 문의하기</a></li>
+                <li><a href="">카카오톡 문의</a></li>
+                <li><a href="">네이버 톡톡 문의</a></li>
+            </ul>
+        </div>
+        <div class="footer-info">
+            <p>
+                <b><!--/company_name/--></b> <a href="#none" onclick="window.open('http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=2748100425','mark','scrollbars=no,resizable=no,width=750,height=700')" class="ani">[사업자정보확인]</a><br><br>
+                
+                <span>
+                    대표자. <!--/company_owner/--> | 사업자등록번호. <!--/company_number/--> <br>
+                    통신판매업신고번호.  <!--/online_sale_number/--><br>
+                    <br>
+                    <!--/company_addr/--><br>
+                    제휴/입점문의. 3carekorea_ad@brandxcorp.com<br>
+                    개인정보보호 책임자. <br>
+                    이윤희 (yoonhee_90@brandxcorp.com)<br>
+                    호스팅사. (주)코리아센터
+                </span>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- CTS Log Gathering Script V.11.2012021301 180621-->
+<!-- 로그분석 스크립트 -->
+<script type='text/javascript'>
+if( typeof MKP_GUL == 'undefined' ){
+var MKP_GUL = 'marketingplanet.acecounter.com';var MKP_GPT='80'; var _AIMG = new Image(); var _bn=navigator.appName; var _PR = location.protocol=="https:"?"https://"+MKP_GUL+":443":"http://"+MKP_GUL+":"+MKP_GPT;if( _bn.indexOf("Netscape") > -1 || _bn=="Mozilla"){ setTimeout("_AIMG.src = _PR+'/?cookie';",1); } else{ _AIMG.src = _PR+'/?cookie'; };
+var _JV="AMZ2012021301";//script Version
+var MKP_GCD = 'AP1A424880194'; // gcode
+var _UD='undefined';var _UN='unknown';
+function _IX(s,t){return s.indexOf(t)}
+function _GV(b,a,c,d){ var f = b.split(c);for(var i=0;i<f.length; i++){ if( _IX(f[i],(a+d))==0) return f[i].substring(_IX(f[i],(a+d))+(a.length+d.length),f[i].length); }	return ''; }
+function _XV(b,a,c,d,e){ var f = b.split(c);var g='';for(var i=0;i<f.length; i++){ if( _IX(f[i],(a+d))==0){ try{eval(e+"=f[i].substring(_IX(f[i],(a+d))+(a.length+d.length),f[i].length);");}catch(_e){}; continue;}else{ if(g) g+= '&'; g+= f[i];}; } return g;};
+function _NOB(a){return (a!=_UD&&a>0)?new Object(a):new Object()}
+function _NIM(){return new Image()}
+function _IL(a){return a!=_UD?a.length:0}
+function _ILF(a){ var b = 0; try{eval("b = a.length");}catch(_e){b=0;}; return b; }
+function _VF(a,b){return a!=_UD&&(typeof a==b)?1:0}
+function _LST(a,b){if(_IX(a,b)) a=a.substring(0,_IL(a));return a}
+function _CST(a,b){if(_IX(a,b)>0) a=a.substring(_IX(a,b)+_IL(b),_IL(a));return a}
+function _UL(a){a=_LST(a,'#');a=_CST(a,'://');return a}
+function _AA(a){return new Array(a?a:0)}
+function _IDV(a){return (typeof a!=_UD)?1:0}
+if(!_IDV(MKP_GUL)) var MKP_GUL ='marketingplanet.acecounter.com'; 
+if(!_IDV(MKP_GPT)) var MKP_GPT ='80';
+_DC = document.cookie ;
+function _AGC(nm) { var cn = nm + "="; var nl = cn.length; var cl = _DC.length; var i = 0; while ( i < cl ) { var j = i + nl; if ( _DC.substring( i, j ) == cn ){ var val = _DC.indexOf(";", j ); if ( val == -1 ) val = _DC.length; return unescape(_DC.substring(j, val)); }; i = _DC.indexOf(" ", i ) + 1; if ( i == 0 ) break; } return ''; }
+function _ASC( nm, val, exp ){var expd = new Date(); if ( exp ){ expd.setTime( expd.getTime() + ( exp * 1000 )); document.cookie = nm+"="+ escape(val) + "; expires="+ expd.toGMTString() +"; path="; }else{ document.cookie = nm + "=" + escape(val);};}
+function SetUID() {     var newid = ''; var d = new Date(); var t = Math.floor(d.getTime()/1000); newid = 'UID-' + t.toString(16).toUpperCase(); for ( var i = 0; i < 16; i++ ){ var n = Math.floor(Math.random() * 16).toString(16).toUpperCase(); newid += n; }       return newid; }
+var _FCV = _AGC("ACEFCID"); if ( !_FCV ) { _FCV = SetUID(); _ASC( "ACEFCID", _FCV , 86400 * 30 * 12 ); _FCV=_AGC("ACEFCID");}
+var _AIO = _NIM(); var _SIU = _NIM();  var _AIW = _NIM();  var _AIX = _NIM();  var _AIB = _NIM();  var __hdki_xit = _NIM();
+var _gX='/?xuid='+MKP_GCD+'&sv='+_JV,_gF='/?fuid='+MKP_GCD+'&sv='+_JV,_gU='/?uid='+MKP_GCD+'&sv='+_JV+"&FCV="+_FCV,_gE='/?euid='+MKP_GCD+'&sv='+_JV,_gW='/?wuid='+MKP_GCD+'&sv='+_JV,_gO='/?ouid='+MKP_GCD+'&sv='+_JV,_gB='/?buid='+MKP_GCD+'&sv='+_JV;
+
+var _d=_rf=_end=_fwd=_arg=_xrg=_av=_bv=_rl=_ak=_xrl=_cd=_cu=_bz='',_sv=11,_tz=20,_ja=_sc=_ul=_ua=_UA=_os=_vs=_UN,_je='n',_bR='blockedReferrer';
+if(!_IDV(_CODE)) var _CODE = '' ;
+_tz = Math.floor((new Date()).getTimezoneOffset()/60) + 29 ;if( _tz > 24 ) _tz = _tz - 24 ;
+// Javascript Variables
+if(!_IDV(_amt)) var _amt=0 ;if(!_IDV(_pk)) var _pk='' ;if(!_IDV(_pd)) var _pd='';if(!_IDV(_ct)) var _ct='';
+if(!_IDV(MKP_ll)) var MKP_ll='';if(!_IDV(_ag)) var _ag=0;	if(!_IDV(_id)) var _id='' ;if(!_IDV(_mr)) var _mr = _UN;
+if(!_IDV(_gd)) var _gd=_UN;if(!_IDV(_jn)) var _jn='';if(!_IDV(_jid)) var _jid='';if(!_IDV(_skey)) var _skey='';
+if(!_IDV(_ud1)) var _ud1='';if(!_IDV(_ud2)) var _ud2='';if(!_IDV(_ud3)) var _ud3='';
+if( !_ag ){ _ag = 0 ; }else{ _ag = parseInt(_ag); }
+if( _ag < 0 || _ag > 150 ){ _ag = 0; }
+if( _gd != 'man' && _gd != 'woman' ){ _gd =_UN;};if( _mr != 'married' && _mr != 'single' ){ _mr =_UN;};if( _jn != 'join' && _jn != 'withdraw' ){ _jn ='';};
+if( _ag > 0 || _gd == 'man' || _gd == 'woman'){ _id = 'undefined_member';}
+if( _jid != '' ){ _jid = 'undefined_member'; }
+_je = (navigator.javaEnabled()==true)?'1':'0';_bn=navigator.appName;
+if(_bn.substring(0,9)=="Microsoft") _bn="MSIE";
+_bN=(_bn=="Netscape"),_bI=(_bn=="MSIE"),_bO=(_IX(navigator.userAgent,"Opera")>-1);if(_bO)_bI='';
+_bz=navigator.appName; _pf=navigator.platform; _av=navigator.appVersion; _bv=parseFloat(_av) ;
+if(_bI){_cu=navigator.cpuClass;}else{_cu=navigator.oscpu;};
+if((_bn=="MSIE")&&(parseInt(_bv)==2)) _bv=3.01;_rf=document.referrer;var _prl='';var _frm=false;
+function _PT(){return location.protocol=="https:"?"https://"+MKP_GUL+":443":"http://"+MKP_GUL+":"+MKP_GPT}
+function _NA(a){return new Array(a?a:0)}
+function _TIX(s,t){return s.indexOf(t)}; function _S_TAG(s){ var o = new RegExp(); o= /[<][^>]*[>]/gi; return s.replace(o,""); }; function _G_TAG(n,a,d){ var b=document.getElementsByTagName(n);if( b.length <= 0 ) return ''; for(var c=0;c<b.length; c++ ){ if( typeof b[c].innerHTML != _UD && _TIX(b[c].innerHTML.toString().replace(/ /g,''),a) >= 0 ){ if( typeof b[c+d].innerHTML != _UD ){ return b[c+d].innerHTML; };};}; return '';}; 
+if( typeof _ORDV == _UD ) var _ORDV = ''; if( typeof _ORDN == _UD ) var _ORDN = '';  
+if( MKP_ll == '' && _ORDN == '' ){ if( typeof ovt_amount != _UD && ovt_amount != ''){ _ORDV = ovt_amount ;}; if( typeof ovt_order_id != _UD && ovt_order_id != ''){ _ORDN = ovt_order_id ;}; 	
+if( _ORDV == '' && document.URL.indexOf('orderend') > 0){ /* for Makeshop */ try{ _ORDV=document.getElementById('mk_totalprice').innerHTML;}catch(_e){}; if(_ORDV.replace(/[^0-9]/g,'')=='') _ORDV = _G_TAG('b','결제금액',1); _ORDV = _S_TAG(_ORDV); _ORDV = _ORDV.replace(/[^0-9]/g,''); if(typeof document.orderdetail == 'object' ){ try{ _ORDN=document.orderdetail.ordernum.value;}catch(_e){}; } }; if( _ORDV == '' && document.URL.indexOf('cart_result') > 0){  /* Whois */ var _ORDVT = _G_TAG('td','결제금액',0); _ORDVT = _ORDVT.toLowerCase();  _ORDV = _ORDVT.substring(_ORDVT.indexOf('결제금액')+1,_ORDVT.indexOf('</td>',_ORDVT.indexOf('결제금액')+5)); _ORDV = _S_TAG(_ORDV); _ORDV = _ORDV.replace(/[^0-9]/g,''); var _ORDVT = _G_TAG('td','주문번호',0);_ORDVT = _ORDVT.toLowerCase(); _ORDN = _ORDVT.substring(_ORDVT.indexOf('주문번호')+4 ,_ORDVT.indexOf('</td>',_ORDVT.indexOf('주문번호')+5));_ORDN = _S_TAG(_ORDN); }; if( _ORDV == '' && document.URL.indexOf('order_result') > 0){ /* Cafe24 */ var _ORDVT = _G_TAG('td','총구매액',0); _ORDVT = _ORDVT.toLowerCase(); _ORDV = _ORDVT.substring(_ORDVT.indexOf('총구매액'),_ORDVT.indexOf('</b>',_ORDVT.indexOf('총구매액'))); _ORDV = _S_TAG(_ORDV); _ORDV = _ORDV.replace(/[^0-9]/g,''); var _ORDVT = _G_TAG('td','주문번호',0);_ORDVT = _ORDVT.toLowerCase(); _ORDN = _ORDVT.substring(_ORDVT.indexOf('주문번호')+1,_ORDVT.indexOf('</td>',_ORDVT.indexOf('주문번호')+5)); _ORDN = _S_TAG(_ORDN); };  if( _ORDV == '' && document.URL.indexOf('url=Orderresult') > 0){ /*  Cafe24 II */ var _ORDVT = _G_TAG('td','주문번호',0);_ORDVT = _ORDVT.toLowerCase(); _ORDN = _ORDVT.substring(_ORDVT.indexOf('주문번호')+1,_ORDVT.indexOf('</td>',_ORDVT.indexOf('주문번호')+5)); _ORDN = _S_TAG(_ORDN); _ORDV=(function(){var obj = document.getElementsByTagName('td');var innerTextLen = -1;var targetK;for(var k in obj){try{if(innerTextLen<0) {innerTextLen=obj[k].innerHTML.length;targetK=k;};if(obj[k].innerHTML.indexOf('총 주문합계 금액')<0) continue;if(innerTextLen>obj[k].innerHTML.length) {innerTextLen = obj[k].innerHTML.length;targetK=k;};}catch(_e){};};return(obj[++targetK].innerHTML.replace(/[^0-9]/g,''));})();};};
+
+if( _jn == '' && document.URL.indexOf('url=Registresult') > 0 ){	/* Cafe24 */ _jn = 'join';_jid='member'; };
+if( _jn == '' && document.URL.indexOf('logscript_type=REGO') > 0 && ( _AGC('SO') == 'REGO' || _AGC('SO') == 'REGF' ) ){ /* Makeshop */ _jn = 'join';_jid = _AGC('login_id');};
+if( _jn == '' && document.URL.indexOf('user_join_form_result.php') > 0 ){ /* whois */ _jn = 'join';_jid='member'; };
+if( _ORDN.length < 5 && document.URL.indexOf('url=Orderresult') > 0 ){ /* cafe24 */	var MKP_rl = document.URL.substring(_TIX(document.URL,'?')+1,document.URL.length);	_ORDN = _GV(MKP_rl,'order_id','&','=');};
+if( _ORDN.length < 5 && document.URL.indexOf('orderend.html') > 0 ){ /* Makeshop */	var MKP_rl = document.URL.substring(_TIX(document.URL,'?')+1,document.URL.length);	_ORDN = _GV(MKP_rl,'ordernum','&','=');};
+if( _ORDN.length < 5 && document.URL.indexOf('cart_result') > 0 ){ /* Makeshop */	var MKP_rl = document.URL.substring(_TIX(document.URL,'?')+1,document.URL.length);	_ORDN = _GV(MKP_rl,'_dat_order_mst_id','&','=');};
+if( _ORDV != '' ){ _ORDN = _ORDN.replace(/\r\n/g,''); _ORDN = _ORDN.replace(/\n/g,'');_ORDN = _ORDN.replace(/ /g,''); if( _ORDN == '') _ORDN = '구매완료'; var MKP_ll = '@'+_ORDN+'@'+_ORDV+'@1^';};
+
+function MKP_PL(a){if(!_IL(a))a=_UL(document.URL);
+_arg = _PT()+_gU;
+if( typeof MKP_ERR !=_UD && MKP_ERR == 'err'){ _arg = _PT()+_gE;};
+if( MKP_ll.length > 0 ) _arg += "&md=b";
+_SIU.src = _arg+"&url="+escape(a)+"&ref="+escape(_rf)+"&cpu="+_cu+"&bz="+_bz+"&bv="+_vs+"&os="+_os+"&dim="+_d+"&cd="+_cd+"&je="+_je+"&jv="+_sv+"&tz="+_tz+"&ul="+_ul+"&ad_key="+escape(_ak)+"&skey="+escape(_skey)+"&age="+_ag+"&gender="+_gd+"&marry="+_mr+"&join="+_jn+"&member_key="+_id+"&jid="+_jid+"&udf1="+_ud1+"&udf2="+_ud2+"&udf3="+_ud3+"&amt="+_amt+"&frwd="+_fwd+"&pd="+escape(_pd)+"&ct="+escape(_ct)+"&ll="+escape(MKP_ll)+"&RID="+Math.random()+"&";
+setTimeout("",300);
+}
+if( typeof window.screen == 'object'){_sv=12;_d=screen.width+'*'+screen.height;_sc=_bI?screen.colorDepth:screen.pixelDepth;if(_sc==_UD)_sc=_UN;}
+_ro=_NA();if(_ro.toSource||(_bI&&_ro.shift))_sv=13;
+if( top && typeof top == 'object' &&_ILF(top.frames)){eval("try{_rl=top.document.URL;}catch(_e){_rl='';};"); if( _rl != document.URL ) _frm = true;}; if(_frm){ eval("try{_prl = top.document.URL;}catch(_e){_prl=_bR;};"); if(_prl == '') eval("try{_prl=parent.document.URL;}catch(_e){_prl='';};");  if( _IX(_prl,'#') > 0 ) _prl=_prl.substring(0,_IX(_prl,'#')); _prl=_LST(_prl,'#'); if( _IX(_rf,'#') > 0 ) _rf=_rf.substring(0,_IX(_rf,'#'));  _prl=_LST(_prl,'/');_rf=_LST(_rf,'/'); if( _rf == '' ) eval("try{_rf=parent.document.URL;}catch(_e){_rf=_bR;}"); if( _prl==_bR && _IX(_rf,'?') > 0 ){ 	if(_IX(_rf,'?') > 0){ _rf = _rf.substring(_IX(_rf,'?')+1,_rf.length); _ak=_rf;}; if( _IX(_rf.toUpperCase(),'OVRAW=') >= 0 ){ _ak = 'src=overture&kw='+_GV(_rf.toUpperCase(),'OVRAW','&','=')+'&OVRAW='+_GV(_rf.toUpperCase(),'OVRAW','&','=')+'&OVKEY='+_GV(_rf.toUpperCase(),'OVKEY','&','=')+'&OVMTC='+_GV(_rf.toUpperCase(),'OVMTC','&','=').toLowerCase() }; if(_IX(_rf,'gclid=') >= 0 ){ _ak='src=adwords'; }; if(_IX(_rf,'DWIT=') >= 0 ){_ak='src=dnet_cb';}; if( _IX(_rf,"rcsite=") >= 0 &&  _IX(_rf,"rctype=") >= 0){ _rf += '&'; _ak = _rf.substring(_IX(_rf,'rcsite='),_rf.indexOf('&',_IX(_rf,'rcsite=')+7))+'-'+_rf.substring(_IX(_rf,'rctype=')+7,_rf.indexOf('&',_IX(_rf,'rctype=')+7))+'&'; }; if( _GV(_rf,'src','&','=') ) _ak += '&src='+_GV(_rf,'src','&','='); if( _GV(_rf,'kw','&','=') ) _ak += '&kw='+_GV(_rf,'kw','&','=');   }; 	if(_rf==_bR||_prl==_bR){ _rf='',_prl='';}; if( _rf == _prl ){ eval("try{_rf=top.document.referrer;}catch(_e){_rf='';}"); if( _rf == ''){ _rf = 'bookmark';};if( _IX(document.cookie,'CCEN_CK='+escape(_rf)) > -1 ){ _rf = _prl;}else{ if(_IX(_prl,'?') > 0){ _ak = _prl.substring(_IX(_prl,'?')+1,_prl.length); _prl = _ak; }; _fwd = _GV(_ak,'FWDIDX','&','='); if( _IX(_prl.toUpperCase(),'src=') >= 0 ){ _ak = 'src='+_GV(_prl.toUpperCase(),'src','&','=')+'&kw='+_GV(_prl.toUpperCase(),'kw','&','='); }; if( _IX(_prl.toUpperCase(),'OVRAW=') >= 0 ){ _ak = 'src=overture&kw='+_GV(_prl.toUpperCase(),'OVRAW','&','=')+'&OVRAW='+_GV(_prl.toUpperCase(),'OVRAW','&','=')+'&OVKEY='+_GV(_prl.toUpperCase(),'OVKEY','&','=')+'&OVMTC='+_GV(_prl.toUpperCase(),'OVMTC','&','=').toLowerCase()+'&OVADID='+_GV(_prl.toUpperCase(),'OVADID','&','=').toLowerCase(); }; if( _IX(_prl.toUpperCase(),'NVAR=') >= 0 ){ _ak = 'NVAR='+_GV(_prl.toUpperCase(),'NVAR','&','=')+'&NVKWD='+_GV(_prl.toUpperCase(),'NVKWD','&','=')+'&NVADKWD='+_GV(_prl.toUpperCase(),'NVADKWD','&','=')+'&NVADID='+_GV(_prl.toUpperCase(),'NVADID','&','=').toLowerCase(); };  if(_IX(_prl,'gclid=') >= 0 ){ _ak='src=adwords'; }; if(_IX(_prl,'DWIT=') >= 0 ){_ak='src=dnet_cb';}; if( _IX(_prl,"rcsite=") >= 0 &&  _IX(_prl,"rctype=") >= 0){ _prl += '&'; _ak = _prl.substring(_IX(_prl,'rcsite='),_prl.indexOf('&',_IX(_prl,'rcsite=')+7))+'-'+_prl.substring(_IX(_prl,'rctype=')+7,_prl.indexOf('&',_IX(_prl,'rctype=')+7))+'&'; };  if( _GV(_prl,'src','&','=') ) _ak += '&src='+_GV(_prl,'src','&','='); if( _GV(_prl,'kw','&','=') ) _ak += '&kw='+_GV(_prl,'kw','&','='); document.cookie='CCEN_CK='+escape(_rf)+';path=/;'; }; if(document.URL.indexOf('?') > 0 && ( _IX(_ak,'rcsite=') < 0 && _IX(_ak,'OVRAW=') < 0&& _IX(_ak,'NVAR=') < 0 && _IX(_ak,'src=') < 0 && _IX(_ak,'source=') < 0 && _IX(_ak,'DMCOL=') < 0 && _IX(_ak,'mkpl1=') < 0) ) _ak =document.URL.substring(document.URL.indexOf('?')+1,document.URL.length); }; } else{ _rf=_LST(_rf,'#');_ak=_CST(document.URL,'?'); if( _IX(_ak,"rcsite=") > 0 &&  _IX(_ak,"rctype=") > 0){ _ak += '&'; _ak = _ak.substring(_IX(_ak,'rcsite='),_ak.indexOf('&',_IX(_ak,'rcsite=')+7))+'-'+_ak.substring(_IX(_ak,'rctype=')+7,_ak.indexOf('&',_IX(_ak,'rctype=')+7))+'&'; };}; 
+_rl=document.URL;
+var _trl = _rl.split('?'); if(_trl.length>1){ _trl[1] = _XV(_trl[1],'FWDRL','&','=','_rf'); _rf = unescape(_rf); _fwd = _GV(_trl[1],'FWDIDX','&','='); _rl=_trl.join('?'); 
+_ak = _XV(_ak,'FWDRL','&','=','_prl');
+}; if( typeof FD_ref=='string' && FD_ref != '' ) _rf = FD_ref;
+if( _rf.indexOf('googlesyndication.com') > 0 ){ 
+var _rf_idx = _rf.indexOf('&url=');  if( _rf_idx > 0 ){ var _rf_t = unescape(_rf.substring(_rf_idx+5,_rf.indexOf('&',_rf_idx+5)));  if( _rf_t.length > 0 ){ _rf = _rf_t ;};  };  };
+_rl = _UL(_rl); _rf = _UL(_rf);
+
+if( typeof _rf_t != 'undefined' && _rf_t != '' ) _rf = _rf_t ;
+if( typeof _ak_t != 'undefined' && _ak_t != '' ) _ak = _ak_t ;
+
+if( typeof _rf==_UD||( _rf == '' )) _rf = 'bookmark' ;_cd=(_bI)?screen.colorDepth:screen.pixelDepth;
+_UA = navigator.userAgent;_ua = navigator.userAgent.toLowerCase();
+if (navigator.language){  _ul = navigator.language.toLowerCase();}else if(navigator.userLanguage){  _ul = navigator.userLanguage.toLowerCase();};
+
+_st = _IX(_UA,'(') + 1;_end = _IX(_UA,')');_str = _UA.substring(_st, _end);_if = _str.split('; ');_cmp = _UN ;
+
+if(_bI){ _cmp = navigator.appName; _str = _if[1].substring(5, _if[1].length); _vs = (parseFloat(_str)).toString();} 
+else if ( (_st = _IX(_ua,"opera")) > 0){ _cmp = "Opera" ;_vs = _ua.substring(_st+6, _ua.indexOf('.',_st+6)); } 
+else if ((_st = _IX(_ua,"firefox")) > 0){_cmp = "Firefox"; _vs = _ua.substring(_st+8, _ua.indexOf('.',_st+8)); } 
+else if ((_st = _IX(_ua,"netscape6")) > 0){ _cmp = "Netscape"; _vs = _ua.substring(_st+10, _ua.length);  
+if ((_st = _IX(_vs,"b")) > 0 ) { _str = _vs.substring(0,_IX(_vs,"b")); _vs = _str ;  };}
+else if ((_st = _IX(_ua,"netscape/7")) > 0){  _cmp = "Netscape";  _vs = _ua.substring(_st+9, _ua.length);  if ((_st = _IX(_vs,"b")) > 0 ){ _str = _vs.substring(0,_IX(_vs,"b")); _vs = _str;};
+}
+else{
+if (_IX(_ua,"gecko") > 0){ if(_IX(_ua,"safari")>0){ _cmp = "Safari";_ut = _ua.split('/');for( var ii=0;ii<_ut.length;ii++) if(_IX(_ut[ii],'safari')>0){ _vst = _ut[ii].split(' '); _vs = _vst[0];} }else{ _cmp = navigator.vendor;  } } else if (_IX(_ua,"nav") > 0){ _cmp = "Netscape Navigator";}else{ _cmp = navigator.appName;}; _av = _UA ; 
+}
+if (_IX(_vs,'.')<0){  _vs = _vs + '.0'}
+_bz = _cmp; 
+
+if( _IX(_pf,_UD) >= 0 || _pf ==  '' ){ _os = _UN ;}else{ _os = _pf ; };
+if( _IX(_os,'Win32') >= 0 ){if( _IX(_av,'98')>=0){ _os = 'Windows 98';}else if( _IX(_av,'95')>=0 ){ _os = 'Windows 95';}else if( _IX(_av,'Me')>=0 ){ _os = 'Windows Me';}else if( _IX(_av,'NT')>=0 ){ _os = 'Windows NT';}else{ _os = 'Windows';};if( _IX(_ua,'nt 5.0')>=0){ _os = 'Windows 2000';};if( _IX(_ua,'nt 5.1')>=0){_os = 'Windows XP';if( _IX(_ua,'sv1') > 0 ){_os = 'Windows XP SP2';};};if( _IX(_ua,'nt 5.2')>=0){_os ='Windows Server 2003';};if( _IX(_ua,'nt 6.0')>=0){_os ='Windows Vista';};if( _IX(_ua,'nt 6.1')>=0){_os ='Windows 7';};};
+_pf_s = _pf.substring(0,4);if( _pf_s == 'Wind'){if( _pf_s == 'Win1'){_os = 'Windows 3.1';}else if( _pf_s == 'Mac6' ){ _os = 'Mac';}else if( _pf_s == 'MacO' ){ _os ='Mac';}else if( _pf_s == 'MacP' ){_os='Mac';}else if(_pf_s == 'Linu'){_os='Linux';}else if( _pf_s == 'WebT' ){ _os='WebTV';}else if(  _pf_s =='OSF1' ){ _os ='Compaq Open VMS';}else if(_pf_s == 'HP-U' ){ _os='HP Unix';}else if(  _pf_s == 'OS/2' ){ _os = 'OS/2' ;}else if( _pf_s == 'AIX4' ){ _os = 'AIX';}else if( _pf_s == 'Free' ){ _os = 'FreeBSD';}else if( _pf_s == 'SunO' ){ _os = 'SunO';}else if( _pf_s == 'Drea' ){ _os = 'Drea'; }else if( _pf_s == 'Plan' ){ _os = 'Plan'; }else{ _os = _UN; };};
+if( _cu == 'x86' ){ _cu = 'Intel x86';}else if( _cu == 'PPC' ){ _cu = 'Power PC';}else if( _cu == '68k' ){ _cu = 'Motorola 680x';}else if( _cu == 'Alpha' ){ _cu = 'Compaq Alpa';}else if( _cu == 'Arm' ){ _cu = 'ARM';}else{ _cu = _UN;};if( _d == '' || typeof _d==_UD ){ _d = '0*0';}
+
+MKP_PL(_rl); // Site Logging
+}
+</script>
+<!-- 로그분석 스크립트 끝 180621-->
+
+<!-- CTS Log Gathering Script V.11.2012021301 2018.02.12-->
+<!-- 로그분석 스크립트 -->
+<script type='text/javascript'>
+if( typeof MKP_GUL == 'undefined' ){
+
+var MKP_GUL = 'marketingplanet.acecounter.com';var MKP_GPT='80'; var _AIMG = new Image(); var _bn=navigator.appName; var _PR = location.protocol=="https:"?"https://"+MKP_GUL+":443":"http://"+MKP_GUL+":"+MKP_GPT;if( _bn.indexOf("Netscape") > -1 || _bn=="Mozilla"){ setTimeout("_AIMG.src = _PR+'/?cookie';",1); } else{ _AIMG.src = _PR+'/?cookie'; };
+var _JV="AMZ2012021301";//script Version
+var MKP_GCD = 'AP1A421784178'; // gcode
+var _UD='undefined';var _UN='unknown';
+function _IX(s,t){return s.indexOf(t)}
+function _GV(b,a,c,d){ var f = b.split(c);for(var i=0;i<f.length; i++){ if( _IX(f[i],(a+d))==0) return f[i].substring(_IX(f[i],(a+d))+(a.length+d.length),f[i].length); }	return ''; }
+function _XV(b,a,c,d,e){ var f = b.split(c);var g='';for(var i=0;i<f.length; i++){ if( _IX(f[i],(a+d))==0){ try{eval(e+"=f[i].substring(_IX(f[i],(a+d))+(a.length+d.length),f[i].length);");}catch(_e){}; continue;}else{ if(g) g+= '&'; g+= f[i];}; } return g;};
+function _NOB(a){return (a!=_UD&&a>0)?new Object(a):new Object()}
+function _NIM(){return new Image()}
+function _IL(a){return a!=_UD?a.length:0}
+function _ILF(a){ var b = 0; try{eval("b = a.length");}catch(_e){b=0;}; return b; }
+function _VF(a,b){return a!=_UD&&(typeof a==b)?1:0}
+function _LST(a,b){if(_IX(a,b)) a=a.substring(0,_IL(a));return a}
+function _CST(a,b){if(_IX(a,b)>0) a=a.substring(_IX(a,b)+_IL(b),_IL(a));return a}
+function _UL(a){a=_LST(a,'#');a=_CST(a,'://');return a}
+function _AA(a){return new Array(a?a:0)}
+function _IDV(a){return (typeof a!=_UD)?1:0}
+if(!_IDV(MKP_GUL)) var MKP_GUL ='marketingplanet.acecounter.com'; 
+if(!_IDV(MKP_GPT)) var MKP_GPT ='80';
+_DC = document.cookie ;
+function _AGC(nm) { var cn = nm + "="; var nl = cn.length; var cl = _DC.length; var i = 0; while ( i < cl ) { var j = i + nl; if ( _DC.substring( i, j ) == cn ){ var val = _DC.indexOf(";", j ); if ( val == -1 ) val = _DC.length; return unescape(_DC.substring(j, val)); }; i = _DC.indexOf(" ", i ) + 1; if ( i == 0 ) break; } return ''; }
+function _ASC( nm, val, exp ){var expd = new Date(); if ( exp ){ expd.setTime( expd.getTime() + ( exp * 1000 )); document.cookie = nm+"="+ escape(val) + "; expires="+ expd.toGMTString() +"; path="; }else{ document.cookie = nm + "=" + escape(val);};}
+function SetUID() {     var newid = ''; var d = new Date(); var t = Math.floor(d.getTime()/1000); newid = 'UID-' + t.toString(16).toUpperCase(); for ( var i = 0; i < 16; i++ ){ var n = Math.floor(Math.random() * 16).toString(16).toUpperCase(); newid += n; }       return newid; }
+var _FCV = _AGC("ACEFCID"); if ( !_FCV ) { _FCV = SetUID(); _ASC( "ACEFCID", _FCV , 86400 * 30 * 12 ); _FCV=_AGC("ACEFCID");}
+var _AIO = _NIM(); var _SIU = _NIM();  var _AIW = _NIM();  var _AIX = _NIM();  var _AIB = _NIM();  var __hdki_xit = _NIM();
+var _gX='/?xuid='+MKP_GCD+'&sv='+_JV,_gF='/?fuid='+MKP_GCD+'&sv='+_JV,_gU='/?uid='+MKP_GCD+'&sv='+_JV+"&FCV="+_FCV,_gE='/?euid='+MKP_GCD+'&sv='+_JV,_gW='/?wuid='+MKP_GCD+'&sv='+_JV,_gO='/?ouid='+MKP_GCD+'&sv='+_JV,_gB='/?buid='+MKP_GCD+'&sv='+_JV;
+
+var _d=_rf=_end=_fwd=_arg=_xrg=_av=_bv=_rl=_ak=_xrl=_cd=_cu=_bz='',_sv=11,_tz=20,_ja=_sc=_ul=_ua=_UA=_os=_vs=_UN,_je='n',_bR='blockedReferrer';
+if(!_IDV(_CODE)) var _CODE = '' ;
+_tz = Math.floor((new Date()).getTimezoneOffset()/60) + 29 ;if( _tz > 24 ) _tz = _tz - 24 ;
+// Javascript Variables
+if(!_IDV(_amt)) var _amt=0 ;if(!_IDV(_pk)) var _pk='' ;if(!_IDV(_pd)) var _pd='';if(!_IDV(_ct)) var _ct='';
+if(!_IDV(MKP_ll)) var MKP_ll='';if(!_IDV(_ag)) var _ag=0;	if(!_IDV(_id)) var _id='' ;if(!_IDV(_mr)) var _mr = _UN;
+if(!_IDV(_gd)) var _gd=_UN;if(!_IDV(_jn)) var _jn='';if(!_IDV(_jid)) var _jid='';if(!_IDV(_skey)) var _skey='';
+if(!_IDV(_ud1)) var _ud1='';if(!_IDV(_ud2)) var _ud2='';if(!_IDV(_ud3)) var _ud3='';
+if( !_ag ){ _ag = 0 ; }else{ _ag = parseInt(_ag); }
+if( _ag < 0 || _ag > 150 ){ _ag = 0; }
+if( _gd != 'man' && _gd != 'woman' ){ _gd =_UN;};if( _mr != 'married' && _mr != 'single' ){ _mr =_UN;};if( _jn != 'join' && _jn != 'withdraw' ){ _jn ='';};
+if( _ag > 0 || _gd == 'man' || _gd == 'woman'){ _id = 'undefined_member';}
+if( _jid != '' ){ _jid = 'undefined_member'; }
+_je = (navigator.javaEnabled()==true)?'1':'0';_bn=navigator.appName;
+if(_bn.substring(0,9)=="Microsoft") _bn="MSIE";
+_bN=(_bn=="Netscape"),_bI=(_bn=="MSIE"),_bO=(_IX(navigator.userAgent,"Opera")>-1);if(_bO)_bI='';
+_bz=navigator.appName; _pf=navigator.platform; _av=navigator.appVersion; _bv=parseFloat(_av) ;
+if(_bI){_cu=navigator.cpuClass;}else{_cu=navigator.oscpu;};
+if((_bn=="MSIE")&&(parseInt(_bv)==2)) _bv=3.01;_rf=document.referrer;var _prl='';var _frm=false;
+function _PT(){return location.protocol=="https:"?"https://"+MKP_GUL+":443":"http://"+MKP_GUL+":"+MKP_GPT}
+function _NA(a){return new Array(a?a:0)}
+function _TIX(s,t){return s.indexOf(t)}; function _S_TAG(s){ var o = new RegExp(); o= /[<][^>]*[>]/gi; return s.replace(o,""); }; function _G_TAG(n,a,d){ var b=document.getElementsByTagName(n);if( b.length <= 0 ) return ''; for(var c=0;c<b.length; c++ ){ if( typeof b[c].innerHTML != _UD && _TIX(b[c].innerHTML.toString().replace(/ /g,''),a) >= 0 ){ if( typeof b[c+d].innerHTML != _UD ){ return b[c+d].innerHTML; };};}; return '';}; 
+if( typeof _ORDV == _UD ) var _ORDV = ''; if( typeof _ORDN == _UD ) var _ORDN = '';  
+if( MKP_ll == '' && _ORDN == '' ){ if( typeof ovt_amount != _UD && ovt_amount != ''){ _ORDV = ovt_amount ;}; if( typeof ovt_order_id != _UD && ovt_order_id != ''){ _ORDN = ovt_order_id ;}; 	
+if( _ORDV == '' && document.URL.indexOf('orderend') > 0){ /* for Makeshop */ try{ _ORDV=document.getElementById('mk_totalprice').innerHTML;}catch(_e){}; if(_ORDV.replace(/[^0-9]/g,'')=='') _ORDV = _G_TAG('b','결제금액',1); _ORDV = _S_TAG(_ORDV); _ORDV = _ORDV.replace(/[^0-9]/g,''); if(typeof document.orderdetail == 'object' ){ try{ _ORDN=document.orderdetail.ordernum.value;}catch(_e){}; } }; if( _ORDV == '' && document.URL.indexOf('cart_result') > 0){  /* Whois */ var _ORDVT = _G_TAG('td','결제금액',0); _ORDVT = _ORDVT.toLowerCase();  _ORDV = _ORDVT.substring(_ORDVT.indexOf('결제금액')+1,_ORDVT.indexOf('</td>',_ORDVT.indexOf('결제금액')+5)); _ORDV = _S_TAG(_ORDV); _ORDV = _ORDV.replace(/[^0-9]/g,''); var _ORDVT = _G_TAG('td','주문번호',0);_ORDVT = _ORDVT.toLowerCase(); _ORDN = _ORDVT.substring(_ORDVT.indexOf('주문번호')+4 ,_ORDVT.indexOf('</td>',_ORDVT.indexOf('주문번호')+5));_ORDN = _S_TAG(_ORDN); }; if( _ORDV == '' && document.URL.indexOf('order_result') > 0){ /* Cafe24 */ var _ORDVT = _G_TAG('td','총구매액',0); _ORDVT = _ORDVT.toLowerCase(); _ORDV = _ORDVT.substring(_ORDVT.indexOf('총구매액'),_ORDVT.indexOf('</b>',_ORDVT.indexOf('총구매액'))); _ORDV = _S_TAG(_ORDV); _ORDV = _ORDV.replace(/[^0-9]/g,''); var _ORDVT = _G_TAG('td','주문번호',0);_ORDVT = _ORDVT.toLowerCase(); _ORDN = _ORDVT.substring(_ORDVT.indexOf('주문번호')+1,_ORDVT.indexOf('</td>',_ORDVT.indexOf('주문번호')+5)); _ORDN = _S_TAG(_ORDN); };  if( _ORDV == '' && document.URL.indexOf('url=Orderresult') > 0){ /*  Cafe24 II */ var _ORDVT = _G_TAG('td','주문번호',0);_ORDVT = _ORDVT.toLowerCase(); _ORDN = _ORDVT.substring(_ORDVT.indexOf('주문번호')+1,_ORDVT.indexOf('</td>',_ORDVT.indexOf('주문번호')+5)); _ORDN = _S_TAG(_ORDN); _ORDV=(function(){var obj = document.getElementsByTagName('td');var innerTextLen = -1;var targetK;for(var k in obj){try{if(innerTextLen<0) {innerTextLen=obj[k].innerHTML.length;targetK=k;};if(obj[k].innerHTML.indexOf('총 주문합계 금액')<0) continue;if(innerTextLen>obj[k].innerHTML.length) {innerTextLen = obj[k].innerHTML.length;targetK=k;};}catch(_e){};};return(obj[++targetK].innerHTML.replace(/[^0-9]/g,''));})();};};
+
+if( _jn == '' && document.URL.indexOf('url=Registresult') > 0 ){	/* Cafe24 */ _jn = 'join';_jid='member'; };
+if( _jn == '' && document.URL.indexOf('logscript_type=REGO') > 0 && ( _AGC('SO') == 'REGO' || _AGC('SO') == 'REGF' ) ){ /* Makeshop */ _jn = 'join';_jid = _AGC('login_id');};
+if( _jn == '' && document.URL.indexOf('user_join_form_result.php') > 0 ){ /* whois */ _jn = 'join';_jid='member'; };
+if( _ORDN.length < 5 && document.URL.indexOf('url=Orderresult') > 0 ){ /* cafe24 */	var MKP_rl = document.URL.substring(_TIX(document.URL,'?')+1,document.URL.length);	_ORDN = _GV(MKP_rl,'order_id','&','=');};
+if( _ORDN.length < 5 && document.URL.indexOf('orderend.html') > 0 ){ /* Makeshop */	var MKP_rl = document.URL.substring(_TIX(document.URL,'?')+1,document.URL.length);	_ORDN = _GV(MKP_rl,'ordernum','&','=');};
+if( _ORDN.length < 5 && document.URL.indexOf('cart_result') > 0 ){ /* Makeshop */	var MKP_rl = document.URL.substring(_TIX(document.URL,'?')+1,document.URL.length);	_ORDN = _GV(MKP_rl,'_dat_order_mst_id','&','=');};
+if( _ORDV != '' ){ _ORDN = _ORDN.replace(/\r\n/g,''); _ORDN = _ORDN.replace(/\n/g,'');_ORDN = _ORDN.replace(/ /g,''); if( _ORDN == '') _ORDN = '구매완료'; var MKP_ll = '@'+_ORDN+'@'+_ORDV+'@1^';};
+
+function MKP_PL(a){if(!_IL(a))a=_UL(document.URL);
+_arg = _PT()+_gU;
+if( typeof MKP_ERR !=_UD && MKP_ERR == 'err'){ _arg = _PT()+_gE;};
+if( MKP_ll.length > 0 ) _arg += "&md=b";
+_SIU.src = _arg+"&url="+escape(a)+"&ref="+escape(_rf)+"&cpu="+_cu+"&bz="+_bz+"&bv="+_vs+"&os="+_os+"&dim="+_d+"&cd="+_cd+"&je="+_je+"&jv="+_sv+"&tz="+_tz+"&ul="+_ul+"&ad_key="+escape(_ak)+"&skey="+escape(_skey)+"&age="+_ag+"&gender="+_gd+"&marry="+_mr+"&join="+_jn+"&member_key="+_id+"&jid="+_jid+"&udf1="+_ud1+"&udf2="+_ud2+"&udf3="+_ud3+"&amt="+_amt+"&frwd="+_fwd+"&pd="+escape(_pd)+"&ct="+escape(_ct)+"&ll="+escape(MKP_ll)+"&RID="+Math.random()+"&";
+setTimeout("",300);
+}
+if( typeof window.screen == 'object'){_sv=12;_d=screen.width+'*'+screen.height;_sc=_bI?screen.colorDepth:screen.pixelDepth;if(_sc==_UD)_sc=_UN;}
+_ro=_NA();if(_ro.toSource||(_bI&&_ro.shift))_sv=13;
+if( top && typeof top == 'object' &&_ILF(top.frames)){eval("try{_rl=top.document.URL;}catch(_e){_rl='';};"); if( _rl != document.URL ) _frm = true;}; if(_frm){ eval("try{_prl = top.document.URL;}catch(_e){_prl=_bR;};"); if(_prl == '') eval("try{_prl=parent.document.URL;}catch(_e){_prl='';};");  if( _IX(_prl,'#') > 0 ) _prl=_prl.substring(0,_IX(_prl,'#')); _prl=_LST(_prl,'#'); if( _IX(_rf,'#') > 0 ) _rf=_rf.substring(0,_IX(_rf,'#'));  _prl=_LST(_prl,'/');_rf=_LST(_rf,'/'); if( _rf == '' ) eval("try{_rf=parent.document.URL;}catch(_e){_rf=_bR;}"); if( _prl==_bR && _IX(_rf,'?') > 0 ){ 	if(_IX(_rf,'?') > 0){ _rf = _rf.substring(_IX(_rf,'?')+1,_rf.length); _ak=_rf;}; if( _IX(_rf.toUpperCase(),'OVRAW=') >= 0 ){ _ak = 'src=overture&kw='+_GV(_rf.toUpperCase(),'OVRAW','&','=')+'&OVRAW='+_GV(_rf.toUpperCase(),'OVRAW','&','=')+'&OVKEY='+_GV(_rf.toUpperCase(),'OVKEY','&','=')+'&OVMTC='+_GV(_rf.toUpperCase(),'OVMTC','&','=').toLowerCase() }; if(_IX(_rf,'gclid=') >= 0 ){ _ak='src=adwords'; }; if(_IX(_rf,'DWIT=') >= 0 ){_ak='src=dnet_cb';}; if( _IX(_rf,"rcsite=") >= 0 &&  _IX(_rf,"rctype=") >= 0){ _rf += '&'; _ak = _rf.substring(_IX(_rf,'rcsite='),_rf.indexOf('&',_IX(_rf,'rcsite=')+7))+'-'+_rf.substring(_IX(_rf,'rctype=')+7,_rf.indexOf('&',_IX(_rf,'rctype=')+7))+'&'; }; if( _GV(_rf,'src','&','=') ) _ak += '&src='+_GV(_rf,'src','&','='); if( _GV(_rf,'kw','&','=') ) _ak += '&kw='+_GV(_rf,'kw','&','=');   }; 	if(_rf==_bR||_prl==_bR){ _rf='',_prl='';}; if( _rf == _prl ){ eval("try{_rf=top.document.referrer;}catch(_e){_rf='';}"); if( _rf == ''){ _rf = 'bookmark';};if( _IX(document.cookie,'CCEN_CK='+escape(_rf)) > -1 ){ _rf = _prl;}else{ if(_IX(_prl,'?') > 0){ _ak = _prl.substring(_IX(_prl,'?')+1,_prl.length); _prl = _ak; }; _fwd = _GV(_ak,'FWDIDX','&','='); if( _IX(_prl.toUpperCase(),'src=') >= 0 ){ _ak = 'src='+_GV(_prl.toUpperCase(),'src','&','=')+'&kw='+_GV(_prl.toUpperCase(),'kw','&','='); }; if( _IX(_prl.toUpperCase(),'OVRAW=') >= 0 ){ _ak = 'src=overture&kw='+_GV(_prl.toUpperCase(),'OVRAW','&','=')+'&OVRAW='+_GV(_prl.toUpperCase(),'OVRAW','&','=')+'&OVKEY='+_GV(_prl.toUpperCase(),'OVKEY','&','=')+'&OVMTC='+_GV(_prl.toUpperCase(),'OVMTC','&','=').toLowerCase()+'&OVADID='+_GV(_prl.toUpperCase(),'OVADID','&','=').toLowerCase(); }; if( _IX(_prl.toUpperCase(),'NVAR=') >= 0 ){ _ak = 'NVAR='+_GV(_prl.toUpperCase(),'NVAR','&','=')+'&NVKWD='+_GV(_prl.toUpperCase(),'NVKWD','&','=')+'&NVADKWD='+_GV(_prl.toUpperCase(),'NVADKWD','&','=')+'&NVADID='+_GV(_prl.toUpperCase(),'NVADID','&','=').toLowerCase(); };  if(_IX(_prl,'gclid=') >= 0 ){ _ak='src=adwords'; }; if(_IX(_prl,'DWIT=') >= 0 ){_ak='src=dnet_cb';}; if( _IX(_prl,"rcsite=") >= 0 &&  _IX(_prl,"rctype=") >= 0){ _prl += '&'; _ak = _prl.substring(_IX(_prl,'rcsite='),_prl.indexOf('&',_IX(_prl,'rcsite=')+7))+'-'+_prl.substring(_IX(_prl,'rctype=')+7,_prl.indexOf('&',_IX(_prl,'rctype=')+7))+'&'; };  if( _GV(_prl,'src','&','=') ) _ak += '&src='+_GV(_prl,'src','&','='); if( _GV(_prl,'kw','&','=') ) _ak += '&kw='+_GV(_prl,'kw','&','='); document.cookie='CCEN_CK='+escape(_rf)+';path=/;'; }; if(document.URL.indexOf('?') > 0 && ( _IX(_ak,'rcsite=') < 0 && _IX(_ak,'OVRAW=') < 0&& _IX(_ak,'NVAR=') < 0 && _IX(_ak,'src=') < 0 && _IX(_ak,'source=') < 0 && _IX(_ak,'DMCOL=') < 0 && _IX(_ak,'mkpl1=') < 0) ) _ak =document.URL.substring(document.URL.indexOf('?')+1,document.URL.length); }; } else{ _rf=_LST(_rf,'#');_ak=_CST(document.URL,'?'); if( _IX(_ak,"rcsite=") > 0 &&  _IX(_ak,"rctype=") > 0){ _ak += '&'; _ak = _ak.substring(_IX(_ak,'rcsite='),_ak.indexOf('&',_IX(_ak,'rcsite=')+7))+'-'+_ak.substring(_IX(_ak,'rctype=')+7,_ak.indexOf('&',_IX(_ak,'rctype=')+7))+'&'; };}; 
+_rl=document.URL;
+var _trl = _rl.split('?'); if(_trl.length>1){ _trl[1] = _XV(_trl[1],'FWDRL','&','=','_rf'); _rf = unescape(_rf); _fwd = _GV(_trl[1],'FWDIDX','&','='); _rl=_trl.join('?'); 
+_ak = _XV(_ak,'FWDRL','&','=','_prl');
+}; if( typeof FD_ref=='string' && FD_ref != '' ) _rf = FD_ref;
+if( _rf.indexOf('googlesyndication.com') > 0 ){ 
+var _rf_idx = _rf.indexOf('&url=');  if( _rf_idx > 0 ){ var _rf_t = unescape(_rf.substring(_rf_idx+5,_rf.indexOf('&',_rf_idx+5)));  if( _rf_t.length > 0 ){ _rf = _rf_t ;};  };  };
+_rl = _UL(_rl); _rf = _UL(_rf);
+
+if( typeof _rf_t != 'undefined' && _rf_t != '' ) _rf = _rf_t ;
+if( typeof _ak_t != 'undefined' && _ak_t != '' ) _ak = _ak_t ;
+
+if( typeof _rf==_UD||( _rf == '' )) _rf = 'bookmark' ;_cd=(_bI)?screen.colorDepth:screen.pixelDepth;
+_UA = navigator.userAgent;_ua = navigator.userAgent.toLowerCase();
+if (navigator.language){  _ul = navigator.language.toLowerCase();}else if(navigator.userLanguage){  _ul = navigator.userLanguage.toLowerCase();};
+
+_st = _IX(_UA,'(') + 1;_end = _IX(_UA,')');_str = _UA.substring(_st, _end);_if = _str.split('; ');_cmp = _UN ;
+
+if(_bI){ _cmp = navigator.appName; _str = _if[1].substring(5, _if[1].length); _vs = (parseFloat(_str)).toString();} 
+else if ( (_st = _IX(_ua,"opera")) > 0){ _cmp = "Opera" ;_vs = _ua.substring(_st+6, _ua.indexOf('.',_st+6)); } 
+else if ((_st = _IX(_ua,"firefox")) > 0){_cmp = "Firefox"; _vs = _ua.substring(_st+8, _ua.indexOf('.',_st+8)); } 
+else if ((_st = _IX(_ua,"netscape6")) > 0){ _cmp = "Netscape"; _vs = _ua.substring(_st+10, _ua.length);  
+if ((_st = _IX(_vs,"b")) > 0 ) { _str = _vs.substring(0,_IX(_vs,"b")); _vs = _str ;  };}
+else if ((_st = _IX(_ua,"netscape/7")) > 0){  _cmp = "Netscape";  _vs = _ua.substring(_st+9, _ua.length);  if ((_st = _IX(_vs,"b")) > 0 ){ _str = _vs.substring(0,_IX(_vs,"b")); _vs = _str;};
+}
+else{
+if (_IX(_ua,"gecko") > 0){ if(_IX(_ua,"safari")>0){ _cmp = "Safari";_ut = _ua.split('/');for( var ii=0;ii<_ut.length;ii++) if(_IX(_ut[ii],'safari')>0){ _vst = _ut[ii].split(' '); _vs = _vst[0];} }else{ _cmp = navigator.vendor;  } } else if (_IX(_ua,"nav") > 0){ _cmp = "Netscape Navigator";}else{ _cmp = navigator.appName;}; _av = _UA ; 
+}
+if (_IX(_vs,'.')<0){  _vs = _vs + '.0'}
+_bz = _cmp; 
+
+if( _IX(_pf,_UD) >= 0 || _pf ==  '' ){ _os = _UN ;}else{ _os = _pf ; };
+if( _IX(_os,'Win32') >= 0 ){if( _IX(_av,'98')>=0){ _os = 'Windows 98';}else if( _IX(_av,'95')>=0 ){ _os = 'Windows 95';}else if( _IX(_av,'Me')>=0 ){ _os = 'Windows Me';}else if( _IX(_av,'NT')>=0 ){ _os = 'Windows NT';}else{ _os = 'Windows';};if( _IX(_ua,'nt 5.0')>=0){ _os = 'Windows 2000';};if( _IX(_ua,'nt 5.1')>=0){_os = 'Windows XP';if( _IX(_ua,'sv1') > 0 ){_os = 'Windows XP SP2';};};if( _IX(_ua,'nt 5.2')>=0){_os ='Windows Server 2003';};if( _IX(_ua,'nt 6.0')>=0){_os ='Windows Vista';};if( _IX(_ua,'nt 6.1')>=0){_os ='Windows 7';};};
+_pf_s = _pf.substring(0,4);if( _pf_s == 'Wind'){if( _pf_s == 'Win1'){_os = 'Windows 3.1';}else if( _pf_s == 'Mac6' ){ _os = 'Mac';}else if( _pf_s == 'MacO' ){ _os ='Mac';}else if( _pf_s == 'MacP' ){_os='Mac';}else if(_pf_s == 'Linu'){_os='Linux';}else if( _pf_s == 'WebT' ){ _os='WebTV';}else if(  _pf_s =='OSF1' ){ _os ='Compaq Open VMS';}else if(_pf_s == 'HP-U' ){ _os='HP Unix';}else if(  _pf_s == 'OS/2' ){ _os = 'OS/2' ;}else if( _pf_s == 'AIX4' ){ _os = 'AIX';}else if( _pf_s == 'Free' ){ _os = 'FreeBSD';}else if( _pf_s == 'SunO' ){ _os = 'SunO';}else if( _pf_s == 'Drea' ){ _os = 'Drea'; }else if( _pf_s == 'Plan' ){ _os = 'Plan'; }else{ _os = _UN; };};
+if( _cu == 'x86' ){ _cu = 'Intel x86';}else if( _cu == 'PPC' ){ _cu = 'Power PC';}else if( _cu == '68k' ){ _cu = 'Motorola 680x';}else if( _cu == 'Alpha' ){ _cu = 'Compaq Alpa';}else if( _cu == 'Arm' ){ _cu = 'ARM';}else{ _cu = _UN;};if( _d == '' || typeof _d==_UD ){ _d = '0*0';}
+
+MKP_PL(_rl); // Site Logging
+}
+</script>
+<!-- 로그분석 스크립트 끝 2018.02.12-->
+
+
+
+
+
+
+
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.agent='plmakeshop-kr';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+        document,'script','//connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1911604502401626');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1911604502401626&ev=PageView&noscript=1"/></noscript>
+<!-- End Facebook Pixel Code -->
+<!-- Facebook Pixel Code SearchKeyword -->
+<script>
+function fbqSearchKeyword() {
+  var uri = document.referrer;
+  if (!uri) return;
+  var link = document.createElement('a');
+  link.setAttribute('href', uri);
+  var pattern = new RegExp('[\?&](?:q|query)=([^&#]*)');
+  var query = link.search.match(pattern);
+  if (query && query.length > 0) {
+    var keyword = query[1].replace(/\+/gi, "%20");
+  }
+  if (keyword) {
+    fbq('trackCustom', 'SearchKeyword', {
+      hostname: link.hostname,
+      keyword: decodeURIComponent(keyword),
+    });
+  }
+}
+ 
+fbqSearchKeyword();
+</script>
+<!-- End Facebook Pixel Code SearchKeyword -->
+
+<!-- WIDERPLANET HOME SCRIPT START 2019.8.28 -->
+<div id="wp_tg_cts" style="display:none;"></div>
+<script type="text/javascript">
+var wp_conf = 'ti=39770&v=1&device=web';
+</script>
+<script type="text/javascript" defer src="//cdn-aitg.widerplanet.com/js/wp_astg_2.0_shop.js"></script>
+<!-- // WIDERPLANET HOME SCRIPT END 2019.8.28 -->
+
+
+

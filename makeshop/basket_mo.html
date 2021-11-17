@@ -1,0 +1,300 @@
+<!--/include_header(1)/-->
+
+<!-- container -->
+<div id="containerWrap">
+    <!-- contents -->
+    <div class="container">
+
+
+        <div class="basket-wrap">
+
+            <!--/if_use_subs/-->
+            <div class="basket-tab-wrap">
+                <div class="basket-tab">
+                    <div><a href="<!--/link_normal_basket/-->" class="active">일반구매</a></div>
+                    <div><a href="<!--/link_subs_basket/-->">정기배송</a></div>
+                </div>
+            </div>
+            <!--/end_if/-->
+
+            <!--/if_provider/-->
+            <div class="chk-btn-wrap">
+                <div class="all-select">
+                    <label class="check"><!--/checkbox_multi_all/--> 전체선택</label>
+                </div>
+                <!--/if_provider/-->
+                <!--/if_link_multi_del/-->
+                <div class="chk-delete"><a href="<!--/link_multi_del/-->"><span>선택삭제</span></a></div>
+                <!--/end_if/-->
+                <!--/end_if/-->
+            </div>
+            <!--/end_if/-->
+            
+
+            <!--/if_not_provider/-->
+            <div class="none-data">
+                <i class="fa fa-exclamation-triangle fa-2x"></i>
+                <p>장바구니 상품이 없습니다.</p>
+            </div>
+            <!--/end_if/-->
+
+
+            <!-- s:자체배송 -->
+            <!--/loop_provider/-->
+            <!--/if_not_provider@is_provider/-->
+            <div class="not-prov-wrap">
+                <div class="basket-list">
+                    <p class="title">KK배송상품</p>
+                    <ul data-type="vertical" data-open="on" data-checkbok="on">
+                        <!--/loop_provider@basket/-->
+                        <li>
+                            <!--/provider@basket@form/-->
+                            <a href="<!--/provider@basket@link_del/-->" class="btn-del-cart"><img src="/design/mkplanet/kkstore/img/btn_delete_cart.png" alt=""></a>
+                            <div class="input">
+                                <label class="check"><!--/provider@basket@checkbox_multi_basket/--></label>
+                            </div>
+                            <div class="thumb">
+                                <a href="<!--/provider@basket@link/-->"><img src="<!--/provider@basket@mobile_image/-->" alt="상품명" class="response100" /></a>
+                            </div>
+                            <div class="info">
+                                <p class="name"><a href="<!--/provider@basket@link/-->"><!--/notag/provider@basket@name(25)/--></a></p>
+
+                                <!--/if_provider@basket@option/-->
+                                <p class="option"><!--/provider@basket@option/--></p>
+                                <!--/end_if/-->
+
+                                <div class="price-wrap">
+                                    <span class="price01"><!--/number/provider@basket@price_sell/-->원</span>
+                                    <span class="price02"><!--/provider@basket@price_consumer/-->원</span>
+                                </div>
+
+                                <div class="qty-wrap">
+                                    <a href="<!--/provider@basket@link_quantity_down/-->" class=""><img src="/design/mkplanet/kkstore/img/qty_down.jpg" alt=""></a>
+                                    <!--/provider@basket@input_quantity(txt-input amount-input)/-->
+                                    <a href="<!--/provider@basket@link_quantity_up/-->" class=""><img src="/design/mkplanet/kkstore/img/qty_up.jpg" alt=""></a>
+                                </div>
+                                <a onclick="<!--/provider@basket@link_quantity_update/-->" class="btn-modify">수량변경</a>
+                            </div>
+                            <!--/end_form/-->
+                        </li>
+                        <!--/end_loop/-->
+                    </ul>
+                </div>
+                <!--/end_if/-->
+                <!--/end_loop/-->
+
+                <!--/loop_provider/-->
+                <!--/if_not_provider@is_provider/-->
+                <div class="all-price-wrap">
+                    <div class="price-each-info-top">
+                        <div class="txt">
+                            <p>
+                                <span class="title">총 상품금액</span>
+                                <span class="price"><!--/number/provider@total_price_sell/-->원</span>
+                            </p>
+        
+                            <!--/if_provider@total_vat(+1)/--> 
+                            <p>
+                                <span class="title">부가세</span>
+                                <span class="price"><!--/number/provider@total_vat/-->원</span>
+                            </p>
+                            <!--/end_if/--> 
+        
+                            <!--/if_provider@total_delivery(+1)/-->
+                            <p>
+                                <span class="title">기본 배송료</span>
+                                <span class="price"><!--/number/provider@total_delivery/-->원</span>
+                            </p>
+                            <!--/end_if/-->
+        
+                            <!--/if_provider@total_delivery_add(+1)/-->
+                            <p>
+                                <span class="title">추가 배송료</span>
+                                <span class="price"><!--/number/provider@total_delivery_add/-->원</span>
+                            </p>
+                            <!--/end_if/-->
+                        </div>
+                    </div>
+                    <div class="price-each-info-bottom">
+                        <div class="txt">
+                            <p>
+                                <span class="title">총 결제 예정금액</span>
+                                <span class="price"><!--/number/provider@total_price/-->원</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/end_if/-->
+            <!--/end_loop/-->
+            <!-- //e:자체배송 -->
+
+
+            <!-- s:업체배송 -->
+            <!--/loop_provider/-->
+            <!--/if_provider@is_provider/-->
+            <div class="prov-wrap">
+                <div class="basket-list">
+                    <p class="title">개별배송상품</p>
+                    <ul data-type="vertical" data-open="on" data-checkbok="on">
+                        <!--/loop_provider@basket/-->
+                        <li>
+                            <!--/provider@basket@form/-->
+                            <a href="<!--/provider@basket@link_del/-->" class="btn-del-cart"><img src="/design/mkplanet/kkstore/img/btn_delete_cart.png" alt=""></a>
+                            <div class="input">
+                                <label class="check"><!--/provider@basket@checkbox_multi_basket/--></label>
+                            </div>
+                            <div class="thumb">
+                                <a href="<!--/provider@basket@link/-->"><img src="<!--/provider@basket@mobile_image/-->" alt="상품명" class="response100" /></a>
+                            </div>
+                            <div class="info">
+                                <p class="name"><a href="<!--/provider@basket@link/-->"><!--/notag/provider@basket@name(25)/--></a></p>
+
+                                <!--/if_provider@basket@option/-->
+                                <p class="option"><!--/provider@basket@option/--></p>
+                                <!--/end_if/-->
+
+                                <div class="price-wrap">
+                                    <span class="price01"><!--/number/provider@basket@price_sell/-->원</span>
+                                    <span class="price02"><!--/provider@basket@price_consumer/-->원</span>
+                                </div>
+
+                                <div class="qty-wrap">
+                                    <a href="<!--/provider@basket@link_quantity_down/-->" class=""><img src="/design/mkplanet/kkstore/img/qty_down.jpg" alt=""></a>
+                                    <!--/provider@basket@input_quantity(txt-input amount-input)/-->
+                                    <a href="<!--/provider@basket@link_quantity_up/-->" class=""><img src="/design/mkplanet/kkstore/img/qty_up.jpg" alt=""></a>
+                                </div>
+                                <a onclick="<!--/provider@basket@link_quantity_update/-->" class="btn-modify">수량변경</a>
+                            </div>
+                            <!--/end_form/-->
+                        </li>
+                        <!--/end_loop/-->
+                    </ul>
+                </div>
+                <div class="all-price-wrap">
+                    <div class="price-each-info-top">
+                        <div class="txt">
+                            <p>
+                                <span class="title">총 상품금액</span>
+                                <span class="price"><!--/number/provider@total_price_sell/-->원</span>
+                            </p>
+        
+                            <!--/if_provider@total_vat(+1)/--> 
+                            <p>
+                                <span class="title">부가세</span>
+                                <span class="price"><!--/number/provider@total_vat/-->원</span>
+                            </p>
+                            <!--/end_if/--> 
+        
+                            <!--/if_provider@total_delivery(+1)/-->
+                            <p>
+                                <span class="title">기본 배송료</span>
+                                <span class="price"><!--/number/provider@total_delivery/-->원</span>
+                            </p>
+                            <!--/end_if/-->
+        
+                            <!--/if_provider@total_delivery_add(+1)/-->
+                            <p>
+                                <span class="title">추가 배송료</span>
+                                <span class="price"><!--/number/provider@total_delivery_add/-->원</span>
+                            </p>
+                            <!--/end_if/-->
+                        </div>
+                    </div>
+                    <div class="price-each-info-bottom">
+                        <div class="txt">
+                            <p>
+                                <span class="title">총 결제 예정금액</span>
+                                <span class="price"><!--/number/provider@total_price/-->원</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <!--/end_if/-->
+            <!--/end_loop/-->
+            <!-- //e:업체배송 -->
+
+            <!--/if_total_price/-->
+            <div class="price-total-wrap">
+                <div class="txt">
+                    <!--/block_none_groupsale_total_price_sell/--> 
+                    <p>
+                        <span class="title">총 주문 금액</span>
+                        <span class="price"><!--/number/none_groupsale_total_price_sell/-->원 </span>
+                    </p>
+                    <!--/end_block/-->
+                    
+                    <!--/block_total_delivery/-->
+                    <p>
+                        <span class="title">총 배송비</span>
+                        <span class="price"><!--/number/total_delivery/-->원</span>
+                    </p>
+                    <!--/end_block/-->
+                    <!--/block_total_price/-->
+                    <p class="total">
+                        <span class="title">총 결제금액</span>
+                        <span class="price"><!--/number/total_price/-->원</span>
+                    </p>
+                    <!--/end_block/-->
+                </div>
+            </div>
+            <!--/else/-->
+            <div class="price-total-info-top">
+                <div class="txt">
+                    <!--/if_none_groupsale_total_price_sell(+1)/-->
+                    <p>
+                        <span class="title">총 주문 금액</span>
+                        <span class="price"><!--/number/none_groupsale_total_price_sell/--><!--/else/-->0원</span>
+                    </p>
+                    <!--/end_if/-->
+                    <!--/if_total_delivery(+1)/-->
+                    <p>
+                        <span class="title">총 배송비</span>
+                        <span class="price"><!--/number/total_delivery/-->원</span>
+                    </p>
+                    <!--/end_if/-->
+                    <p class="total">
+                        <span class="title">총 결제금액</span>
+                        <span class="price"><!--/number/total_price/-->원</span>
+                    </p>
+                </div>
+            </div>
+            <!--/end_if/-->
+
+
+            <div class="cart-ft2">
+                <!--/if_btn_kakaopay/-->
+                    <!--/btn_kakaopay/-->
+                <!--/end_if/-->
+                <!--/if_btn_payco/-->
+                    <!--/btn_payco/-->
+                <!--/end_if/-->
+                <!--/if_btn_nhn/-->
+                <div class="naver-checkout">
+                    <!--/btn_nhn/-->
+                </div>
+                <!--/end_if/-->
+                <!--/if_btn_app/-->
+                    <!--/btn_app/--> 
+                <!--/end_if/-->
+            </div>
+            
+            <div class="btn-order">
+                <a href="<!--/link_order/-->">주문하기 :)</a>
+            </div>
+            
+
+        </div>
+    </div>
+    <!-- //contents -->
+</div>
+<!-- //container -->
+<!-- //본문 -->
+
+
+
+
+
+<!--/include_footer(1)/-->
