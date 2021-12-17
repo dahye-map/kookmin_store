@@ -1,0 +1,12 @@
+#main { width:1300px; margin:0 auto; }
+
+.custom { display:block; background:url('../../img/pink_big.png') left top no-repeat; width:126px; height:126px; background-size:100%; }
+.custom2 { display:block; background:url('../../img/green_big.png') left top no-repeat; width:126px; height:126px; background-size:100%; }
+.custom3 { display:block; background:url('../../img/pink_s.png') left top no-repeat; width:110px; height:110px; background-size:100%; }
+.custom4 { display:block; background:url('../../img/green_s.png') left top no-repeat; width:110px; height:110px; background-size:100%; }
+
+/* .brand-wrap { background:url('../../img/kukuro_eventpage_18.jpg') left top no-repeat; padding-top:285px; padding-bottom:280px; background-size:cover; } */
+
+.flex-list { display:-webkit-flex; display:flex; flex-wrap:wrap; }
+/* .flex-list > p { width:50%; } */
+

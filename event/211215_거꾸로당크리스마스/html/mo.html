@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset = UTF-8" />
+    <link rel="stylesheet" href="../lib/css/common.css">
+    <link rel="stylesheet" href="../lib/css/layout.css">
+    <link rel="stylesheet" href="../lib/css/swiper.min.css" />
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="../lib/js/jquery.waypoints.min.js"></script>
+
+    <script src="../lib/js/swiper.min.js"></script>
+    <title></title>
+</head>
+    <body>
+
+        <style>
+            .slide-banner-wrap img { width:100%; }
+            .slide-banner-wrap .slide-banner { transition-timing-function: linear; }
+            .slide-banner-wrap .slide-banner .swiper-slide { width:200px !important; }
+        </style>
+
+
+        <div><img src="//ftp.xexymix.jpg3.kr/3carekorea/kukuro/event/211216_mas/mo/kukuro_eventpage_m_01.jpg" alt=""></div>
+        <div class="slide-banner-wrap swiper-container">
+            <div class="slide-banner swiper-wrapper">
+                <div class="swiper-slide"><img src="//ftp.xexymix.jpg3.kr/3carekorea/kukuro/event/211216_mas/pc/slide_img_kukuro01.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="//ftp.xexymix.jpg3.kr/3carekorea/kukuro/event/211216_mas/pc/slide_img_kukuro02.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="//ftp.xexymix.jpg3.kr/3carekorea/kukuro/event/211216_mas/pc/slide_img_kukuro03.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="//ftp.xexymix.jpg3.kr/3carekorea/kukuro/event/211216_mas/pc/slide_img_kukuro04.jpg" alt=""></div>
+            </div>
+        </div>
+        <div><a href="/shop/shopdetail.html?branduid=10188176"><img src="//ftp.xexymix.jpg3.kr/3carekorea/kukuro/event/211216_mas/mo/kukuro_eventpage_m_02.jpg" alt=""></a></div>
+        <div><a href="/m/product.html?branduid=10181541"><img src="//ftp.xexymix.jpg3.kr/3carekorea/kukuro/event/211216_mas/mo/kukuro_eventpage_m_03.jpg" alt=""></a></div>
+        <div><a href="/m/product.html?branduid=10184667"><img src="//ftp.xexymix.jpg3.kr/3carekorea/kukuro/event/211216_mas/mo/kukuro_eventpage_m_04.jpg" alt=""></a></div>
+        <div><a href="/m/product.html?branduid=3538271"><img src="//ftp.xexymix.jpg3.kr/3carekorea/kukuro/event/211216_mas/mo/kukuro_eventpage_m_05.jpg" alt=""></a></div>
+        <div>
+            <a href="/shop/shopbrand.html?xcode=003&mcode=001&type=Y">
+                <img src="//ftp.xexymix.jpg3.kr/3carekorea/kukuro/event/211216_mas/mo/kukuro_eventpage_m_06.jpg" alt=""><br>
+                <img src="//ftp.xexymix.jpg3.kr/3carekorea/kukuro/event/211216_mas/mo/kukuro_eventpage_m_07.jpg" alt=""><br>
+                <img src="//ftp.xexymix.jpg3.kr/3carekorea/kukuro/event/211216_mas/mo/kukuro_eventpage_m_08.jpg" alt="">
+            </a>
+        </div>
+        <div><img src="//ftp.xexymix.jpg3.kr/3carekorea/kukuro/event/211216_mas/mo/kukuro_eventpage_m_09.jpg" alt=""></div>
+        
+
+
+        <script>
+            var swiper_kukuro = new Swiper('.slide-banner-wrap', {
+                slidesPerView: '1.5',
+                loop: true,
+                speed: 45000,
+                allowTouchMove: false,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+            });
+            function infinite() {
+                swiper_kukuro.slideTo(swiper_kukuro.slides.length);
+                swiper_kukuro.once('transitionEnd', function(){
+                    swiper_kukuro.slideTo(swiper_kukuro.params.slidesPerView, 0, false);
+                    setTimeout(function () {
+                        infinite();    
+                    }, 0);
+                });
+            }
+            infinite();	
+        </script>
+
+        
+
+    </body>
+
+
+
+</html>
