@@ -342,7 +342,7 @@
 
                                 <tr>
                                     <th scope="row">
-                                        <div class="txt-l">배송 메세지</div>
+                                        <div class="txt-l">배송 메세지<br><FONT COLOR=red> ※새벽배송 주문 시 <br>공동 현관 비밀번호 필수 기재</font></div>
                                     </th>
                                     <td>
                                         <!--/text_delivery_message/-->
@@ -392,7 +392,7 @@
                                             <div class="con">
                                                 <span class="tit">희망배송일(=상품수령일)</span>
                                                 냉동식품에 한하여, 선택가능 <br>
-                                                새벽배송상품 희망배송일 지정 불가(지정한 경우 적용불가)<br>
+                                                새벽배송 및 샐러드 포함 상품 희망배송일 지정 불가(지정한 경우 적용불가)<br>
                                                 그외 주문/결제된 시간에 따라 자동 출고<br>
                                                 * 오후3시 이전 입금완료 시 당일출고<br>
                                                 * 오후3시 이후 입금완료 시 익일출고
@@ -640,7 +640,7 @@
                     <div class="delivery_agree">
                         <ol>
                             <li>
-                                <p>· CJ대한통운</p>
+                                <p>· 롯데택배</p>
                             </li>
                             <li>
                                 <p>· 배송준비중으로 변경 시 택배 포장이 진행되기 때문에, 수취인 정보 수정 및 취소·환불이 불가합니다.</p>
@@ -1064,105 +1064,3 @@
     </div><!-- #contentWrap -->
 </div><!-- #contentWrapper-->
 <!--/include_footer(1)/-->
-
-<!-- bigin checkout tracking START -->
-<script>
-    function getBiginProductList() {
-        try {
-            var biginProductList = biginProductList || [];
-
-      < !--/loop_order_product/-->
-      var biginProduct = {};
-            biginProduct.name = '<!--/order_product@name/-->'.replace(/(<([^>]+)>)/ig, '').trim();
-            biginProduct.price = parseInt('<!--/number/order_product@unit_price/-->'.replace(/[\D]/g, ''));
-            biginProduct.quantity = parseInt('<!--/number/order_product@amount/-->');
-            biginProduct.thumbnail = [window.location.protocol + '//' + window.location.hostname + '<!--/order_product@image_s/-->'];
-            var biginProductLink = '<!--/order_product@link/-->';
-            if (biginProductLink && typeof biginProductLink == 'string' && biginProductLink.indexOf('branduid') > -1) {
-                biginProduct.id = biginProductLink.replace(/(.*)branduid=/ig, '').replace(/&(.*)/ig, '');
-            }
-            var biginProductOption = '<!--/order_product@option/-->'.replace(/(필수선택||옵션 선택)(\(.*?\))? : /g, '').trim();
-            biginProductOption = biginProductOption.replace(/\(\+\d*?\)/g, '').replace(/(<([^>]+)>)/ig, '').replace(/\d+개$/, '').trim();
-            if (biginProductOption) {
-                biginProduct.variant = biginProductOption
-            }
-
-            if (biginProduct && biginProduct.id && biginProductList) {
-                biginProductList.push(biginProduct);
-            }
-      < !--/end_loop/-->
-
-      return biginProductList;
-        } catch (e) {
-            return [];
-        }
-    }
-
-    function getPayOption(inputValue) {
-        try {
-            switch (inputValue) {
-                case 'D': return '휴대폰 결제';
-                case 'KAKAOPAY': return '카카오페이';
-                case 'PAYCO': return '페이코';
-                case 'CHAIPAY': return '차이';
-                case 'B': return '가상계좌';
-                case 'C': return '신용카드';
-                case 'V': return '실시간 계좌이체';
-                case 'S': return '에스크로';
-                default: return undefined;
-            }
-        } catch (e) {
-            return undefined;
-        }
-    }
-
-    window.addEventListener('load', function () {
-        try {
-            document.querySelector('#paybutton>a[href*="send()"]').addEventListener('click', function () {
-                try {
-                    var paymentInputValue = document.querySelector('input[name="radio_paymethod"]:checked').value;
-                    var option = getPayOption(paymentInputValue);
-                    var biginProductList = getBiginProductList();
-                    if (option && biginProductList) {
-                        window.bigin.event('bg:checkout', {
-                            step: 1,
-                            option: option,
-                            products: biginProductList
-                        })
-                    }
-                } catch (e) { }
-            });
-        } catch (e) { }
-    });
-</script>
-<!-- bigin checkout tracking END -->
-
-<!-- bigin profile tracking START -->
-<!--/if_login/-->
-<script>
-    window.addEventListener('load', function () {
-        try {
-            var bgUserInfo = {};
-            bgUserInfo.id = '<!--/user_id/-->';
-            bgUserInfo.name = '<!--/user_name/-->';
-            bgUserInfo.email = '<!--/user_email/-->';
-
-            var biginPhone1 = document.querySelector('select[name="emergency11"], input[name="emergency11"]').value;
-            var biginPhone2 = document.querySelector('input[name="emergency12"]').value;
-            var biginPhone3 = document.querySelector('input[name="emergency13"]').value;
-            bgUserInfo.phoneCell = biginPhone1 + biginPhone2 + biginPhone3;
-
-            var biginAddr1 = document.querySelector('input[name="address1"]').value;
-            var biginAddr2 = document.querySelector('input[name="address2"]').value;
-            if (biginAddr1 && biginAddr2) {
-                bgUserInfo.address = biginAddr1 + ' ' + biginAddr2;
-            }
-
-            if (bgUserInfo.id && bgUserInfo.email) {
-                window.bigin.user('profile', bgUserInfo);
-            }
-        } catch (e) { }
-    });
-</script>
-<!--/end_if/-->
-<!-- bigin profile tracking END -->

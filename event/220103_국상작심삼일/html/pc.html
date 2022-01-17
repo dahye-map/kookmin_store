@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <style>
+        .slide-banner-wrap img { width:100%; }
+        .slide-banner-wrap .slide-banner {     transition-timing-function: linear; }
+    </style>
+
+
+    <div><img src="//ftp.xexymix.jpg3.kr/3carekorea/kookmin/event/2022/220103_stop/pc/211230_kookmin_event_page_PC_01.jpg" alt=""></div>
+    <div class="slide-banner-wrap swiper-container">
+        <div class="slide-banner swiper-wrapper">
+            <div class="swiper-slide"><img src="//ftp.xexymix.jpg3.kr/3carekorea/kookmin/event/2022/220103_stop/pc/event_page_bar_M_01.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="//ftp.xexymix.jpg3.kr/3carekorea/kookmin/event/2022/220103_stop/pc/event_page_bar_M_02.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="//ftp.xexymix.jpg3.kr/3carekorea/kookmin/event/2022/220103_stop/pc/event_page_bar_M_03.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="//ftp.xexymix.jpg3.kr/3carekorea/kookmin/event/2022/220103_stop/pc/event_page_bar_M_04.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="//ftp.xexymix.jpg3.kr/3carekorea/kookmin/event/2022/220103_stop/pc/event_page_bar_M_05.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="//ftp.xexymix.jpg3.kr/3carekorea/kookmin/event/2022/220103_stop/pc/event_page_bar_M_06.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="//ftp.xexymix.jpg3.kr/3carekorea/kookmin/event/2022/220103_stop/pc/event_page_bar_M_07.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="//ftp.xexymix.jpg3.kr/3carekorea/kookmin/event/2022/220103_stop/pc/event_page_bar_M_08.jpg" alt=""></div>
+        </div>
+    </div>
+    <div>
+        <img src="//ftp.xexymix.jpg3.kr/3carekorea/kookmin/event/2022/220103_stop/pc/211230_kookmin_event_page_PC_03.jpg" alt=""  usemap="#map01">
+        <map id="map01" name="map01">
+            <area shape="rect" alt="" title="" coords="136,368,676,1096" href="/shop/shopdetail.html?branduid=1970584" target="" />
+            <area shape="rect" alt="" title="" coords="728,372,1272,1092" href="/shop/shopdetail.html?branduid=1947460" target="" />
+            <area shape="rect" alt="" title="" coords="136,1148,676,1908" href="/shop/shopdetail.html?branduid=1969865" target="" />
+            <area shape="rect" alt="" title="" coords="732,1152,1272,1888" href="/shop/shopdetail.html?branduid=54" target="" />
+            <area shape="rect" alt="" title="" coords="168,1976,1272,2104" href="/shop/shopbrand.html?xcode=033&type=Y" target="" />
+        </map>
+        
+    </div>
+    <div>
+        <img src="//ftp.xexymix.jpg3.kr/3carekorea/kookmin/event/2022/220103_stop/pc/211230_kookmin_event_page_PC_04.jpg" alt=""  usemap="#map02">
+        <map id="map02" name="map02">
+            <area shape="rect" alt="" title="" coords="136,332,1276,880" href="/shop/shopdetail.html?branduid=1970623" target="" />
+            <area shape="rect" alt="" title="" coords="140,952,684,1800" href="/shop/shopdetail.html?branduid=1970629" target="" />
+            <area shape="rect" alt="" title="" coords="736,940,1268,1800" href="/shop/shopdetail.html?branduid=1970628" target="" />
+            <area shape="rect" alt="" title="" coords="164,1884,1272,2008" href="/shop/shopbrand.html?xcode=042&type=Y" target="" />
+        </map>
+        
+    </div>
+    <div>
+        <img src="//ftp.xexymix.jpg3.kr/3carekorea/kookmin/event/2022/220103_stop/pc/211230_kookmin_event_page_PC_05.jpg" alt=""  usemap="#map03">
+        <map id="map03" name="map03">
+            <area shape="rect" alt="" title="" coords="160,356,1280,868" href="/shop/shopdetail.html?branduid=1970590" target="" />
+            <area shape="rect" alt="" title="" coords="164,976,680,1676" href="/shop/shopdetail.html?branduid=1970614" target="" />
+            <area shape="rect" alt="" title="" coords="752,964,1276,1680" href="/shop/shopdetail.html?branduid=1970608" target="" />
+            <area shape="rect" alt="" title="" coords="168,1768,1272,1896" href="/shop/shopbrand.html?xcode=046&type=Y" target="" />
+        </map>
+        
+    </div>
+    <div><img src="//ftp.xexymix.jpg3.kr/3carekorea/kookmin/event/2022/220103_stop/pc/211230_kookmin_event_page_PC_06.jpg" alt=""></div>
+
+
+
+    <script>
+
+
+        $(document).ready(function(){
+            $(document).snowfall({
+                minSize: 5,
+                maxSize:10,
+                round : true,
+                shadow: true,
+                flakeCount : 300, maxSpeed : 5,
+            })
+        });
+
+
+        var swiper_kukuro = new Swiper('.slide-banner-wrap', {
+            slidesPerView: '1.5',
+            loop: true,
+            speed: 45000,
+            allowTouchMove: false,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+        });
+        function infinite() {
+            swiper_kukuro.slideTo(swiper_kukuro.slides.length);
+            swiper_kukuro.once('transitionEnd', function(){
+                swiper_kukuro.slideTo(swiper_kukuro.params.slidesPerView, 0, false);
+                setTimeout(function () {
+                    infinite();    
+                }, 0);
+            });
+        }
+        infinite();	
+    </script>
+    
+</body>
+</html>

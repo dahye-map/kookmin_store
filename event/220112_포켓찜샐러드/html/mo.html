@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <title>Document</title>
+
+</head>
+<body>
+
+    <style>
+        .flex-list { display:-webkit-flex; display:flex; }
+        .pre-salad-slide { position:relative; background:url('//ftp.xexymix.jpg3.kr/3carekorea/pocket/event/2022/220112_saladopen/mo/220107_event_page_M_01.jpg') center no-repeat; background-size:100%; max-width:320px; min-width:320px; height:100%; margin: 0 auto; overflow: hidden; }
+        .pre-salad-slide .fork { position:absolute; left:30px; bottom:0; z-index:10; width:26%; }
+        .pre-salad-slide .fork img { width:100%; }
+        .pre-salad-slide .swiper-slide { padding-top:50%; padding-bottom:25%; text-align:center; }
+        .pre-salad-slide .swiper-slide img { max-width:60% !important; }
+    </style>
+
+
+    <div class="swiper-container pre-salad-slide">
+        <p class="fork"><img src="//ftp.xexymix.jpg3.kr/3carekorea/pocket/event/2022/220112_saladopen/pc/fork.png" alt=""></p>
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="//ftp.xexymix.jpg3.kr/3carekorea/pocket/event/2022/220112_saladopen/pc/220107_event_pae_img01.png" alt=""></div>
+            <div class="swiper-slide"><img src="//ftp.xexymix.jpg3.kr/3carekorea/pocket/event/2022/220112_saladopen/pc/220107_event_pae_img02.png" alt=""></div>
+            <div class="swiper-slide"><img src="//ftp.xexymix.jpg3.kr/3carekorea/pocket/event/2022/220112_saladopen/pc/220107_event_pae_img03.png" alt=""></div>
+            <div class="swiper-slide"><img src="//ftp.xexymix.jpg3.kr/3carekorea/pocket/event/2022/220112_saladopen/pc/220107_event_pae_img04.png" alt=""></div>
+            <div class="swiper-slide"><img src="//ftp.xexymix.jpg3.kr/3carekorea/pocket/event/2022/220112_saladopen/pc/220107_event_pae_img05.png" alt=""></div>
+        </div>
+    </div>
+    <div><img src="//ftp.xexymix.jpg3.kr/3carekorea/pocket/event/2022/220112_saladopen/mo/220107_event_page_M_02.jpg" alt=""></div>
+    <div><a href="/shop/shopdetail.html?branduid=3539225"><img src="//ftp.xexymix.jpg3.kr/3carekorea/pocket/event/2022/220112_saladopen/mo/220107_event_page_M_03.jpg" alt=""></a></div>
+
+
+    <div><img src="//ftp.xexymix.jpg3.kr/3carekorea/pocket/event/2022/220112_saladopen/mo/220107_event_page_M_04.jpg" alt=""></div>
+    <div class="flex-list">
+        <p><a href="/shop/shopdetail.html?branduid=3539210"><img src="//ftp.xexymix.jpg3.kr/3carekorea/pocket/event/2022/220112_saladopen/mo/220107_event_page_M_05.jpg" alt=""></a></p>
+        <p><a href="/shop/shopdetail.html?branduid=3539211"><img src="//ftp.xexymix.jpg3.kr/3carekorea/pocket/event/2022/220112_saladopen/mo/220107_event_page_M_06.jpg" alt=""></a></p>
+    </div>
+    <div class="flex-list">
+        <p><a href="/shop/shopdetail.html?branduid=3539222"><img src="//ftp.xexymix.jpg3.kr/3carekorea/pocket/event/2022/220112_saladopen/mo/220107_event_page_M_07.jpg" alt=""></a></p>
+        <p><a href="/shop/shopdetail.html?branduid=3539188"><img src="//ftp.xexymix.jpg3.kr/3carekorea/pocket/event/2022/220112_saladopen/mo/220107_event_page_M_08.jpg" alt=""></a></p>
+    </div>
+    <div class="flex-list">
+        <p><a href="/shop/shopdetail.html?branduid=3539223"><img src="//ftp.xexymix.jpg3.kr/3carekorea/pocket/event/2022/220112_saladopen/mo/220107_event_page_M_09.jpg" alt=""></a></p>
+        <p><a href="/shop/shopdetail.html?branduid=3539194"><img src="//ftp.xexymix.jpg3.kr/3carekorea/pocket/event/2022/220112_saladopen/mo/220107_event_page_M_10.jpg" alt=""></a></p>
+    </div>
+    <div><img src="//ftp.xexymix.jpg3.kr/3carekorea/pocket/event/2022/220112_saladopen/mo/220107_event_page_M_11.jpg" alt=""></div>
+    
+
+
+    <script>
+        var swiper_salae = new Swiper('.pre-salad-slide', {
+            slidesPerView: '1',
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+        });
+    </script>
+
+</body>
+</html>
